@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios'>
+    <pages>
+        <page name='内建集合类型'/>
+        <page name='集合类型协议'/>
+        <page name='可选值'/>
+        <page name='结构体和类'/>
+        <page name='编码和解码'/>
+        <page name='函数'/>
+        <page name='字符串'/>
+        <page name='错误处理'/>
+        <page name='泛型'/>
+        <page name='协议'/>
+        <page name='互用性'/>
+        <page name='数据结构'/>
+        <page name='Complexity'/>
+        <page name='The Swift standard library'/>
+        <page name='Stack Data'/>
+        <page name='Linked List'/>
+        <page name='Queues'/>
+        <page name='Trees'/>
+        <page name='Binary Trees'/>
+        <page name='Binary Search Trees'/>
+    </pages>
+</playground>
