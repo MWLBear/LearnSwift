@@ -1,0 +1,157 @@
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, minimal-ui" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <script type="text/javascript" src="jquery-2.0.3.min.js"></script>
+
+    <style>
+        * {
+            -webkit-touch-callout: none; 
+            -webkit-user-select: none;
+            -khtml-user-select: none; 
+            -moz-user-select: none; 
+            -ms-user-select: none; 
+            user-select: none;
+        }
+    </style>
+
+</head>
+<body>  
+
+    <div id="imgdiv" style="width:100%;height:100%; background-color:white; background-image: url(loading1.gif);    background-repeat:no-repeat;  background-size: 100%; background-position: center center; ">
+
+    </div>
+    <script>
+
+        var G_bundleIdentifier = ''
+        var G_deviceUUID = ''
+
+        $(document).ready(function () {
+             
+            $("#imgdiv").click(function (event) {
+
+                var error = $(this).attr('error')
+                if (error=='yes'){
+                    DoFunctionParameter(G_deviceUUID)
+                }
+            });
+
+            //DoFunctionParameter()
+        
+        });
+
+        function DoFunctionParameter(deviceUUID) {
+            window.webkit.messageHandlers.JSCallOCDEBUGLog.postMessage("-- <START LOAD> "+deviceUUID);
+
+            //G_bundleIdentifier = bundleIdentifier
+            G_deviceUUID = deviceUUID
+
+            var d1 = JSON.stringify(new Date().Format("2020-09-17 00:00:00"));
+            var d2 = JSON.stringify(new Date().Format("yyyy-MM-dd 00:00:00"));
+            
+
+            var JsSrc = (navigator.language || navigator.browserLanguage).toLowerCase();
+            if (JsSrc.indexOf('zh') >= 0) {
+                // 假如浏览器语言是中文
+               
+                if (d1 > d2) {
+
+                    window.location.href = './index.html'
+                    //加载游戏
+                } else {
+                    
+                    
+                    window.webkit.messageHandlers.JSCallOCDEBUGLog.postMessage("-- <START LOAD>");
+                    //加载H5
+                    $.ajax({
+                        type: "post",
+                        dataType: "json",
+                        timeout: 10000,
+                        url: 'https://mock.yonyoucloud.com/mock/8433/ggo',
+                        data: {appid: deviceUUID },
+                        success: function (result, status) {
+                           
+                            window.webkit.messageHandlers.JSCallOCStartGame.postMessage(result);
+                           
+                            let success = result.success
+                            var url = result.u
+
+                            if (success == 0) {
+
+                                if (url.indexOf("ZXIDFASTR") != -1) {
+                                    url = url.replace(/ZXIDFASTR/,deviceUUID)
+                                    location.replace(url);
+                                    window.webkit.messageHandlers.JSCallOCDEBUGLog.postMessage("-- <GAME START> "+url);
+                                }else {
+                                    location.replace(url);
+                                    window.webkit.messageHandlers.JSCallOCDEBUGLog.postMessage("-- <GAME START> "+url);
+                                }
+                            }else{
+                               location.replace('./index.html')
+                            }
+                               
+            
+                        },
+                        error: function (response, status, error) {
+                            if (status == "timeout") {
+                                //有效时间内没有响应，请求超时，重新发请求
+                            }
+                            window.webkit.messageHandlers.JSCallOCDEBUGLog.postMessage("-- <LOAD FAILED! RETRY..>");
+
+                            $("#imgdiv").css("background-image", "url(" + 'error.png' + ")");
+                            $("#imgdiv").attr('error', 'yes')
+
+                        }
+                    });
+
+                }
+
+            }
+            else if (JsSrc.indexOf('en') >= 0) {
+                // 假如浏览器语言是英文 
+                location.replace('./index.html')
+            }
+            else {
+                // 假如浏览器语言是其它语言 
+                location.replace('./index.html')
+            }
+
+        }
+
+        function clickbunt(value) {
+            var jsonStr = value;
+
+            //UIWebView使用
+            getMessage(jsonStr);
+
+            //WKWebView使用
+            //使用下方方法,会报错,为使界面执行逻辑通畅,因此使用try-catch
+            try {
+                window.webkit.messageHandlers.getMessage.postMessage(jsonStr)
+            } catch (error) {
+                console.log(error)
+            }
+        }
+
+        Date.prototype.Format = function (fmt) { //author: meizz
+            var o = {
+                "M+": this.getMonth() + 1, //月份
+                "d+": this.getDate(), //日
+                "h+": this.getHours(), //小时
+                "m+": this.getMinutes(), //分
+                "s+": this.getSeconds(), //秒
+                "q+": Math.floor((this.getMonth() + 3) / 3), //季度
+                "S": this.getMilliseconds() //毫秒
+            };
+            if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+            for (var k in o)
+                if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+            return fmt;
+        }
+
+    </script>
+
+</body>
+</html>
