@@ -87,6 +87,7 @@ extension BinarySearchTree {
             ^       ^
          0    2    5
      
+     
      */
     private func remove(node: BinaryNode<Element>?, value: Element)
         -> BinaryNode<Element>?{
