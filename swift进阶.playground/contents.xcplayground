@@ -21,5 +21,6 @@
         <page name='Trees'/>
         <page name='Binary Trees'/>
         <page name='Binary Search Trees'/>
+        <page name='AVL Trees'/>
     </pages>
 </playground>

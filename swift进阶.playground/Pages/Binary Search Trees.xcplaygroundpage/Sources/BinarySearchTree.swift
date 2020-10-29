@@ -18,14 +18,15 @@ extension BinarySearchTree {
     
     public mutating func insert(_ value: Element) {
         root = insert(from: root, value: value)
+        
     }
+    //根据BST的规则，左子节点的节点必须包含小于当前节点的值。 右子节点的节点必须包含大于或等于当前节点的值。
     private func insert(from node: BinaryNode<Element>?, value: Element)
         -> BinaryNode<Element> {
-            guard let node = node else {
+            guard let node = node else { //3
                 return BinaryNode(value: value)
             }
-            
-            if value < node.value {
+            if value < node.value { // 1<3
                 node.leftChild = insert(from: node.leftChild, value: value)
             }else {
                 node.rightChild = insert(from: node.rightChild, value: value)
@@ -61,7 +62,6 @@ extension BinarySearchTree {
             }else {
                 current = node.rightChild
             }
-            
         }
         return false
 
@@ -89,6 +89,7 @@ extension BinarySearchTree {
      
      
      */
+    
     private func remove(node: BinaryNode<Element>?, value: Element)
         -> BinaryNode<Element>?{
             guard let node = node else {

@@ -68,18 +68,21 @@ Pre-order traversal always visits the current node first, then recursively visit
 
 extension BinaryNode {
     
+    //中序遍历
     public func traverseInOrder(visit: (Element) -> Void) {
         leftChild?.traverseInOrder(visit: visit)
         visit(value)
         rightChild?.traverseInOrder(visit: visit)
     }
     
+    //先序遍历
     public func traversePreOrder(visit: (Element) -> Void) {
         visit(value)
         leftChild?.traversePreOrder(visit: visit)
         rightChild?.traversePreOrder(visit: visit)
     }
     
+    //后序遍历
     public func traversePostOrder(visit : (Element) -> Void) {
         leftChild?.traversePostOrder(visit: visit)
         rightChild?.traversePostOrder(visit: visit)

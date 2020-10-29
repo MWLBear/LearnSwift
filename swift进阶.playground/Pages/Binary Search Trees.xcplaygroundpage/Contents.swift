@@ -1,6 +1,7 @@
 /**
 A binary search tree, or BST, is a data structure that facilitates fast lookup, insert and removal operations
  二叉树搜索树或BST是一种数据结构，可促进快速查找，插入和删除操作
+ 排序二叉树
  
  •左子树的值必须小于其父子树值
  •右子树的值大于等于其父子树的值
@@ -22,7 +23,7 @@ example(of: "building a BST") {
         bst.insert(i)
     }
     print(bst)
-    
+
 }
 var exampleTree:BinarySearchTree<Int> {
     var bst = BinarySearchTree<Int>()
