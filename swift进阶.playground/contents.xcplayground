@@ -24,5 +24,6 @@
         <page name='AVL Trees'/>
         <page name='Tries'/>
         <page name='Binary Search'/>
+        <page name='The Heap Data Structure'/>
     </pages>
 </playground>
