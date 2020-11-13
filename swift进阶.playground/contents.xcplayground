@@ -25,5 +25,6 @@
         <page name='Tries'/>
         <page name='Binary Search'/>
         <page name='The Heap Data Structure'/>
+        <page name='Priority Queue'/>
     </pages>
 </playground>
