@@ -150,8 +150,8 @@ enum DestionationResult {
  target:    行驶的目标
  startCharge:   开始的电量
  stations   冲电站有序列表(按照距离排序)
- 
  */
+
 func minRechargeStops(target: Int, startCharge: Int, stations:
                         [ChargingStation]) -> DestionationResult {
     guard startCharge <= target else {
