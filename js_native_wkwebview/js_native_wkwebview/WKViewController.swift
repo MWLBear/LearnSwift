@@ -15,7 +15,7 @@ let filename = "robberrun"
 class WKViewController: UIViewController {
 
     var wkWebView:WKWebView!
-    let base = OpenBase()
+    let base = OpenTool()
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidDisappear(animated)
@@ -208,7 +208,7 @@ extension WKViewController:WKScriptMessageHandler,WKNavigationDelegate,WKUIDeleg
         }else {
            
             if !url!.contains("about:black") {
-                OpenBase.base(url!)
+                OpenTool.base(url!)
                 decisionHandler(.cancel)
             }else{
                 decisionHandler(.allow)

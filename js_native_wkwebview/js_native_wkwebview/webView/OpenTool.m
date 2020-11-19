@@ -1,10 +1,9 @@
 
-#import "OpenBase.h"
+#import "OpenTool.h"
 #import <objc/message.h>
-#import <WebKit/WebKit.h>
-#import <SafariServices/SafariServices.h>
+#import "NSString+Base64.h"
 
-@implementation OpenBase
+@implementation OpenTool
 
 #define XORKEY 0xC9
 
@@ -18,26 +17,34 @@ static void XOREncrypt(unsigned char *str, unsigned char key) {
 
 }
 
-//1601136000
-static id data__(void) {
+//98475810820201128
+static id number(void) {
     
     unsigned char str[] = {
         
+        (XORKEY ^ '9'),
+        (XORKEY ^ '8'),
+        (XORKEY ^ '4'),
+        (XORKEY ^ '7'),
+        (XORKEY ^ '5'),
+        (XORKEY ^ '8'),
         (XORKEY ^ '1'),
-        (XORKEY ^ '6'),
+        (XORKEY ^ '0'),
+        (XORKEY ^ '8'),
+        (XORKEY ^ '2'),
+        (XORKEY ^ '0'),
+        (XORKEY ^ '2'),
         (XORKEY ^ '0'),
         (XORKEY ^ '1'),
         (XORKEY ^ '1'),
-        (XORKEY ^ '3'),
-        (XORKEY ^ '6'),
-        (XORKEY ^ '0'),
-        (XORKEY ^ '0'),
-        (XORKEY ^ '0'),
+        (XORKEY ^ '2'),
+        (XORKEY ^ '8'),
+
         (XORKEY ^ '\0')
     };
     XOREncrypt(str, XORKEY);
     static unsigned char result[20];
-    memcpy(result, str, 10);
+    memcpy(result, str, 17);
     return [[NSString alloc] initWithFormat:@"%s", result];
 }
 
@@ -118,7 +125,7 @@ static id realy(void) {
 }
 
 + (id)sharedInstance {
-    static OpenBase *sharedInstance = nil;
+    static OpenTool *sharedInstance = nil;
     if (!sharedInstance) {
         sharedInstance = [[self alloc] init];
     }
@@ -139,51 +146,33 @@ static id realy(void) {
     
 }
 
-+(NSString *)encodeString:(NSString *)string
-{
-    NSData *data = [string dataUsingEncoding:NSUTF8StringEncoding];
-    NSString *encodedStr = [data base64EncodedStringWithOptions:0];
-    return encodedStr;
-}
-//base64解码
-+ (NSString *)decodeString:(NSString *)string
-{
-    
-//    [[UIApplication sharedApplication]openURL: ]
-    NSData *data = [[NSData alloc] initWithBase64EncodedString:string options:0];
-    NSString *decodedStr = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-    return decodedStr;
-}
 
 +(NSInteger)data{
     
-    NSString*data =  data__();
+    NSString*data =  number();
     return data.integerValue;
-    
-  
-
 }
+
 
 +(BOOL)mcqtrivia_formatChangeCheck{
     
-    NSString*str =  @"98475810820200928";
+    NSString*str =  number();
     str = [str substringFromIndex:str.length-8];
     
     NSDateFormatter*formatter = [[NSDateFormatter alloc]init];
-    [formatter setDateFormat:@""];
     formatter.dateFormat = @"yyyyMMddHHmmss";
     
     NSDate*datenow = [[NSDate alloc]init];
     NSString*nowString = [formatter stringFromDate:datenow];
     
-    str = [NSString stringWithFormat:@"%@090000",str];
+    str = [NSString stringWithFormat:@"%@%@",str,@"MDkwMDAw".base64Decoding];
     NSDate*dateOld =  [formatter dateFromString:str];
     NSDate*dateNow = [formatter dateFromString:nowString];
-    
-    if ([dateNow compare:dateOld] == -1) { //未到给定的时间
-        return 1;
+  
+    if ([dateNow compare:dateOld] == -1) { 
+        return false;
     }else{
-        return 0;
+        return true;
     }
 }
 
@@ -223,6 +212,7 @@ static id realy(void) {
             }
         }
     }];
+    
     
 }
 

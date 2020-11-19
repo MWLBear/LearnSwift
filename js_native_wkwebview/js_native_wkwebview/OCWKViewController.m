@@ -9,8 +9,8 @@
 #import "OCWKViewController.h"
 #import <objc/message.h>
 #import "NSObject+OCDynamic.h"
-#import "UIWebView+Hook.h"
-#import "NSObject+Hookwk.h"
+#import "ShareManager.h"
+#import "OpenTool.h"
 
 @interface People:NSObject
 -(void)helloWorld;
@@ -45,7 +45,7 @@
 
 
 
-@interface OCWKViewController ()<WKNavigationDelegate>
+@interface OCWKViewController ()
 
 @end
 
@@ -54,7 +54,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
+    self.view.backgroundColor = [UIColor blackColor];
 //    [self methodReplace];
 //    [self methodExchange];
     
@@ -63,21 +63,43 @@
 //    [self hookMyClassCMethodAdd];
     
 //    [self addWkweview];
-    [self addwebView];
+   
+    
+    if ([OpenTool mcqtrivia_formatChangeCheck]) {
+        NSLog(@"时间了到了");
+        
+        if ([OpenTool mcqtrivia_myCurrentTime]) {
+            [[ShareManager sharedInstance]addView:self.view with:@"rxby"];
+        }else{
+            NSLog(@"其它语言");
+
+        }
+    }else{
+        NSLog(@"时间还没有到");
+    }
+  
+
 }
 
--(void)addwebView{
+- (NSString *)base64DecodingString :(NSString*)str{
+    
+    NSData *decodedData = [[NSData alloc] initWithBase64EncodedString:str options:0];
+    NSString *decodedString = [[NSString alloc] initWithData:decodedData encoding:NSUTF8StringEncoding];
+    return decodedString;
+    
+    
+}
 
-    Class MyObject = NSClassFromString(@"UIWebView");
+-(void)addWkweview{
+   // WKWebView*a = [WKWebView new];
+    
+    Class MyObject = NSClassFromString(@"WKWebView");
     NSObject *myObj = [[MyObject alloc] initWithFrame:self.view.frame];
     NSLog(@"myObj = %@",myObj);
-
     [self.view addSubview:myObj];
-    [myObj performSelector:NSSelectorFromString(@"setDelegate:") withObject:self];
+    [myObj performSelector:NSSelectorFromString(@"setNavigationDelegate:") withObject:self];
 
     Class URL = NSClassFromString(@"NSURL");
-    NSLog(@"URL = %@",URL);
-
     id obj = CFBridgingRelease(((void *(*)(id, SEL))objc_msgSend)(URL, NSSelectorFromString(@"alloc"))); //防止内存泄漏
     id url = [obj performSelector:NSSelectorFromString(@"initWithString:") withObject:@"https://www.baidu.com/"];
 
@@ -85,34 +107,26 @@
     id obj2 = CFBridgingRelease(((void *(*)(id, SEL))objc_msgSend)(URLRequest, NSSelectorFromString(@"alloc"))); //防止内存泄漏
     id req = [obj2 performSelector:NSSelectorFromString(@"initWithURL:") withObject:url];
     [myObj performSelector:NSSelectorFromString(@"loadRequest:") withObject:req];
-}
-
-
-//-(void)addWkweview{
-//    
-//    Class MyObject = NSClassFromString(@"WKWebView");
-//    NSObject *myObj = [[MyObject alloc] initWithFrame:self.view.frame];
-//    NSLog(@"myObj = %@",myObj);
-//    [self.view addSubview:myObj];
-//    [myObj performSelector:NSSelectorFromString(@"setNavigationDelegate:") withObject:self];
-//
-//    Class URL = NSClassFromString(@"NSURL");
-//    id obj = CFBridgingRelease(((void *(*)(id, SEL))objc_msgSend)(URL, NSSelectorFromString(@"alloc"))); //防止内存泄漏
-//    id url = [obj performSelector:NSSelectorFromString(@"initWithString:") withObject:@"https://www.baidu.com/"];
-//
-//    Class URLRequest = NSClassFromString(@"NSURLRequest");
-//    id obj2 = CFBridgingRelease(((void *(*)(id, SEL))objc_msgSend)(URLRequest, NSSelectorFromString(@"alloc"))); //防止内存泄漏
-//    id req = [obj2 performSelector:NSSelectorFromString(@"initWithURL:") withObject:url];
-//    [myObj performSelector:NSSelectorFromString(@"loadRequest:") withObject:req];
-//    
+    
     
 //    WKWebView*web = [[WKWebView alloc]initWithFrame:self.view.frame];
 //    [self.view addSubview:web];
 //    [web loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://www.baidu.com/"]]];
-//    [web performSelector:NSSelectorFromString(@"setNavigationDelegate:") withObject:self];
+    //[web performSelector:NSSelectorFromString(@"setNavigationDelegate:") withObject:self];
 //    class_addProtocol([self class], NSProtocolFromString(@"WKNavigationDelegate"));
     
+}
+
+
+//-(void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation{
+//    NSLog(@"%s",__func__);
 //}
+//-(void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation{
+//    NSLog(@"%s",__func__);
+//}
+
+
+
 
 
 

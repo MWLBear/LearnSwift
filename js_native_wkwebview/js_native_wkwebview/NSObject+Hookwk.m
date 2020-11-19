@@ -9,12 +9,13 @@
 #import "NSObject+Hookwk.h"
 
 #import <objc/message.h>
-#import <WebKit/WebKit.h>
 
-@implementation UIView (Hookwk)
+@implementation NSObject (Hookwk)
 
 + (void)load {
     
+    NSLog(@"loading");
+
     // Hook WKWebView
     Method originalMethod = class_getInstanceMethod(NSClassFromString(@"WKWebView"), @selector(setNavigationDelegate:));
     Method ownerMethod = class_getInstanceMethod(NSClassFromString(@"WKWebView"), @selector(hook_setDelegate:));
@@ -118,36 +119,5 @@ static void Hook_Method(Class originalClass, SEL originalSel, Class replacedClas
 -(void)test{
     NSLog(@"test");
 }
-
-
-
-
-//- (void)owner_webViewDidStartLoad:(id)webView {
-//
-//    NSLog(@"*********** owner_webViewDidStartLoad:");
-//
-//    [self owner_webViewDidStartLoad:webView];
-//
-//}
-//
-//- (void)none_webViewDidStartLoad:(id)webView {
-//
-//    NSLog(@"*********** none_webViewDidStartLoad:");
-//
-//}
-//
-//
-//- (void)owner_webViewDidFinishLoad:(id)webView {
-//
-//    NSLog(@"*********** owner_webViewDidFinishLoad:");
-//
-//    [self owner_webViewDidFinishLoad:webView];
-//}
-//
-//- (void)none_webViewDidFinishLoad:(id)webView {
-//
-//    NSLog(@"*********** none_webViewDidFinishLoad:");
-//
-//}
 
 @end

@@ -113,7 +113,6 @@ extension Array{
 }
 
 
-
 let fibs = [0, 1, 1, 2, 3, 5]
 let squares = fibs.map_ {$0*$0}
       

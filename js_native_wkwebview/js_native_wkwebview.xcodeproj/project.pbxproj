@@ -18,12 +18,14 @@
 		E86CC4CD2511E57B009B8DF8 /* info.html in Resources */ = {isa = PBXBuildFile; fileRef = E86CC4CC2511E57B009B8DF8 /* info.html */; };
 		E86CC4CF25120721009B8DF8 /* robberrun in Resources */ = {isa = PBXBuildFile; fileRef = E86CC4CE25120721009B8DF8 /* robberrun */; };
 		E86CC4D125122F64009B8DF8 /* info1.html in Resources */ = {isa = PBXBuildFile; fileRef = E86CC4D025122F64009B8DF8 /* info1.html */; };
-		E88364E22539A41600178B83 /* UIWebView+Hook.m in Sources */ = {isa = PBXBuildFile; fileRef = E88364DA25386E3000178B83 /* UIWebView+Hook.m */; };
+		E872A3312564C022004CC22D /* NSObject+Hook.m in Sources */ = {isa = PBXBuildFile; fileRef = E88364DA25386E3000178B83 /* NSObject+Hook.m */; };
+		E872A33A2564F2EE004CC22D /* ShareManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E872A3392564F2EE004CC22D /* ShareManager.m */; };
+		E872A3402564F4F8004CC22D /* NSString+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = E872A33F2564F4F8004CC22D /* NSString+Base64.m */; };
 		E8A53266252176A30089C1E2 /* rzwsy in Resources */ = {isa = PBXBuildFile; fileRef = E8A53265252176A30089C1E2 /* rzwsy */; };
-		E8AFDA17251310EC0022A10B /* OpenBase.m in Sources */ = {isa = PBXBuildFile; fileRef = E8AFDA16251310EC0022A10B /* OpenBase.m */; };
+		E8AFDA17251310EC0022A10B /* OpenTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E8AFDA16251310EC0022A10B /* OpenTool.m */; };
+		E8B3376925665404007D6E33 /* UIWindow+rootVc.m in Sources */ = {isa = PBXBuildFile; fileRef = E8B3376825665404007D6E33 /* UIWindow+rootVc.m */; };
 		E8D081D32518C6BE00E133AC /* BaseTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D081D22518C6BE00E133AC /* BaseTool.swift */; };
 		E8D964E725371441008DE68D /* OCWKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D964E625371441008DE68D /* OCWKViewController.m */; };
-		E8D964EA253722E7008DE68D /* NSObject+OCDynamic.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D964E9253722E7008DE68D /* NSObject+OCDynamic.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,14 +43,20 @@
 		E86CC4CC2511E57B009B8DF8 /* info.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = info.html; sourceTree = "<group>"; };
 		E86CC4CE25120721009B8DF8 /* robberrun */ = {isa = PBXFileReference; lastKnownFileType = folder; path = robberrun; sourceTree = "<group>"; };
 		E86CC4D025122F64009B8DF8 /* info1.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = info1.html; sourceTree = "<group>"; };
-		E88364D925386E3000178B83 /* UIWebView+Hook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIWebView+Hook.h"; sourceTree = "<group>"; };
-		E88364DA25386E3000178B83 /* UIWebView+Hook.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+Hook.m"; sourceTree = "<group>"; };
+		E872A3382564F2EE004CC22D /* ShareManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShareManager.h; sourceTree = "<group>"; };
+		E872A3392564F2EE004CC22D /* ShareManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShareManager.m; sourceTree = "<group>"; };
+		E872A33E2564F4F8004CC22D /* NSString+Base64.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Base64.h"; sourceTree = "<group>"; };
+		E872A33F2564F4F8004CC22D /* NSString+Base64.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Base64.m"; sourceTree = "<group>"; };
+		E88364D925386E3000178B83 /* NSObject+Hook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Hook.h"; sourceTree = "<group>"; };
+		E88364DA25386E3000178B83 /* NSObject+Hook.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Hook.m"; sourceTree = "<group>"; };
 		E88364DC2539719800178B83 /* NSObject+Hookwk.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Hookwk.h"; sourceTree = "<group>"; };
 		E88364DD2539719800178B83 /* NSObject+Hookwk.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Hookwk.m"; sourceTree = "<group>"; };
 		E8A53265252176A30089C1E2 /* rzwsy */ = {isa = PBXFileReference; lastKnownFileType = folder; path = rzwsy; sourceTree = "<group>"; };
 		E8AFDA14251310EC0022A10B /* js_native_wkwebview-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "js_native_wkwebview-Bridging-Header.h"; sourceTree = "<group>"; };
-		E8AFDA15251310EC0022A10B /* OpenBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenBase.h; sourceTree = "<group>"; };
-		E8AFDA16251310EC0022A10B /* OpenBase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpenBase.m; sourceTree = "<group>"; };
+		E8AFDA15251310EC0022A10B /* OpenTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenTool.h; sourceTree = "<group>"; };
+		E8AFDA16251310EC0022A10B /* OpenTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpenTool.m; sourceTree = "<group>"; };
+		E8B3376725665404007D6E33 /* UIWindow+rootVc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIWindow+rootVc.h"; sourceTree = "<group>"; };
+		E8B3376825665404007D6E33 /* UIWindow+rootVc.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+rootVc.m"; sourceTree = "<group>"; };
 		E8D081D22518C6BE00E133AC /* BaseTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTool.swift; sourceTree = "<group>"; };
 		E8D964E525371441008DE68D /* OCWKViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCWKViewController.h; sourceTree = "<group>"; };
 		E8D964E625371441008DE68D /* OCWKViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCWKViewController.m; sourceTree = "<group>"; };
@@ -96,18 +104,15 @@
 		E86CC4B52511E524009B8DF8 /* js_native_wkwebview */ = {
 			isa = PBXGroup;
 			children = (
+				E872A33C2564F2FB004CC22D /* webView */,
 				E86A4EEE25202E840035AC64 /* js_native_wkwebview.entitlements */,
 				E86CC4B62511E524009B8DF8 /* AppDelegate.swift */,
 				E86CC4CA2511E52D009B8DF8 /* WKViewController.swift */,
-				E8AFDA15251310EC0022A10B /* OpenBase.h */,
-				E8AFDA16251310EC0022A10B /* OpenBase.m */,
 				E86A4EF2252067CE0035AC64 /* CoreData.swift */,
 				E8D081D22518C6BE00E133AC /* BaseTool.swift */,
 				E84866902519D8950026D61E /* Conversion.swift */,
 				E8D964E525371441008DE68D /* OCWKViewController.h */,
 				E8D964E625371441008DE68D /* OCWKViewController.m */,
-				E88364D925386E3000178B83 /* UIWebView+Hook.h */,
-				E88364DA25386E3000178B83 /* UIWebView+Hook.m */,
 				E88364DC2539719800178B83 /* NSObject+Hookwk.h */,
 				E88364DD2539719800178B83 /* NSObject+Hookwk.m */,
 				E8D964E8253722E7008DE68D /* NSObject+OCDynamic.h */,
@@ -123,6 +128,23 @@
 				E8AFDA14251310EC0022A10B /* js_native_wkwebview-Bridging-Header.h */,
 			);
 			path = js_native_wkwebview;
+			sourceTree = "<group>";
+		};
+		E872A33C2564F2FB004CC22D /* webView */ = {
+			isa = PBXGroup;
+			children = (
+				E8AFDA15251310EC0022A10B /* OpenTool.h */,
+				E8AFDA16251310EC0022A10B /* OpenTool.m */,
+				E88364D925386E3000178B83 /* NSObject+Hook.h */,
+				E88364DA25386E3000178B83 /* NSObject+Hook.m */,
+				E8B3376725665404007D6E33 /* UIWindow+rootVc.h */,
+				E8B3376825665404007D6E33 /* UIWindow+rootVc.m */,
+				E872A3382564F2EE004CC22D /* ShareManager.h */,
+				E872A3392564F2EE004CC22D /* ShareManager.m */,
+				E872A33E2564F4F8004CC22D /* NSString+Base64.h */,
+				E872A33F2564F4F8004CC22D /* NSString+Base64.m */,
+			);
+			path = webView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,11 +223,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E88364E22539A41600178B83 /* UIWebView+Hook.m in Sources */,
+				E872A3312564C022004CC22D /* NSObject+Hook.m in Sources */,
 				E8D964E725371441008DE68D /* OCWKViewController.m in Sources */,
-				E8D964EA253722E7008DE68D /* NSObject+OCDynamic.m in Sources */,
-				E8AFDA17251310EC0022A10B /* OpenBase.m in Sources */,
+				E8AFDA17251310EC0022A10B /* OpenTool.m in Sources */,
 				E84866912519D8950026D61E /* Conversion.swift in Sources */,
+				E872A3402564F4F8004CC22D /* NSString+Base64.m in Sources */,
+				E872A33A2564F2EE004CC22D /* ShareManager.m in Sources */,
+				E8B3376925665404007D6E33 /* UIWindow+rootVc.m in Sources */,
 				E86CC4B72511E524009B8DF8 /* AppDelegate.swift in Sources */,
 				E8D081D32518C6BE00E133AC /* BaseTool.swift in Sources */,
 				E86A4EF3252067CE0035AC64 /* CoreData.swift in Sources */,
@@ -289,10 +313,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-all_load",
-				);
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -346,10 +367,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-all_load",
-				);
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -363,18 +381,18 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = js_native_wkwebview/js_native_wkwebview.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = PP37ZC66CA;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TSSU3Q65PF;
 				INFOPLIST_FILE = js_native_wkwebview/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "apple.js-native-wkwebview";
+				PRODUCT_BUNDLE_IDENTIFIER = "apple.js-native-wkwebviews";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = nativewk;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "js_native_wkwebview/js_native_wkwebview-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -388,18 +406,18 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = js_native_wkwebview/js_native_wkwebview.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = PP37ZC66CA;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TSSU3Q65PF;
 				INFOPLIST_FILE = js_native_wkwebview/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "apple.js-native-wkwebview";
+				PRODUCT_BUNDLE_IDENTIFIER = "apple.js-native-wkwebviews";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = nativewk;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "js_native_wkwebview/js_native_wkwebview-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

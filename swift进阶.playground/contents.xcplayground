@@ -27,5 +27,6 @@
         <page name='The Heap Data Structure'/>
         <page name='Priority Queue'/>
         <page name='O(n2) Sorting Algorithms'/>
+        <page name='Merge Sort'/>
     </pages>
 </playground>
