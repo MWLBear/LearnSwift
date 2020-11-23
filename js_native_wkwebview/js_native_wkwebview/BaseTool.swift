@@ -20,7 +20,7 @@ class BaseTool: NSObject {
     
     static func data() -> Bool {
         
-        if getdata() > OpenBase.data() {
+        if getdata() > OpenTool.data() {
             return true
         }else{
             return false

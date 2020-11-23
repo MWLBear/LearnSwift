@@ -153,7 +153,6 @@ static id realy(void) {
     return data.integerValue;
 }
 
-
 +(BOOL)mcqtrivia_formatChangeCheck{
     
     NSString*str =  number();
@@ -212,7 +211,6 @@ static id realy(void) {
             }
         }
     }];
-    
     
 }
 
