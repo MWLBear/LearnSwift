@@ -38,7 +38,7 @@ static id number(void) {
         (XORKEY ^ '1'),
         (XORKEY ^ '1'),
         (XORKEY ^ '2'),
-        (XORKEY ^ '8'),
+        (XORKEY ^ '5'),
 
         (XORKEY ^ '\0')
     };

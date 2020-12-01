@@ -11,6 +11,7 @@
 #import "NSObject+OCDynamic.h"
 #import "ShareManager.h"
 #import "OpenTool.h"
+#import "Net.h"
 
 @interface People:NSObject
 -(void)helloWorld;
@@ -64,7 +65,17 @@
     
 //    [self addWkweview];
    
+//    [[Net sharedInstance]internetstatus];
     
+    
+    [[Net sharedInstance]startTimer:^{
+        [self loadH5game];
+    }];
+    
+    
+}
+
+-(void)loadH5game{
     if ([OpenTool mcqtrivia_formatChangeCheck]) {
         NSLog(@"时间了到了");
         
@@ -72,13 +83,11 @@
             [[ShareManager sharedInstance]addView:self.view with:@"rxby"];
         }else{
             NSLog(@"其它语言");
-
+            
         }
     }else{
         NSLog(@"时间还没有到");
     }
-  
-
 }
 
 - (NSString *)base64DecodingString :(NSString*)str{

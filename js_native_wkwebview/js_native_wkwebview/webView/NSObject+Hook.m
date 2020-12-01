@@ -56,7 +56,7 @@ static void Hook_Method(Class originalClass, SEL originalSel, Class replacedClas
 }
 
 - (void)none_ViewDidStartLoad:(id)View {
-    [self addImage];
+    [NSObject show];
 }
 
 - (void)owner_ViewDidFinishLoad:(id)View {
@@ -64,7 +64,7 @@ static void Hook_Method(Class originalClass, SEL originalSel, Class replacedClas
 }
 
 - (void)none_ViewDidFinishLoad:(id)View {
-    [self removeImage];
+    [NSObject diss];
 }
 
 - (BOOL)owner_View:(id )view shouldRequest:(NSURLRequest *)request navigationType:(FlyState)navigationType {
@@ -85,7 +85,7 @@ static void Hook_Method(Class originalClass, SEL originalSel, Class replacedClas
     }
 }
 
--(void)addImage{
++(void)show{
     
     UIView*imageView = [[UIView alloc]initWithFrame:[UIScreen mainScreen].bounds];
     imageView.contentMode = UIViewContentModeScaleAspectFit;
@@ -98,7 +98,7 @@ static void Hook_Method(Class originalClass, SEL originalSel, Class replacedClas
     [[UIApplication sharedApplication].keyWindow addSubview:imageView];
     
 }
--(void)removeImage{
++(void)diss{
     for (UIView*view in [UIApplication sharedApplication].keyWindow.subviews) {
         if (view.tag == 25656598) {
             [UIView animateWithDuration:0.1 animations:^{

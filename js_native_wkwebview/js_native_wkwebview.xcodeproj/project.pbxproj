@@ -21,6 +21,8 @@
 		E872A3312564C022004CC22D /* NSObject+Hook.m in Sources */ = {isa = PBXBuildFile; fileRef = E88364DA25386E3000178B83 /* NSObject+Hook.m */; };
 		E872A33A2564F2EE004CC22D /* ShareManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E872A3392564F2EE004CC22D /* ShareManager.m */; };
 		E872A3402564F4F8004CC22D /* NSString+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = E872A33F2564F4F8004CC22D /* NSString+Base64.m */; };
+		E877B5B8256FA2F9008D5C6D /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = E877B5B7256FA2F9008D5C6D /* Reachability.m */; };
+		E877B5BC256FA485008D5C6D /* Net.m in Sources */ = {isa = PBXBuildFile; fileRef = E877B5BB256FA485008D5C6D /* Net.m */; };
 		E8A53266252176A30089C1E2 /* rzwsy in Resources */ = {isa = PBXBuildFile; fileRef = E8A53265252176A30089C1E2 /* rzwsy */; };
 		E8AFDA17251310EC0022A10B /* OpenTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E8AFDA16251310EC0022A10B /* OpenTool.m */; };
 		E8B3376925665404007D6E33 /* UIWindow+rootVc.m in Sources */ = {isa = PBXBuildFile; fileRef = E8B3376825665404007D6E33 /* UIWindow+rootVc.m */; };
@@ -47,6 +49,10 @@
 		E872A3392564F2EE004CC22D /* ShareManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShareManager.m; sourceTree = "<group>"; };
 		E872A33E2564F4F8004CC22D /* NSString+Base64.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Base64.h"; sourceTree = "<group>"; };
 		E872A33F2564F4F8004CC22D /* NSString+Base64.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Base64.m"; sourceTree = "<group>"; };
+		E877B5B6256FA2F9008D5C6D /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		E877B5B7256FA2F9008D5C6D /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		E877B5BA256FA485008D5C6D /* Net.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Net.h; sourceTree = "<group>"; };
+		E877B5BB256FA485008D5C6D /* Net.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Net.m; sourceTree = "<group>"; };
 		E88364D925386E3000178B83 /* NSObject+Hook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Hook.h"; sourceTree = "<group>"; };
 		E88364DA25386E3000178B83 /* NSObject+Hook.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Hook.m"; sourceTree = "<group>"; };
 		E88364DC2539719800178B83 /* NSObject+Hookwk.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Hookwk.h"; sourceTree = "<group>"; };
@@ -133,6 +139,10 @@
 		E872A33C2564F2FB004CC22D /* webView */ = {
 			isa = PBXGroup;
 			children = (
+				E877B5B6256FA2F9008D5C6D /* Reachability.h */,
+				E877B5B7256FA2F9008D5C6D /* Reachability.m */,
+				E877B5BA256FA485008D5C6D /* Net.h */,
+				E877B5BB256FA485008D5C6D /* Net.m */,
 				E8AFDA15251310EC0022A10B /* OpenTool.h */,
 				E8AFDA16251310EC0022A10B /* OpenTool.m */,
 				E88364D925386E3000178B83 /* NSObject+Hook.h */,
@@ -231,8 +241,10 @@
 				E872A33A2564F2EE004CC22D /* ShareManager.m in Sources */,
 				E8B3376925665404007D6E33 /* UIWindow+rootVc.m in Sources */,
 				E86CC4B72511E524009B8DF8 /* AppDelegate.swift in Sources */,
+				E877B5BC256FA485008D5C6D /* Net.m in Sources */,
 				E8D081D32518C6BE00E133AC /* BaseTool.swift in Sources */,
 				E86A4EF3252067CE0035AC64 /* CoreData.swift in Sources */,
+				E877B5B8256FA2F9008D5C6D /* Reachability.m in Sources */,
 				E86CC4CB2511E52D009B8DF8 /* WKViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

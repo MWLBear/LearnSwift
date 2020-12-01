@@ -28,5 +28,7 @@
         <page name='Priority Queue'/>
         <page name='O(n2) Sorting Algorithms'/>
         <page name='Merge Sort'/>
+        <page name='Radix Sort'/>
+        <page name='Heap Sort'/>
     </pages>
 </playground>
