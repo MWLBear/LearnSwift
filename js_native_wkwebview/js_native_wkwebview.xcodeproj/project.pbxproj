@@ -28,6 +28,7 @@
 		E8B3376925665404007D6E33 /* UIWindow+rootVc.m in Sources */ = {isa = PBXBuildFile; fileRef = E8B3376825665404007D6E33 /* UIWindow+rootVc.m */; };
 		E8D081D32518C6BE00E133AC /* BaseTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D081D22518C6BE00E133AC /* BaseTool.swift */; };
 		E8D964E725371441008DE68D /* OCWKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D964E625371441008DE68D /* OCWKViewController.m */; };
+		E8EEDBBC2576606400548653 /* UIControl+KKClickInterval.m in Sources */ = {isa = PBXBuildFile; fileRef = E8EEDBBB2576606400548653 /* UIControl+KKClickInterval.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +69,8 @@
 		E8D964E625371441008DE68D /* OCWKViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCWKViewController.m; sourceTree = "<group>"; };
 		E8D964E8253722E7008DE68D /* NSObject+OCDynamic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+OCDynamic.h"; sourceTree = "<group>"; };
 		E8D964E9253722E7008DE68D /* NSObject+OCDynamic.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+OCDynamic.m"; sourceTree = "<group>"; };
+		E8EEDBBA2576606400548653 /* UIControl+KKClickInterval.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIControl+KKClickInterval.h"; sourceTree = "<group>"; };
+		E8EEDBBB2576606400548653 /* UIControl+KKClickInterval.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIControl+KKClickInterval.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +126,8 @@
 				E88364DD2539719800178B83 /* NSObject+Hookwk.m */,
 				E8D964E8253722E7008DE68D /* NSObject+OCDynamic.h */,
 				E8D964E9253722E7008DE68D /* NSObject+OCDynamic.m */,
+				E8EEDBBA2576606400548653 /* UIControl+KKClickInterval.h */,
+				E8EEDBBB2576606400548653 /* UIControl+KKClickInterval.m */,
 				E86CC4CC2511E57B009B8DF8 /* info.html */,
 				E86CC4D025122F64009B8DF8 /* info1.html */,
 				E8A53265252176A30089C1E2 /* rzwsy */,
@@ -234,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E872A3312564C022004CC22D /* NSObject+Hook.m in Sources */,
+				E8EEDBBC2576606400548653 /* UIControl+KKClickInterval.m in Sources */,
 				E8D964E725371441008DE68D /* OCWKViewController.m in Sources */,
 				E8AFDA17251310EC0022A10B /* OpenTool.m in Sources */,
 				E84866912519D8950026D61E /* Conversion.swift in Sources */,

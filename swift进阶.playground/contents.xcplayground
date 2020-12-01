@@ -30,5 +30,6 @@
         <page name='Merge Sort'/>
         <page name='Radix Sort'/>
         <page name='Heap Sort'/>
+        <page name='Quciksort'/>
     </pages>
 </playground>
