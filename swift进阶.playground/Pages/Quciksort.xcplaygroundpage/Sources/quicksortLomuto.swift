@@ -10,16 +10,16 @@
 
 public func partitionLomuto<T: Comparable>(_ a: inout [T],
                                            low: Int,
-                                           heigh: Int) -> Int {
-    let pivot = a[heigh]
+                                           high: Int) -> Int {
+    let pivot = a[high]
     var i = low
-    for j in low..<heigh {
+    for j in low..<high {
         if a[j] <= pivot {
             a.swapAt(i, j)
             i += 1
         }
     }
-    a.swapAt(i, heigh)//完成循环后，将i处的元素与枢轴交换。枢轴始终位于较小和较大的分区之间。
+    a.swapAt(i, high)//完成循环后，将i处的元素与枢轴交换。枢轴始终位于较小和较大的分区之间。
     return i
     
 }
@@ -28,7 +28,7 @@ public func quicksortLomuto<T:Comparable>(_ a: inout [T],
                                           low: Int,
                                           high: Int) {
     if low < high {
-        let pivot = partitionLomuto(&a, low: low, heigh: high)
+        let pivot = partitionLomuto(&a, low: low, high: high)
         quicksortLomuto(&a, low: low, high: pivot-1)
         quicksortLomuto(&a, low: pivot+1, high: high)
     }
