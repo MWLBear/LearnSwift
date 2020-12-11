@@ -10,7 +10,7 @@
 #import "AppDelegate.h"
 
 
-#define FileName @"HeroJump"
+#define FileName @"dykl"
 #define port 12324
 
 

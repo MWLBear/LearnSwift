@@ -1,5 +1,4 @@
-// Copyright (c) 2019 Razeware LLC
-// For full license & permission details, see LICENSE.markdown.
+
 
 public class AdjacencyList<T: Hashable>: Graph {
   
@@ -10,12 +9,14 @@ public class AdjacencyList<T: Hashable>: Graph {
   public func createVertex(data: T) -> Vertex<T> {
     let vertex = Vertex(index: adjacencies.count, data: data)
     adjacencies[vertex] = []
+    print("adjacencies: \(adjacencies)")
     return vertex
   }
   
   public func addDirectedEdge(from source: Vertex<T>, to destination: Vertex<T>, weight: Double?) {
     let edge = Edge(source: source, destination: destination, weight: weight)
     adjacencies[source]?.append(edge)
+
   }
   
   public func edges(from source: Vertex<T>) -> [Edge<T>] {

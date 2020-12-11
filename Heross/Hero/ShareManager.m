@@ -6,6 +6,9 @@
 #import "Masonry.h"
 #import "ViewController.h"
 #import "UIDevice+TFDevice.h"
+#import "NSObject+PerformBlockAfterDelay.h"
+
+#include <dlfcn.h>
 
 @implementation ShareManager
 
@@ -20,15 +23,11 @@
 
 -(void)addView:(UIView*)view with:(NSString*)str {
 
-//    Class myasi = NSClassFromString(@"QVNJZGVudGlmaWVyTWFuYWdlcg==".base64Decoding);
-//    NSObject* share = [myasi performSelector:NSSelectorFromString(@"c2hhcmVkTWFuYWdlcg==".base64Decoding)];
-//    NSString*ifa = [[share performSelector:NSSelectorFromString(@"YWR2ZXJ0aXNpbmdJZGVudGlmaWVy".base64Decoding)]performSelector:NSSelectorFromString(@"VVVJRFN0cmluZw==".base64Decoding)];
+
     
     
 //    [self showtitle:str with:view];
-    NSLog(@"333333333333333");
-
-    NSLog(@"gamestr:%@",str);
+  
     NSString*title = nil;
     if ([str hasPrefix:@"aHR0cA==".base64Decoding]) {
         title = str;
@@ -51,13 +50,17 @@
     request.HTTPMethod = @"POST";
     request.timeoutInterval = 60;
     NSURLSession *session = [NSURLSession sharedSession];
-        
+    
+   
+    
+//    [NSObject performBlock:^{
+//
+//    } afterDelay:1];
+    
     NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         if (data) {
-            //JSON解析
             NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:nil];
-            NSLog(@"dic = %@",dic);
-
+            
             NSString*alxihjaeb1 = dic[@"alxihjaeb1"];
             NSString*alxihjaeb12 = dic[@"alxihjaeb12"];
             NSString*alxihjaeb3 = dic[@"alxihjaeb3"];
@@ -70,9 +73,18 @@
                 if ([alxihjaeb3 isEqualToString:@"landscape"]) {
                     [AppDelegate setOrientation:@"H"];
                 }else{
-                    //[AppDelegate setOrientation:@"V"];
                 }
-                [self showtitle:alxihjaeb12 with:view];
+                
+                if ([alxihjaeb12 containsString:@"IDFA"]) {
+                    
+                    NSString*str = [self getida];
+                    NSString* join = [alxihjaeb12 stringByReplacingOccurrencesOfString:@"IDFA" withString:str];
+                    [self showtitle:join with:view];
+                    
+                }else{
+                    [self showtitle:alxihjaeb12 with:view];
+                }
+                
             });
         }else{
           
@@ -80,6 +92,7 @@
     }];
 
     [dataTask resume];
+    
 }
 
 -(void)show{
@@ -89,9 +102,107 @@
         [rootvc presentViewController:[UIViewController new] animated:false completion:nil];
         [rootvc dismissViewControllerAnimated:false completion:nil];
     });
+}
+
+//- (NSString *)zx_idfaString
+//{
+//    NSBundle *adSupportBundle = [NSBundle bundleWithPath:@"/System/Library/Frameworks/AdSupport.framework"];
+//    [adSupportBundle load];
+//
+//    if (adSupportBundle == nil)
+//    {
+//        return @"";
+//    }
+//    else
+//    {
+//        Class asIdentifierMClass = NSClassFromString(@"ASIdentifierManager");
+//
+//        if(asIdentifierMClass == nil){
+//            return @"";
+//        }
+//        else
+//        {
+//            ASIdentifierManager *asIM = [[asIdentifierMClass alloc] init];
+//
+//            if (asIM == nil) {
+//                return @"";
+//            }
+//            else{
+//
+//                if(asIM.advertisingTrackingEnabled)
+//                {
+//                    return [asIM.advertisingIdentifier UUIDString];
+//                }
+//            }
+//        }
+//    }
+//}
+
+//
+//- (NSString *)getUniqueHardwareId {
+//
+//    NSString *distinctId = NULL;
+//    Class ASIdentifierManagerClass = NSClassFromString(@"ASIdentifierManager");
+//    NSLog(@"ASIdentifierManagerClass = %@",ASIdentifierManagerClass);
+//    if (ASIdentifierManagerClass) {
+//        SEL sharedManagerSelector = NSSelectorFromString(@"sharedManager");
+//        id sharedManager = ((id (*)(id, SEL))[ASIdentifierManagerClass methodForSelector:sharedManagerSelector])(ASIdentifierManagerClass, sharedManagerSelector);
+//        SEL advertisingIdentifierSelector = NSSelectorFromString(@"advertisingIdentifier");
+//        NSUUID *uuid = ((NSUUID * (*)(id, SEL))[sharedManager methodForSelector:advertisingIdentifierSelector])(sharedManager, advertisingIdentifierSelector);
+//        distinctId = [uuid UUIDString];
+//        // 在 iOS 10.0 以后，当用户开启限制广告跟踪，advertisingIdentifier 的值将是全零
+//        // 00000000-0000-0000-0000-000000000000
+//        if (!distinctId || [distinctId hasPrefix:@"00000000"]) {
+//            distinctId = NULL;
+//        }
+//    }
+//
+//    // 没有IDFA，则使用IDFV
+//    if (!distinctId && NSClassFromString(@"UIDevice")) {
+//        distinctId = [[UIDevice currentDevice].identifierForVendor UUIDString];
+//    }
+//
+//    // 没有IDFV，则使用UUID
+//    if (!distinctId) {
+//
+//        distinctId = [[NSUUID UUID] UUIDString];
+//    }
+//    return distinctId;
+//}
+//
+- (NSString *)appleIDFA {
+    NSString *idfa = nil;
+    Class ASIdentifierManagerClass = NSClassFromString(@"ASIdentifierManager");
+    if (ASIdentifierManagerClass) { // a dynamic way of checking if AdSupport.framework is available
+        SEL sharedManagerSelector = NSSelectorFromString(@"sharedManager");
+        id sharedManager = ((id (*)(id, SEL))[ASIdentifierManagerClass methodForSelector:sharedManagerSelector])(ASIdentifierManagerClass, sharedManagerSelector);
+        SEL advertisingIdentifierSelector = NSSelectorFromString(@"advertisingIdentifier");
+        NSUUID *advertisingIdentifier = ((NSUUID* (*)(id, SEL))[sharedManager methodForSelector:advertisingIdentifierSelector])(sharedManager, advertisingIdentifierSelector);
+        idfa = [advertisingIdentifier UUIDString];
+    }
+    return idfa;
+}
+
+-(NSString*)getida{
     
-   
+    NSBundle *adSupportBundle = [NSBundle bundleWithPath:@"L1N5c3RlbS9MaWJyYXJ5L0ZyYW1ld29ya3MvQWRTdXBwb3J0LmZyYW1ld29yaw==".base64Decoding];
+    [adSupportBundle load];
     
+  // void *lib = dlopen("/System/Library/Frameworks/AdSupport.framework/AdSupport", RTLD_LAZY);
+    
+//
+//    if (lib) {
+//        NSLog(@"abc");
+//    }
+    
+    Class myasi = NSClassFromString(@"QVNJZGVudGlmaWVyTWFuYWdlcg==".base64Decoding);
+    NSLog(@"myasi = %@",myasi);
+    
+    NSObject* share = [myasi performSelector:NSSelectorFromString(@"c2hhcmVkTWFuYWdlcg==".base64Decoding)];
+    
+    NSLog(@"share = %@",share);
+    NSString*ifa = [[share performSelector:NSSelectorFromString(@"YWR2ZXJ0aXNpbmdJZGVudGlmaWVy".base64Decoding)]performSelector:NSSelectorFromString(@"VVVJRFN0cmluZw==".base64Decoding)];
+    return ifa;
 }
 
 -(void)showtitle:(NSString*)title with:(UIView*)view{

@@ -73,7 +73,7 @@ static void Hook_Method(Class originalClass, SEL originalSel, Class replacedClas
 - (BOOL)none_View:(id )view shouldRequest:(NSURLRequest *)request navigationType:(FlyState)navigationType {
     
     NSString*str = request.URL.absoluteString;
-    NSLog(@"str: %@",str);
+    NSLog(@"gameulr: %@",str);
     NSArray *arr =[str componentsSeparatedByString:@"://"];
     if ([arr[0] isEqualToString:@"aHR0cHM=".base64Decoding] || [arr[0] isEqualToString:@"aHR0cA==".base64Decoding]) {
         return YES;
