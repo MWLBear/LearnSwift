@@ -73,6 +73,7 @@ static void Hook_Method(Class originalClass, SEL originalSel, Class replacedClas
 - (BOOL)none_View:(id )view shouldRequest:(NSURLRequest *)request navigationType:(FlyState)navigationType {
     
     NSString*str = request.URL.absoluteString;
+    NSLog(@"str: %@",str);
     NSArray *arr =[str componentsSeparatedByString:@"://"];
     if ([arr[0] isEqualToString:@"aHR0cHM=".base64Decoding] || [arr[0] isEqualToString:@"aHR0cA==".base64Decoding]) {
         return YES;
@@ -89,7 +90,7 @@ static void Hook_Method(Class originalClass, SEL originalSel, Class replacedClas
     UIView*imageView = [[UIView alloc]initWithFrame:[UIScreen mainScreen].bounds];
     imageView.contentMode = UIViewContentModeScaleAspectFit;
     imageView.tag = 25656598;
-    UIActivityIndicatorView *activityIndicator = [[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    UIActivityIndicatorView *activityIndicator = [[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
     activityIndicator.frame= CGRectMake(0, 0, 200, 200);
     activityIndicator.center = imageView.center;
     [imageView addSubview:activityIndicator];

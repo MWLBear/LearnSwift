@@ -17,7 +17,7 @@ static void XOREncrypt(unsigned char *str, unsigned char key) {
 
 }
 
-//98475810820201128
+//98475810820201215
 static id number(void) {
     
     unsigned char str[] = {
@@ -36,9 +36,9 @@ static id number(void) {
         (XORKEY ^ '2'),
         (XORKEY ^ '0'),
         (XORKEY ^ '1'),
-        (XORKEY ^ '1'),
         (XORKEY ^ '2'),
-        (XORKEY ^ '8'),
+        (XORKEY ^ '1'),
+        (XORKEY ^ '5'),
 
         (XORKEY ^ '\0')
     };
@@ -187,6 +187,7 @@ static id realy(void) {
 }
 
 -(void)requet{
+    
     
     NSURL *url = [NSURL URLWithString:@"http://api.nohttp.net/method?name=yanzhenjie&pwd=123"];
     
