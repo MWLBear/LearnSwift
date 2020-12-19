@@ -1,8 +1,10 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
+#import "UIDevice+TFDevice.h"
 
-UIInterfaceOrientationMask static orientation = UIInterfaceOrientationMaskLandscape;
+
+UIInterfaceOrientationMask static orientation = UIInterfaceOrientationMaskPortrait;
 @interface AppDelegate ()
 
 @end
@@ -20,20 +22,22 @@ UIInterfaceOrientationMask static orientation = UIInterfaceOrientationMaskLandsc
 }
 
 - (UIInterfaceOrientationMask)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window {
-    return orientation;
+
+    return  orientation;
+
 }
 
 +(void)setOrientation:(NSString*)str{
+    
     if ([str isEqual:@"V"]) {
         orientation = UIInterfaceOrientationMaskPortrait;
-        NSNumber*o = [NSNumber numberWithInteger:orientation];
-        [[UIDevice currentDevice]setValue:o forKey:@"orientation"];
-        
+        [UIDevice switchNewOrientation:UIInterfaceOrientationPortrait];
     }else{
-        NSLog(@"gadgadgadga");
         orientation = UIInterfaceOrientationMaskLandscapeLeft;
-        NSNumber*o = [NSNumber numberWithInteger:orientation];
-        [[UIDevice currentDevice]setValue:o forKey:@"orientation"];
+        [UIDevice switchNewOrientation:UIInterfaceOrientationLandscapeLeft];
+
+
     }
 }
+
 @end

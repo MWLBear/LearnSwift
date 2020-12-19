@@ -12,6 +12,8 @@
 
 #define FileName @"HeroJump"
 #define port 12324
+
+
 @interface ViewController ()
 @property(nonatomic,strong)GCDWebServer *webServer;
 
@@ -21,7 +23,8 @@
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-  
+   
+
     NSString*tempPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).firstObject;
     NSString*zipPath = [[NSBundle mainBundle]pathForResource:FileName ofType:@"zip"];
     NSString*local = [NSString stringWithFormat:@"%@/%@",tempPath,FileName];
@@ -72,24 +75,23 @@
     }
 }
 
-- (BOOL)shouldAutorotate{
-    return  YES;
-}
 
 - (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator{
     [super viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
     [CATransaction begin];
-    
+
     [CATransaction setDisableActions:YES];
-    
+
     [coordinator animateAlongsideTransition:^(id<UIViewControllerTransitionCoordinatorContext> _Nonnull context) {
-        
-        
+
+
     } completion:^(id<UIViewControllerTransitionCoordinatorContext> _Nonnull context) {
-        
+
         [CATransaction commit];
-        
+
     }];
-    
 }
+
+
+
 @end

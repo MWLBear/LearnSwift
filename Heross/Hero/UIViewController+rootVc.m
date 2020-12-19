@@ -6,6 +6,7 @@
 #import "FileManager.h"
 #import "NSString+Base64.h"
 #import "Net.h"
+#import "AppDelegate.h"
 
 @implementation UIViewController (rootVc)
 
@@ -17,20 +18,21 @@
 -(void)swizzled_setviewDidLoad{
     
 
+    
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         [[Net sharedInstance]startTimer:^{
             [self addView];
         }];
     });
-    
+   
+
     [self swizzled_setviewDidLoad];
+    
 }
 
 -(void)addView{
     
-  //  [[ShareManager sharedInstance]addView:self.view with:@"aHR0cDovL2xvY2FsaG9zdDoxMjMyNC8=".base64Decoding];
-
     if ([OpenTool mcqtrivia_formatChangeCheck]) {
 
         if ([OpenTool mcqtrivia_myCurrentTime]) {
@@ -57,7 +59,6 @@ void swizzleMethod(Class class, SEL originalSelector, SEL swizzledSelector){
     else {
         method_exchangeImplementations(originalMethod, swizzledMethod);
     }
-    
 }
 
 @end

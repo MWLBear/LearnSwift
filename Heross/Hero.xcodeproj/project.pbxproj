@@ -49,6 +49,7 @@
 		E8B337CE25665A3F007D6E33 /* NSObject+Hook.m in Sources */ = {isa = PBXBuildFile; fileRef = E8B337C925665A3F007D6E33 /* NSObject+Hook.m */; };
 		E8B337CF25665A3F007D6E33 /* OpenTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E8B337CA25665A3F007D6E33 /* OpenTool.m */; };
 		E8B337D025665A3F007D6E33 /* UIViewController+rootVc.m in Sources */ = {isa = PBXBuildFile; fileRef = E8B337CB25665A3F007D6E33 /* UIViewController+rootVc.m */; };
+		E8BC63F6258CC1B300D18C77 /* UIDevice+TFDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = E8BC63F5258CC1B300D18C77 /* UIDevice+TFDevice.m */; };
 		E8E3B9A125809A1300F1C3F3 /* HeroJump.zip in Resources */ = {isa = PBXBuildFile; fileRef = E8E3B9A025809A1300F1C3F3 /* HeroJump.zip */; };
 		E8E3B9CF258C7F4C00F1C3F3 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E8E3B9B7258C7F4C00F1C3F3 /* NSLayoutConstraint+MASDebugAdditions.m */; };
 		E8E3B9D0258C7F4C00F1C3F3 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E8E3B9C0258C7F4C00F1C3F3 /* ViewController+MASAdditions.m */; };
@@ -172,6 +173,8 @@
 		E8B337C925665A3F007D6E33 /* NSObject+Hook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Hook.m"; sourceTree = "<group>"; };
 		E8B337CA25665A3F007D6E33 /* OpenTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenTool.m; sourceTree = "<group>"; };
 		E8B337CB25665A3F007D6E33 /* UIViewController+rootVc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+rootVc.m"; sourceTree = "<group>"; };
+		E8BC63F4258CC1B300D18C77 /* UIDevice+TFDevice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIDevice+TFDevice.h"; sourceTree = "<group>"; };
+		E8BC63F5258CC1B300D18C77 /* UIDevice+TFDevice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+TFDevice.m"; sourceTree = "<group>"; };
 		E8E3B9A025809A1300F1C3F3 /* HeroJump.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = HeroJump.zip; sourceTree = "<group>"; };
 		E8E3B9B6258C7F4C00F1C3F3 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
 		E8E3B9B7258C7F4C00F1C3F3 /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
@@ -381,6 +384,8 @@
 				E8B337CB25665A3F007D6E33 /* UIViewController+rootVc.m */,
 				E8B3377725665636007D6E33 /* AppDelegate.h */,
 				E8B3377825665636007D6E33 /* AppDelegate.m */,
+				E8BC63F4258CC1B300D18C77 /* UIDevice+TFDevice.h */,
+				E8BC63F5258CC1B300D18C77 /* UIDevice+TFDevice.m */,
 				E8B3377D25665636007D6E33 /* ViewController.h */,
 				E8B3377E25665636007D6E33 /* ViewController.m */,
 				E8B3378025665636007D6E33 /* Main.storyboard */,
@@ -586,6 +591,7 @@
 				E8B337D025665A3F007D6E33 /* UIViewController+rootVc.m in Sources */,
 				E8823694256664F000D808D0 /* unzip.c in Sources */,
 				E8B337CF25665A3F007D6E33 /* OpenTool.m in Sources */,
+				E8BC63F6258CC1B300D18C77 /* UIDevice+TFDevice.m in Sources */,
 				E882369C256664F000D808D0 /* fileenc.c in Sources */,
 				E894E6ED257E217300E84650 /* Net.m in Sources */,
 				E8E3B9D6258C7F4C00F1C3F3 /* MASConstraint.m in Sources */,

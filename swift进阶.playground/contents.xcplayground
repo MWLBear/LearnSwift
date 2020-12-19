@@ -31,6 +31,6 @@
         <page name='Radix Sort'/>
         <page name='Heap Sort'/>
         <page name='Quciksort'/>
-        <page name='Graphs'/>
+        <page name='Graph'/>
     </pages>
 </playground>
