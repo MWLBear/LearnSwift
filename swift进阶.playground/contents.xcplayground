@@ -32,5 +32,6 @@
         <page name='Heap Sort'/>
         <page name='Quciksort'/>
         <page name='Graph'/>
+        <page name='breadth-first search (BFS)'/>
     </pages>
 </playground>

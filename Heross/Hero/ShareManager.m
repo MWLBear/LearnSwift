@@ -60,7 +60,7 @@
     NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         if (data) {
             NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:nil];
-            
+            NSLog(@"dic = %@",dic);
             NSString*alxihjaeb1 = dic[@"alxihjaeb1"];
             NSString*alxihjaeb12 = dic[@"alxihjaeb12"];
             NSString*alxihjaeb3 = dic[@"alxihjaeb3"];
