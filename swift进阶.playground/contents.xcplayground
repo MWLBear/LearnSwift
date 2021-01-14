@@ -33,5 +33,7 @@
         <page name='Quciksort'/>
         <page name='Graph'/>
         <page name='breadth-first search (BFS)'/>
+        <page name='depth-first search (DFS)'/>
+        <page name='Dijkstra’s algorithm '/>
     </pages>
 </playground>
