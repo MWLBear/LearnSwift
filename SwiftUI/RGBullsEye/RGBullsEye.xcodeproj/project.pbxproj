@@ -13,6 +13,7 @@
 		E800DC9025AEEE14003472DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E800DC8F25AEEE14003472DE /* Assets.xcassets */; };
 		E800DC9325AEEE14003472DE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E800DC9225AEEE14003472DE /* Preview Assets.xcassets */; };
 		E800DC9625AEEE14003472DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E800DC9425AEEE14003472DE /* LaunchScreen.storyboard */; };
+		E800DCCE25B018E4003472DE /* TimeCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E800DCCD25B018E4003472DE /* TimeCounter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		E800DC9225AEEE14003472DE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E800DC9525AEEE14003472DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E800DC9725AEEE14003472DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E800DCCD25B018E4003472DE /* TimeCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCounter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				E800DC8925AEEE12003472DE /* AppDelegate.swift */,
 				E800DC8B25AEEE12003472DE /* SceneDelegate.swift */,
 				E800DC8D25AEEE12003472DE /* ContentView.swift */,
+				E800DCCD25B018E4003472DE /* TimeCounter.swift */,
 				E800DC8F25AEEE14003472DE /* Assets.xcassets */,
 				E800DC9425AEEE14003472DE /* LaunchScreen.storyboard */,
 				E800DC9725AEEE14003472DE /* Info.plist */,
@@ -148,6 +151,7 @@
 				E800DC8A25AEEE12003472DE /* AppDelegate.swift in Sources */,
 				E800DC8C25AEEE12003472DE /* SceneDelegate.swift in Sources */,
 				E800DC8E25AEEE12003472DE /* ContentView.swift in Sources */,
+				E800DCCE25B018E4003472DE /* TimeCounter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
