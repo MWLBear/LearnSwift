@@ -12,6 +12,8 @@ struct RegisterView: View {
     
     @EnvironmentObject var userManager: UserManger
     @ObservedObject var keyboardHandler: KeyboardFollower
+    @GestureState var dargAmount = CGSize.zero
+    
     
     init(keyboardHandler: KeyboardFollower) {
         self.keyboardHandler = keyboardHandler
@@ -42,10 +44,6 @@ struct RegisterView: View {
                 })
             }
             
-            
-            
-            
-            
             Button(action: self.registerUser){
                 HStack {
                     Image(systemName: "checkmark")
@@ -58,6 +56,14 @@ struct RegisterView: View {
             }
             .boardered()
             .disabled(!userManager.isUserNameValid())
+            
+            Image(systemName: "checkmark")
+                .offset(dargAmount) //移动视图
+                .gesture(
+                    DragGesture().updating($dargAmount, body: { (value, state,  transaction) in
+                        state = value.translation
+                    })
+                )
             
         })
         .padding(.bottom,keyboardHandler.keyboardHeight)
