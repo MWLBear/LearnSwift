@@ -88,7 +88,6 @@ class ChallengeViewMode: ObservableObject {
         }
     }
     
-    
     private func getRandomChallenge() -> ChallengeTest? {
         return getRandomChallenge(count: 1).first
     }
