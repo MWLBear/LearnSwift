@@ -1,9 +1,5 @@
 
-
-
- 
-
- Use @State for simple properties that belong to a single view. They should usually be marked private.
+ Use `@State` for simple properties that belong to a single view. They should usually be marked private.
  Use @ObservedObject for complex properties that might belong to several views. Any time you’re using a reference type you should be using @ObservedObject for it.
  Use @EnvironmentObject for properties that were created elsewhere in the app, such as shared data.
 
