@@ -35,9 +35,9 @@
  }
  ```
  ContentView使用 @ObservedObject来监视那些公告。如果没有@ObservedObject，则更改通知将被发送但被忽略
- 一.用@ObservedObject标记的任何类型都必须符合ObservableObject协议，这反过来意味着它必须是类而不是结构。
- 二.观察到的对象是专门为视图外部的数据设计的，这意味着它们可能在多个视图之间共享。 @ObservedObject属性包装器将自动确保密切监视该属性，以便重要的更改将重新使用该视图加载任何视图。
- 三.并不是观察对象中的所有属性都会导致视图刷新-您需要使用@Published或自定义公告来决定哪些属性应发送更改通知。为符合ObservableObject的类型提供默认的objectWillChange发布者，以便根据需要进行自定义声明。
+ - 一.用@ObservedObject标记的任何类型都必须符合ObservableObject协议，这反过来意味着它必须是类而不是结构。
+ - 二.观察到的对象是专门为视图外部的数据设计的，这意味着它们可能在多个视图之间共享。 @ObservedObject属性包装器将自动确保密切监视该属性，以便重要的更改将重新使用该视图加载任何视图。
+ - 三.并不是观察对象中的所有属性都会导致视图刷新-您需要使用@Published或自定义公告来决定哪些属性应发送更改通知。为符合ObservableObject的类型提供默认的objectWillChange发布者，以便根据需要进行自定义声明。
  
  
  ### @EnvironmentObject
