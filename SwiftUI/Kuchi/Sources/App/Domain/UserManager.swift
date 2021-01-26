@@ -17,13 +17,11 @@ final class UserManger: ObservableObject {
     @Published
     var settings: Settings = Settings()
     
-    var isRegister: Bool {
+    var isRegistered: Bool {
         return profile.name.isEmpty == false
     }
     
-    init() {
-        
-    }
+    init() {}
     
     init(name: String) {
         self.profile.name = name

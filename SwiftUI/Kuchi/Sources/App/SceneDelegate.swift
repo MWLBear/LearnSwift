@@ -15,9 +15,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             let window = UIWindow(windowScene: windowScene)
             let userManger = UserManger()
             userManger.load()
+            let challengesViewModel = ChallengeViewMode()
+
             window.rootViewController = UIHostingController(
-                rootView: RegisterView(keyboardHandler: KeyboardFollower())
+                rootView: StartView()
                     .environmentObject(userManger)
+                    .environmentObject(challengesViewModel)
             )
             self.window = window
             window.makeKeyAndVisible()

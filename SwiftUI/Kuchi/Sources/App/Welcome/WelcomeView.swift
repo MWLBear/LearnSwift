@@ -9,17 +9,39 @@
 import SwiftUI
 
 struct WelcomeView: View {
+    
+    
+    @EnvironmentObject var userMode: UserManger
+    @EnvironmentObject var chanllengMode: ChallengeViewMode
+    @State var showHome = false
+    
+    @ViewBuilder
     var body: some View {
         
-        ZStack {
-            WelcomeBackgroundImage()
-            WelcomeMessageView()
+        if showHome {
+            PracticeView(challgengTest: $chanllengMode.currnetChallenge, userName: $userMode.profile.name)
+        }else{
+            
+            VStack {
+                Text("Hi, \(userMode.profile.name)")
+                WelcomeMessageView()
+
+                Button(action: {
+                    self.showHome = true
+                }, label: {
+                    Image(systemName: "play")
+                    Text("Start")
+                })
+            }.background(WelcomeBackgroundImage())
         }
+        
+       
     }
 }
 
 struct WelcomeView_Previews: PreviewProvider {
     static var previews: some View {
         WelcomeView()
+            .environmentObject(UserManger())
     }
 }
