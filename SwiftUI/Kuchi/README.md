@@ -24,6 +24,7 @@
  
  ###  @ObservedObject
  SwiftUI为我们提供了@ObservedObject属性包装器，以便视图可以监视外部对象的状态，并在重要内容发生变化时得到通知。
+ ```
  class Order: ObservableObject {
      @Published var items = [String]()
  }
@@ -36,6 +37,7 @@
          // your code here
      }
  }
+ ```
  ContentView使用 @ObservedObject来监视那些公告。如果没有@ObservedObject，则更改通知将被发送但被忽略
  一.用@ObservedObject标记的任何类型都必须符合ObservableObject协议，这反过来意味着它必须是类而不是结构。
  二.观察到的对象是专门为视图外部的数据设计的，这意味着它们可能在多个视图之间共享。 @ObservedObject属性包装器将自动确保密切监视该属性，以便重要的更改将重新使用该视图加载任何视图。
@@ -85,5 +87,4 @@
  使用@ObservedObject那些可能属于多个视图的复杂性。每当使用引用类型时，都应该使用@ObservedObject它。
  使用@EnvironmentObject针对在该应用别处创建属性，例如共享数据。
  
- 
- */
+
