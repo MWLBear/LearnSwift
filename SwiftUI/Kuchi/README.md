@@ -9,7 +9,7 @@
  SwiftUI使用@State属性包装器允许我们修改结构体中的值，由于结构体是值类型，通常不允许这样做。 将@State放在属性之前，可以有效地将其存储从结构中移出，并移到SwiftUI管理的共享存储中。 这意味着SwiftUI可以在需要时销毁并重新创建我们的结构（这可能会发生很多！），而不会丢失其存储状态。
  @State应该与简单的结构类型（例如String和Int）一起使用，并且通常不应与其他视图共享。 如果要在视图之间共享值，则可能应该使用@ObservedObject或@EnvironmentObject-两者都将确保在数据更改时刷新所有视图。
  为了增强@State属性的本地性，Apple建议您将其标记为私有，
- @State private var usename = ""
+ ``` @State private var usename = "" ```
 
  
  
