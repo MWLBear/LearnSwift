@@ -80,6 +80,7 @@ struct CardView: View {
         .offset(self.offset)
         .gesture(longPress)
         .scaleEffect(isLongPressed ? 1.1 : 1)
+        
 //        .gesture(TapGesture()
 //                    .onEnded({
 //                        withAnimation(.easeIn) {
