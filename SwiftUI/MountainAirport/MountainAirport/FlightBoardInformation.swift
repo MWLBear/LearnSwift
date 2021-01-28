@@ -57,7 +57,6 @@ struct FlightBoardInformation: View {
                 }
             }
             
-           
             Button("On-Time History"){
                 self.showFlightHistory.toggle()
             }.popover(isPresented: $showFlightHistory, arrowEdge: .top,content: {

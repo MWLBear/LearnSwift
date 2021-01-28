@@ -10,16 +10,16 @@ import SwiftUI
 
 struct WelcomeView: View {
     
-    
-    @EnvironmentObject var userMode: UserManger
-    @EnvironmentObject var chanllengMode: ChallengeViewMode
+
     @State var showHome = false
-    
+    @EnvironmentObject var userMode: UserManger
+
     @ViewBuilder
     var body: some View {
         
         if showHome {
-            PracticeView(challgengTest: $chanllengMode.currnetChallenge, userName: $userMode.profile.name)
+           // PracticeView(challgengTest: $chanllengMode.currnetChallenge, userName: $userMode.profile.name)
+            HomeView()
         }else{
             
             VStack {
