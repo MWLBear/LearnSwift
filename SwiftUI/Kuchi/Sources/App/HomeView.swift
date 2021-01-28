@@ -17,7 +17,7 @@ struct HomeView: View {
     
     var body: some View {
         
-        TabView{
+        TabView(selection:$selectedTab){
             LearnView()
                 .tabItem {
                     VStack {

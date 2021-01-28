@@ -49,7 +49,11 @@ struct CardView: View {
         let longPress = LongPressGesture()
             .updating($isLongPressed) { (value, state, trsnsiton) in
                 state = value
-            }.simultaneously(with: drag)
+            }.onEnded({ (value) in
+                withAnimation(.easeIn) {
+                    self.revealed = !self.revealed
+                }
+            }).simultaneously(with: drag)
         
         
         
@@ -76,12 +80,12 @@ struct CardView: View {
         .offset(self.offset)
         .gesture(longPress)
         .scaleEffect(isLongPressed ? 1.1 : 1)
-        .gesture(TapGesture()
-                    .onEnded({
-                        withAnimation(.easeIn) {
-                            self.revealed = !self.revealed
-                        }
-                    }))
+//        .gesture(TapGesture()
+//                    .onEnded({
+//                        withAnimation(.easeIn) {
+//                            self.revealed = !self.revealed
+//                        }
+//                    }))
     }
 }
 
