@@ -26,7 +26,7 @@ struct HomeView: View {
                     }
                 }.tag(0)
 
-            
+        
             PracticeView(challgengTest: $chanllengMode.currnetChallenge, userName: $userMode.profile.name)
                 .tabItem {
                     VStack {

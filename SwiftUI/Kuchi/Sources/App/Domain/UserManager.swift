@@ -58,7 +58,7 @@ final class UserManger: ObservableObject {
         UserDefaults.standard.removeObject(forKey: "user-profile")
     }
     
-    func isUserNameValid() -> Bool {
-        return profile.name.count >= 3
+    func isUserNameValid(_ name: String) -> Bool {
+        return name.count >= 3
     }
 }

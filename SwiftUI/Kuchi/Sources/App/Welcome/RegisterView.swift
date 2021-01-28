@@ -12,7 +12,7 @@ struct RegisterView: View {
     
     @EnvironmentObject var userManager: UserManger
     @ObservedObject var keyboardHandler: KeyboardFollower
-    @GestureState var dargAmount = CGSize.zero
+    @State var name: String = ""
     
     
     init(keyboardHandler: KeyboardFollower) {
@@ -22,14 +22,14 @@ struct RegisterView: View {
     var body: some View {
         VStack (content: {
             WelcomeMessageView()
-            TextField("Type your name...",text: $userManager.profile.name).boardered()
+            TextField("Type your name...",text: $name).boardered()
             
             HStack {
                 Spacer()
-                Text("\(userManager.profile.name.count)")
+                Text("\(name.count)")
                     .font(.caption)
                     .foregroundColor(
-                        userManager.isUserNameValid() ? .green : .red)
+                        userManager.isUserNameValid(name) ? .green : .red)
                     .padding(.trailing)
             }
             .padding(.bottom)
@@ -55,15 +55,15 @@ struct RegisterView: View {
                 }
             }
             .boardered()
-            .disabled(!userManager.isUserNameValid())
+            .disabled(!userManager.isUserNameValid(name))
             
-            Image(systemName: "checkmark")
-                .offset(dargAmount) //移动视图
-                .gesture(
-                    DragGesture().updating($dargAmount, body: { (value, state,  transaction) in
-                        state = value.translation
-                    })
-                )
+//            Image(systemName: "checkmark")
+//                .offset(dargAmount) //移动视图
+//                .gesture(
+//                    DragGesture().updating($dargAmount, body: { (value, state,  transaction) in
+//                        state = value.translation
+//                    })
+//                )
             
         })
         .padding(.bottom,keyboardHandler.keyboardHeight)
@@ -76,7 +76,8 @@ struct RegisterView: View {
 
 extension RegisterView {
     func registerUser() {
-        
+    
+        userManager.profile.name = name
         if userManager.settings.remenberUser {
             userManager.persistProfile()
         }else {
