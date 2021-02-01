@@ -41,10 +41,7 @@ func appReducer(state: inout AppState,
         print("search(query: \(query)")
         return environment.service.searchPuhlisher(matching: query)
             .replaceError(with: [])
-            .map{
-                print("map-------")
-                return AppAction.setSearchReslut(repos: $0)
-               }
+            .map{ AppAction.setSearchReslut(repos: $0) }
             .eraseToAnyPublisher()
     }
     return Empty().eraseToAnyPublisher()

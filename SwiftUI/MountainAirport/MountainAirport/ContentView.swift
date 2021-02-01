@@ -37,6 +37,11 @@ struct ContentView: View {
             label: {
                 Text("Departures")
             })
+          NavigationLink(
+            destination: AirportAwards(),
+            label: {
+              Text("Awards")
+            })
           Spacer()
           
         }).font(.title).padding(20)

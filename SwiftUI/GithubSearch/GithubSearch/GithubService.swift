@@ -23,7 +23,6 @@ struct Repo: Decodable, Identifiable {
     }
 }
 
-
 struct SearchResponse: Decodable {
     let items: [Repo]
 }
