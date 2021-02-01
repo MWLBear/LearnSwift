@@ -20,7 +20,8 @@ struct FlightRow: View {
             }.sheet(isPresented: $isPresented, onDismiss: {
                 print("Modal dismissed. State Now: \(self.isPresented)")
             }, content: {
-                FlightBoardInformation(flight: self.flight,showModal: $isPresented)
+//                FlightBoardInformation(flight: self.flight,showModal: $isPresented)
+                FlightBoardInformation1(flight: self.flight, dismissFlag: $isPresented)
             })
         }
     }

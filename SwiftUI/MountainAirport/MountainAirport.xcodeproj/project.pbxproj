@@ -23,6 +23,8 @@
 		E835662F25C4370100761B6A /* AirportMealAward.swift in Sources */ = {isa = PBXBuildFile; fileRef = E835662E25C4370100761B6A /* AirportMealAward.swift */; };
 		E85018D325C10E8F00C1EEBE /* FlightRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85018D225C10E8F00C1EEBE /* FlightRow.swift */; };
 		E85018D625C10FCC00C1EEBE /* FlightBoardInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85018D525C10FCC00C1EEBE /* FlightBoardInformation.swift */; };
+		E8CA064025C7EA9500670983 /* FlightBoardInformation1.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CA063F25C7EA9500670983 /* FlightBoardInformation1.swift */; };
+		E8CA064325C7EC4D00670983 /* FlightDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CA064225C7EC4D00670983 /* FlightDetails.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +47,8 @@
 		E835662E25C4370100761B6A /* AirportMealAward.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportMealAward.swift; sourceTree = "<group>"; };
 		E85018D225C10E8F00C1EEBE /* FlightRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightRow.swift; sourceTree = "<group>"; };
 		E85018D525C10FCC00C1EEBE /* FlightBoardInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightBoardInformation.swift; sourceTree = "<group>"; };
+		E8CA063F25C7EA9500670983 /* FlightBoardInformation1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightBoardInformation1.swift; sourceTree = "<group>"; };
+		E8CA064225C7EC4D00670983 /* FlightDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightDetails.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,8 @@
 				E6C531522327123600BA40DF /* FlightBoard.swift */,
 				E85018D225C10E8F00C1EEBE /* FlightRow.swift */,
 				E85018D525C10FCC00C1EEBE /* FlightBoardInformation.swift */,
+				E8CA063F25C7EA9500670983 /* FlightBoardInformation1.swift */,
+				E8CA064225C7EC4D00670983 /* FlightDetails.swift */,
 				E835662325C409A500761B6A /* AirportAwards.swift */,
 				E835662625C40A3D00761B6A /* FirstVisitAward.swift */,
 				E835662A25C410B400761B6A /* OverNightParkAward.swift */,
@@ -187,9 +193,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E85018D325C10E8F00C1EEBE /* FlightRow.swift in Sources */,
+				E8CA064025C7EA9500670983 /* FlightBoardInformation1.swift in Sources */,
 				E835662F25C4370100761B6A /* AirportMealAward.swift in Sources */,
 				A9CF015F22FA4BF9009B3CC0 /* FlightHistory.swift in Sources */,
 				18D775C122AD944300AE281E /* AppDelegate.swift in Sources */,
+				E8CA064325C7EC4D00670983 /* FlightDetails.swift in Sources */,
 				18D775C322AD944300AE281E /* SceneDelegate.swift in Sources */,
 				E85018D625C10FCC00C1EEBE /* FlightBoardInformation.swift in Sources */,
 				E835662B25C410B400761B6A /* OverNightParkAward.swift in Sources */,
