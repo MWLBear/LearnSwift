@@ -7,7 +7,7 @@ extension AnyTransition {
 //        AnyTransition.slide
         let insertion = AnyTransition.move(edge: .trailing)
             .combined(with: .opacity)
-        let removal = AnyTransition.scale(scale: 1.0)
+        let removal = AnyTransition.scale(scale: 0)
             .combined(with: .opacity)
         
         return .asymmetric(insertion: insertion, removal: removal)
@@ -42,9 +42,9 @@ struct FlightBoardInformation1: View {
                 }
             }){
                 HStack {
-                    
                     Text(showDetails ? "Hide Details" : "Show Details")
                     Spacer()
+                    
                     Image(systemName: "chevron.up.square")
                         .scaleEffect(showDetails ? 2 : 1)
                        // .animation(.spring())

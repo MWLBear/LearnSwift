@@ -8,8 +8,13 @@ struct FlightDetails: View {
         VStack(alignment:.leading) {
             Text("\(flight.direction == .arrival ? "Arriving ar" : "Departing from") Gate: \(flight.gate)")
             Text("Scheduled; \(flight.scheduledTimeString)")
-            Text("Current; \(flight.currentTimeString)")
+            Text("Current: \(flight.currentTimeString)")
+            Text("Terminal Map").font(.title)
             Image(flight.gate.starts(with: "A") ? "terminal-a-map" : "terminal-b-map")
+            
+            ForEach(flight.history[0...5],id: \.day){ h in
+                Text("On \(h.shortDate) flight was \(h.status.rawValue)")
+            }
         }
     }
 }

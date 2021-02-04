@@ -37,6 +37,12 @@ struct ContentView: View {
             label: {
                 Text("Departures")
             })
+          
+          NavigationLink(
+            destination: FlightTimeline(flights: self.flightInfo),
+            label: {
+              Text("Flight TimeLine")
+            })
           NavigationLink(
             destination: AirportAwards(),
             label: {
