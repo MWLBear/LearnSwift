@@ -50,9 +50,9 @@ struct GridView<Content,T>: View where Content: View{
 
 struct GridView_Previews: PreviewProvider {
     static var previews: some View {
-        GridView(colums: 3, items:[11, 3, 7, 17, 5, 2,1]){girlwth,item in
+        GridView(colums: 3, items:[11, 3, 7, 17, 5, 2,1]){gridWidth,item in
             Text("\(item)")
-                .frame(width: girlwth, height: girlwth)
+                .frame(width: gridWidth, height: gridWidth)
         }
     }
 }

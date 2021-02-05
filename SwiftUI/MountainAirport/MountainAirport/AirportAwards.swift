@@ -60,11 +60,11 @@ struct AirportAwards: View {
         VStack{
             Text("Your Awards (\(activeAwards.count))")
                 .font(.title)
-            GridView(colums: 2, items: activeAwards) {girwith ,item in
+            GridView(colums: 2, items: activeAwards) {gridwith ,item in
                 VStack {
                     item.awardView
                     Text(item.title)
-                }.frame(width: girwith, height: girwith)
+                }.frame(width: gridwith, height: gridwith)
             }
         }
     }
