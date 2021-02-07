@@ -108,3 +108,4 @@ example(of: "scan") {
     .store(in: &subscriptions)
     
 }
+
