@@ -1,6 +1,10 @@
 import UIKit
 import Combine
 
+struct MyType:Decodable {
+    
+}
+
 class MainViewController: UIViewController {
     
     private var subscriptions = Set<AnyCancellable>()
@@ -27,7 +31,7 @@ class MainViewController: UIViewController {
         let collageSize = imagePreview.frame.size
         
         images.handleEvents( receiveOutput: { (photo) in
-           // self.updateUI(photos: photo)
+            self.updateUI(photos: photo)
         })
         .map{ photo in
             UIImage.collage(images: photo, size: collageSize)
@@ -35,7 +39,69 @@ class MainViewController: UIViewController {
         .assign(to: \.image, on: imagePreview)
         .store(in: &subscriptions)
         
+        
+        
     }
+    
+    func url() {
+        guard let url = URL(string: "") else {
+            return
+        }
+        
+        let subscription = URLSession.shared.dataTaskPublisher(for: url)
+            .sink(receiveCompletion: { completion in
+                
+                if case .failure(let error) = completion{
+                    print("Retrieving data failed with error \(error)")
+                }
+            }) { (data ,response) in
+                print("Retrieved data of size")
+            }
+        
+        let subscription1 = URLSession.shared.dataTaskPublisher(for: url)
+            .map(\.data)
+            .decode(type: MyType.self, decoder: JSONDecoder())
+            .sink(receiveCompletion: { completion in if case .failure(let err) = completion {
+                  print("Retrieving data failed with error \(err)")
+                }
+              }, receiveValue: { object in
+                print("Retrieved object \(object)")
+            })
+        
+    }
+    
+    
+    func requestshare() {
+        let url = URL(string: "https://www.raywenderlich.com")!;
+        let publisher = URLSession.shared
+            .dataTaskPublisher(for: url)
+            .map(\.data)
+            .multicast { PassthroughSubject<Data ,URLError>() }
+        
+        // 2
+        let subscription1 = publisher .sink(receiveCompletion: { completion in
+        if case .failure(let err) = completion {
+              print("Sink1 Retrieving data failed with error \(err)")
+            }
+          }, receiveValue: { object in
+            print("Sink1 Retrieved object \(object)")
+        })
+        // 3
+        let subscription2 = publisher .sink(receiveCompletion: { completion in
+        if case .failure(let err) = completion {
+              print("Sink2 Retrieving data failed with error \(err)")
+            }
+          }, receiveValue: { object in
+            print("Sink2 Retrieved object \(object)")
+        })
+        
+        let subscription = publisher.connect();
+        //使用此代码，您可以一次发送请求，并将结果共享给两个订户。
+        
+    }
+    
+    
+    
     
     private func updateUI(photos: [UIImage]) {
         buttonSave.isEnabled = photos.count > 0 && photos.count % 2 == 0
@@ -102,7 +168,6 @@ class MainViewController: UIViewController {
             .store(in: &subscriptions)
         
             
-        
         newPhotos.map{ [unowned self] newImage in
             return self.images.value + [newImage]
         }.subscribe(images)
@@ -116,9 +181,6 @@ class MainViewController: UIViewController {
             } receiveValue: { _ in }
             .store(in: &subscriptions)
 
-  
-            
-        
         navigationController!.pushViewController(photos, animated: true)
         
     }

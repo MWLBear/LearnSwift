@@ -21,6 +21,7 @@ class PhotosViewController: UICollectionViewController {
     
     private lazy var thumbnailSize: CGSize = {
         let cellSize = (self.collectionViewLayout as! UICollectionViewFlowLayout).itemSize
+        print(cellSize)
         return CGSize(width: cellSize.width * UIScreen.main.scale,
                       height: cellSize.height * UIScreen.main.scale)
     }()
