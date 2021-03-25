@@ -90,8 +90,6 @@ struct API {
 }
 
 
-
-
 let api = API()
 var subscriptions = [AnyCancellable]()
 api.stories()
@@ -111,7 +109,12 @@ api.stories()
 //    .store(in: &subscriptions)
 
 
+struct  AppStore {
+    var name: String
+}
 
+let app = AppStore(name: "my name is lz")
+print(app[keyPath: \.name])
 
 
 // Run indefinitely.
