@@ -9,7 +9,6 @@ import SwiftUI
 import Combine
 
 
-
 struct ResultRow: View {
     let reslut:Story
     
