@@ -7,7 +7,7 @@
 
 import Foundation
 
-class ChecklistItem {
+class ChecklistItem:NSObject,Codable {
     var text:String!
     var checked:Bool!
     
