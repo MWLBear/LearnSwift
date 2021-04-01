@@ -62,11 +62,11 @@
 		E834C65826142AB400F9D61E /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				E834C65C261449B000F9D61E /* IconPickerViewController.swift */,
 				E87A6F8326118146006B537A /* CheckListViewController.swift */,
 				E834C1B62612BCF700F9D61E /* AllListsViewController.swift */,
 				E87A6F992611B88C006B537A /* ItemDetailViewController.swift */,
 				E834C1BD2612CB9200F9D61E /* ListDetailViewController.swift */,
-				E834C65C261449B000F9D61E /* IconPickerViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";

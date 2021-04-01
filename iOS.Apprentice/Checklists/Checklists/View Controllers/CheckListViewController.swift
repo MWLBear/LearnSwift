@@ -41,9 +41,6 @@ class CheckListViewController: UITableViewController,itemDetailViewControllerrDe
     
     var checklist: Checklist!
     
-   // var checkList: [ChecklistItem] = []
-
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = checklist.name

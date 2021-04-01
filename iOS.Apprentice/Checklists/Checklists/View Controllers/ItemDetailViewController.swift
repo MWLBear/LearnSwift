@@ -77,7 +77,6 @@ class ItemDetailViewController: UITableViewController ,UITextFieldDelegate{
             delegate?.itemDetailViewControllerr(self, didFinishAdding: item)
         }
        
-        
     }
  
     @IBAction func shouldRemindToggled(_ sender: UISwitch) {
