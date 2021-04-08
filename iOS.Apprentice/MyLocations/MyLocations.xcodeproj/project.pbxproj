@@ -8,19 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		E834C6702615741100F9D61E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E834C66F2615741100F9D61E /* AppDelegate.swift */; };
-		E834C6722615741100F9D61E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E834C6712615741100F9D61E /* SceneDelegate.swift */; };
 		E834C6742615741100F9D61E /* CurrentLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E834C6732615741100F9D61E /* CurrentLocationViewController.swift */; };
 		E834C6772615741100F9D61E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E834C6752615741100F9D61E /* Main.storyboard */; };
 		E834C6792615741300F9D61E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E834C6782615741300F9D61E /* Assets.xcassets */; };
 		E834C67C2615741300F9D61E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E834C67A2615741300F9D61E /* LaunchScreen.storyboard */; };
 		E834C6A42616B0EE00F9D61E /* LocationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E834C6A32616B0EE00F9D61E /* LocationDetailsViewController.swift */; };
 		E834C6A92616C50C00F9D61E /* CategoryPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E834C6A82616C50C00F9D61E /* CategoryPickerViewController.swift */; };
+		E834C6B82616EC2000F9D61E /* HudView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E834C6B72616EC2000F9D61E /* HudView.swift */; };
+		E834C6BB2616F61300F9D61E /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E834C6BA2616F61300F9D61E /* Functions.swift */; };
+		E87F51D7261D4BE5007392E6 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E87F51D5261D4BE5007392E6 /* DataModel.xcdatamodeld */; };
+		E87F51DB261D4FD4007392E6 /* Location+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87F51D9261D4FD4007392E6 /* Location+CoreDataClass.swift */; };
+		E87F51DC261D4FD4007392E6 /* Location+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87F51DA261D4FD4007392E6 /* Location+CoreDataProperties.swift */; };
+		E87F51E5261D8067007392E6 /* LocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87F51E4261D8067007392E6 /* LocationsViewController.swift */; };
+		E87F51E9261D8790007392E6 /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87F51E8261D8790007392E6 /* LocationCell.swift */; };
+		E87F51EC261D9EB8007392E6 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87F51EB261D9EB8007392E6 /* MapViewController.swift */; };
+		E87F51F3261F14F6007392E6 /* UIImage+Resiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87F51F2261F14F6007392E6 /* UIImage+Resiz.swift */; };
+		E87F51F8261F29C6007392E6 /* String+AddText.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87F51F7261F29C6007392E6 /* String+AddText.swift */; };
+		E87F51FB261F2E94007392E6 /* Sound.caf in Resources */ = {isa = PBXBuildFile; fileRef = E87F51FA261F2E94007392E6 /* Sound.caf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E834C66C2615741100F9D61E /* MyLocations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyLocations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E834C66F2615741100F9D61E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E834C6712615741100F9D61E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E834C6732615741100F9D61E /* CurrentLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentLocationViewController.swift; sourceTree = "<group>"; };
 		E834C6762615741100F9D61E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E834C6782615741300F9D61E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -28,6 +37,17 @@
 		E834C67D2615741300F9D61E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E834C6A32616B0EE00F9D61E /* LocationDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailsViewController.swift; sourceTree = "<group>"; };
 		E834C6A82616C50C00F9D61E /* CategoryPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryPickerViewController.swift; sourceTree = "<group>"; };
+		E834C6B72616EC2000F9D61E /* HudView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HudView.swift; sourceTree = "<group>"; };
+		E834C6BA2616F61300F9D61E /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
+		E87F51D6261D4BE5007392E6 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		E87F51D9261D4FD4007392E6 /* Location+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Location+CoreDataClass.swift"; sourceTree = "<group>"; };
+		E87F51DA261D4FD4007392E6 /* Location+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Location+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		E87F51E4261D8067007392E6 /* LocationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewController.swift; sourceTree = "<group>"; };
+		E87F51E8261D8790007392E6 /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
+		E87F51EB261D9EB8007392E6 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		E87F51F2261F14F6007392E6 /* UIImage+Resiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Resiz.swift"; sourceTree = "<group>"; };
+		E87F51F7261F29C6007392E6 /* String+AddText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+AddText.swift"; sourceTree = "<group>"; };
+		E87F51FA261F2E94007392E6 /* Sound.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Sound.caf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,11 +81,21 @@
 			isa = PBXGroup;
 			children = (
 				E834C66F2615741100F9D61E /* AppDelegate.swift */,
-				E834C6712615741100F9D61E /* SceneDelegate.swift */,
 				E834C6732615741100F9D61E /* CurrentLocationViewController.swift */,
 				E834C6A32616B0EE00F9D61E /* LocationDetailsViewController.swift */,
+				E87F51FA261F2E94007392E6 /* Sound.caf */,
 				E834C6A82616C50C00F9D61E /* CategoryPickerViewController.swift */,
+				E834C6B72616EC2000F9D61E /* HudView.swift */,
+				E834C6BA2616F61300F9D61E /* Functions.swift */,
+				E87F51D5261D4BE5007392E6 /* DataModel.xcdatamodeld */,
+				E87F51D9261D4FD4007392E6 /* Location+CoreDataClass.swift */,
+				E87F51DA261D4FD4007392E6 /* Location+CoreDataProperties.swift */,
+				E87F51E4261D8067007392E6 /* LocationsViewController.swift */,
+				E87F51EB261D9EB8007392E6 /* MapViewController.swift */,
+				E87F51E8261D8790007392E6 /* LocationCell.swift */,
 				E834C6752615741100F9D61E /* Main.storyboard */,
+				E87F51F2261F14F6007392E6 /* UIImage+Resiz.swift */,
+				E87F51F7261F29C6007392E6 /* String+AddText.swift */,
 				E834C6782615741300F9D61E /* Assets.xcassets */,
 				E834C67A2615741300F9D61E /* LaunchScreen.storyboard */,
 				E834C67D2615741300F9D61E /* Info.plist */,
@@ -132,6 +162,7 @@
 			files = (
 				E834C67C2615741300F9D61E /* LaunchScreen.storyboard in Resources */,
 				E834C6792615741300F9D61E /* Assets.xcassets in Resources */,
+				E87F51FB261F2E94007392E6 /* Sound.caf in Resources */,
 				E834C6772615741100F9D61E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -144,10 +175,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				E834C6A42616B0EE00F9D61E /* LocationDetailsViewController.swift in Sources */,
+				E87F51E5261D8067007392E6 /* LocationsViewController.swift in Sources */,
+				E87F51D7261D4BE5007392E6 /* DataModel.xcdatamodeld in Sources */,
 				E834C6742615741100F9D61E /* CurrentLocationViewController.swift in Sources */,
+				E834C6B82616EC2000F9D61E /* HudView.swift in Sources */,
+				E87F51DC261D4FD4007392E6 /* Location+CoreDataProperties.swift in Sources */,
+				E87F51E9261D8790007392E6 /* LocationCell.swift in Sources */,
+				E87F51EC261D9EB8007392E6 /* MapViewController.swift in Sources */,
+				E834C6BB2616F61300F9D61E /* Functions.swift in Sources */,
+				E87F51F8261F29C6007392E6 /* String+AddText.swift in Sources */,
 				E834C6702615741100F9D61E /* AppDelegate.swift in Sources */,
+				E87F51DB261D4FD4007392E6 /* Location+CoreDataClass.swift in Sources */,
 				E834C6A92616C50C00F9D61E /* CategoryPickerViewController.swift in Sources */,
-				E834C6722615741100F9D61E /* SceneDelegate.swift in Sources */,
+				E87F51F3261F14F6007392E6 /* UIImage+Resiz.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,6 +391,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E87F51D5261D4BE5007392E6 /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E87F51D6261D4BE5007392E6 /* DataModel.xcdatamodel */,
+			);
+			currentVersion = E87F51D6261D4BE5007392E6 /* DataModel.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = E834C6642615741100F9D61E /* Project object */;
 }

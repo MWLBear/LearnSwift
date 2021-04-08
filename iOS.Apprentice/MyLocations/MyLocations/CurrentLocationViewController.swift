@@ -7,7 +7,7 @@
 
 import UIKit
 import CoreLocation
-
+import CoreData
 
 class CurrentLocationViewController: UIViewController ,CLLocationManagerDelegate{
     @IBOutlet weak var messageLabel: UILabel!
@@ -27,6 +27,7 @@ class CurrentLocationViewController: UIViewController ,CLLocationManagerDelegate
     var performingReverseGeocoding = false
     var lastGeocodingError: Error?
     var timer: Timer?
+    var managedObjectContext: NSManagedObjectContext!
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -136,7 +137,7 @@ class CurrentLocationViewController: UIViewController ,CLLocationManagerDelegate
     }
     
     // MARK:- Helper Methods
-
+    
     func showLocationServicesDeniedAlert() {
         let alert = UIAlertController(title: "Location Services Disabled", message: "Please enable location services for this app in Settings.", preferredStyle: .alert)
         let okaction = UIAlertAction(title: "OK", style: .default, handler: nil)
@@ -203,7 +204,7 @@ class CurrentLocationViewController: UIViewController ,CLLocationManagerDelegate
             updateesLabels()
         }
     }
-   
+    
     func stopLocationManager() {
         if updatingLocation {
             locationManager.stopUpdatingLocation()
@@ -225,24 +226,17 @@ class CurrentLocationViewController: UIViewController ,CLLocationManagerDelegate
     }
     
     func string(from placemark: CLPlacemark) -> String {
-      var line1 = ""
-      if let s = placemark.subThoroughfare {
-        line1 += s + " "
-      }
-      if let s = placemark.thoroughfare {
-        line1 += s
-      }
-      var line2 = ""
-      if let s = placemark.locality {
-        line2 += s + " "
-      }
-      if let s = placemark.administrativeArea {
-        line2 += s + " "
-      }
-      if let s = placemark.postalCode {
-        line2 += s
-      }
-      return line1 + "\n" + line2
+        var line1 = ""
+        line1.add(text: placemark.subThoroughfare)
+        line1.add(text: placemark.thoroughfare)
+        
+        var line2 = ""
+        line2.add(text: placemark.locality)
+        line2.add(text: placemark.administrativeArea,separatedBy: " ")
+        line2.add(text: placemark.postalCode, separatedBy: " ")
+        
+        line1.add(text: line2, separatedBy: "\n")
+        return line1
     }
     // MARK:- Navigation
     
@@ -251,7 +245,7 @@ class CurrentLocationViewController: UIViewController ,CLLocationManagerDelegate
             let controller = segue.destination as! LocationDetailsViewController
             controller.placemark = placemark
             controller.coordinate = location!.coordinate
-            
+            controller.managedObjectContext = managedObjectContext
         }
     }
 }
