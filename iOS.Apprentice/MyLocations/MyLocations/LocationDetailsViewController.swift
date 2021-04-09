@@ -48,11 +48,8 @@ class LocationDetailsViewController: UITableViewController {
     }
     var observer: Any?
     
-    
     // MARK:- Actions
     @IBAction func done() {
-        
-    
         let hudView = HudView.hud(inView: navigationController!.view, animated: true)
         let location: Location
         if let temp = locationToEdit {
@@ -85,8 +82,6 @@ class LocationDetailsViewController: UITableViewController {
             }
         }
         
-    
-        
         do {
             try managedObjectContext.save()
             afterDelay(0.6) {
@@ -96,11 +91,6 @@ class LocationDetailsViewController: UITableViewController {
         }catch {
             fatalCoreDataError(error)
         }
-        
-    
-        
-        
-        
     }
     @IBAction func cancel() {
         navigationController?.popViewController(animated: true)
@@ -222,6 +212,13 @@ class LocationDetailsViewController: UITableViewController {
             pickPhoto()
         }
     }
+    
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell,
+                            forRowAt indexPath: IndexPath) {
+        let selection = UIView(frame: CGRect.zero)
+        selection.backgroundColor = UIColor(white: 1.0, alpha: 0.3)
+        cell.selectedBackgroundView = selection
+    }
 }
 
 extension LocationDetailsViewController: UIImagePickerControllerDelegate,UINavigationControllerDelegate {
@@ -255,7 +252,8 @@ extension LocationDetailsViewController: UIImagePickerControllerDelegate,UINavig
     
     
     func takePhotoWithCamera() {
-        let imagePikcer = UIImagePickerController()
+        let imagePikcer = MyImagePickerController()
+        imagePikcer.view.tintColor = view.tintColor
         imagePikcer.sourceType = .camera
         imagePikcer.delegate = self
         imagePikcer.allowsEditing = true
@@ -263,7 +261,8 @@ extension LocationDetailsViewController: UIImagePickerControllerDelegate,UINavig
     }
     
     func choosePhotoFromLibrary() {
-        let imagePicker = UIImagePickerController()
+        let imagePicker = MyImagePickerController()
+        imagePicker.view.tintColor = view.tintColor
         imagePicker.sourceType = .photoLibrary
         imagePicker.delegate = self
         imagePicker.allowsEditing = true
