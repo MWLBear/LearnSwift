@@ -65,6 +65,63 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E81E91D726205817000C1964 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E834C6A32616B0EE00F9D61E /* LocationDetailsViewController.swift */,
+				E834C6732615741100F9D61E /* CurrentLocationViewController.swift */,
+				E834C6A82616C50C00F9D61E /* CategoryPickerViewController.swift */,
+				E87F51E4261D8067007392E6 /* LocationsViewController.swift */,
+				E87F51EB261D9EB8007392E6 /* MapViewController.swift */,
+				E81E91CD26200988000C1964 /* MyTabBarController.swift */,
+				E81E91D026200A8E000C1964 /* MyImagePickerController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		E81E91D82620583C000C1964 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				E87F51E8261D8790007392E6 /* LocationCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		E81E91D926205848000C1964 /* Untils */ = {
+			isa = PBXGroup;
+			children = (
+				E834C6B72616EC2000F9D61E /* HudView.swift */,
+				E834C6BA2616F61300F9D61E /* Functions.swift */,
+			);
+			path = Untils;
+			sourceTree = "<group>";
+		};
+		E81E91DA26205850000C1964 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				E87F51D9261D4FD4007392E6 /* Location+CoreDataClass.swift */,
+				E87F51DA261D4FD4007392E6 /* Location+CoreDataProperties.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		E81E91DB26205866000C1964 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				E87F51F2261F14F6007392E6 /* UIImage+Resiz.swift */,
+				E87F51F7261F29C6007392E6 /* String+AddText.swift */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		E81E91DC26205878000C1964 /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				E87F51FA261F2E94007392E6 /* Sound.caf */,
+			);
+			path = Sound;
+			sourceTree = "<group>";
+		};
 		E834C6632615741100F9D61E = {
 			isa = PBXGroup;
 			children = (
@@ -84,24 +141,15 @@
 		E834C66E2615741100F9D61E /* MyLocations */ = {
 			isa = PBXGroup;
 			children = (
+				E81E91DC26205878000C1964 /* Sound */,
+				E81E91DB26205866000C1964 /* Category */,
+				E81E91DA26205850000C1964 /* CoreData */,
+				E81E91D926205848000C1964 /* Untils */,
+				E81E91D82620583C000C1964 /* Cell */,
+				E81E91D726205817000C1964 /* ViewControllers */,
 				E834C66F2615741100F9D61E /* AppDelegate.swift */,
-				E834C6732615741100F9D61E /* CurrentLocationViewController.swift */,
-				E834C6A32616B0EE00F9D61E /* LocationDetailsViewController.swift */,
-				E87F51FA261F2E94007392E6 /* Sound.caf */,
-				E834C6A82616C50C00F9D61E /* CategoryPickerViewController.swift */,
-				E834C6B72616EC2000F9D61E /* HudView.swift */,
-				E834C6BA2616F61300F9D61E /* Functions.swift */,
 				E87F51D5261D4BE5007392E6 /* DataModel.xcdatamodeld */,
-				E87F51D9261D4FD4007392E6 /* Location+CoreDataClass.swift */,
-				E87F51DA261D4FD4007392E6 /* Location+CoreDataProperties.swift */,
-				E87F51E4261D8067007392E6 /* LocationsViewController.swift */,
-				E87F51EB261D9EB8007392E6 /* MapViewController.swift */,
-				E81E91CD26200988000C1964 /* MyTabBarController.swift */,
-				E81E91D026200A8E000C1964 /* MyImagePickerController.swift */,
-				E87F51E8261D8790007392E6 /* LocationCell.swift */,
 				E834C6752615741100F9D61E /* Main.storyboard */,
-				E87F51F2261F14F6007392E6 /* UIImage+Resiz.swift */,
-				E87F51F7261F29C6007392E6 /* String+AddText.swift */,
 				E834C6782615741300F9D61E /* Assets.xcassets */,
 				E834C67A2615741300F9D61E /* LaunchScreen.storyboard */,
 				E834C67D2615741300F9D61E /* Info.plist */,
