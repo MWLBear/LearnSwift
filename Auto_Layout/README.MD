@@ -15,3 +15,21 @@
 - Compression resistance priorities
 压缩抗性优先级可帮助“自动版面配置”确定缩小的视图小于其固有尺寸。每个视图还具有水平和垂直压缩阻力优先级。具有较高抗压缩性优先级的视图可避免收缩，反之亦然。
 每个视图都有默认的750水平和垂直压缩阻力优先级。与内容包含优先级不同，所有视图对象都具有相同的默认抗压缩性优先级，而与视图类型或实例化方法无关。在两个视图之间进行选择并决定缩小视图时，布局引擎会考虑抗压缩优先级。具有较低含量抗压缩优先级的视图缩小。
+
+
+#### Stack View
+###### `Alignment`控制着垂直于轴的视图布局,`Distribution`控制视图平行于轴的布局。
+
+- Alignment 
+	-  horizontal stack view
+		-  `fill` alignment makes the views take up all of the vertical space inside the stack view.在每种情况下，最高视图的高度决定了堆栈视图的高度。并且由于对齐方式已填充，因此堆栈视图中的每个其他视图都与该高度匹配。
+		-  Horizontal axis top, bottom and center alignments
+		-  Horizontal axis first baseline and last baseline alignments
+	-  Vertical axis alignments
+		- leading, trailing, fill and center.
+- distribution
+	-  Fill: 调整子视图的大小以填充沿轴的所有空间，但是一个视图的大小可能与其他视图不同。
+	-  Fill Equally:调整子视图的大小以填充沿轴的所有空间，但使每个子视图具有相同的大小。
+	-  Fill Proportionally: 调整子视图的大小以填充沿轴的所有空间，但按其固有尺寸成比例地调整每个子视图的大小。
+	-  Equal Spacing:根据子视图的固有大小或其他约束来调整子视图的大小，但要对其进行定位，以使每个子视图之间的间隔相等，并且至少要具有堆栈视图的Spacing属性。
+	-  Equal Centering: 根据子视图的内在大小或其他约束来调整子视图的大小，但要放置它们，以使每个中心之间的距离相等。
