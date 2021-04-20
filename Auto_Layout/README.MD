@@ -36,16 +36,16 @@
 	
 #### Auto Layout with visual format language
 ##### Symbols
-- | superview
-- - standard spacing
--  == equal widths
--  -20- non-standard spacing (20 points)
--  <= less than or equal to
--  >= greater than or equal to
--  @250 priority of the constraint; can have any value between 0 and 1000
-- 250 - low priority
--  750 - high priority
--  1000 - required priority
+- `|` superview
+- `-` standard spacing
+-  `==` equal widths
+-  `-20-` non-standard spacing (20 points)
+-  `<=` less than or equal to
+-  `>=` greater than or equal to
+-  `@250` priority of the constraint; can have any value between 0 and 1000
+- `250` - low priority
+-  `750` - high priority
+-  `1000` - required priority
 ###### 例子:
 ` H:|-[label(labelHeight)]-16-[imageView(>=250,<=300)]-16- [button(88@250)]-|`
 
