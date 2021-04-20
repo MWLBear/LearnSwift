@@ -12,7 +12,7 @@
         <!--Contact List Table View Controller-->
         <scene sceneID="auV-ih-Rdd">
             <objects>
-                <tableViewController id="eO5-Wc-5rD" customClass="ContactListTableViewController" customModule="MessagingApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="ContactListTableViewController" id="eO5-Wc-5rD" customClass="ContactListTableViewController" customModule="MessagingApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="w8T-lo-K7R">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
