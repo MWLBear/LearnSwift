@@ -24,23 +24,7 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ffp-2g-iH1" id="eyS-6C-RHs">
                                     <rect key="frame" x="0.0" y="0.0" width="335" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="htr-zH-eBd">
-                                            <rect key="frame" x="48" y="11.5" width="287" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="htr-zH-eBd" firstAttribute="leading" secondItem="eyS-6C-RHs" secondAttribute="leading" constant="48" id="6dk-PP-PUt"/>
-                                        <constraint firstAttribute="trailing" secondItem="htr-zH-eBd" secondAttribute="trailing" id="7rb-fc-Kdb"/>
-                                        <constraint firstItem="htr-zH-eBd" firstAttribute="centerY" secondItem="eyS-6C-RHs" secondAttribute="centerY" id="jp4-1g-3cH"/>
-                                    </constraints>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="nameLabel" destination="htr-zH-eBd" id="0HW-75-89R"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -49,14 +33,14 @@
                         </connections>
                     </tableView>
                     <connections>
-                        <outlet property="contactPreviewView" destination="ufS-Ts-2xd" id="Jx0-KT-kla"/>
+                        <outlet property="contactPreviewView" destination="Snx-5d-Xkb" id="B0v-rP-fAZ"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3sF-E6-SHG" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <view contentMode="scaleToFill" id="ufS-Ts-2xd" customClass="ContactPreviewView" customModule="MessagingApp" customModuleProvider="target">
+                <view contentMode="scaleToFill" id="Snx-5d-Xkb" customClass="ContactPreviewView" customModule="MessagingApp" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <viewLayoutGuide key="safeArea" id="Bqs-cH-SoA"/>
+                    <viewLayoutGuide key="safeArea" id="YxG-W7-f4P"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </view>
             </objects>

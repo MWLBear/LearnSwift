@@ -12,8 +12,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ContactPreviewView" customModule="MessagingApp" customModuleProvider="target">
             <connections>
                 <outlet property="contentView" destination="iN0-l3-epB" id="eaz-5d-r2a"/>
-                <outlet property="nameLabel" destination="htI-1o-3tK" id="Jgk-cF-nGJ"/>
-                <outlet property="photoImageView" destination="gGM-o4-Gqu" id="COi-j4-NAf"/>
+                <outlet property="nameLabel" destination="htI-1o-3tK" id="iQB-ov-X2j"/>
+                <outlet property="photoImageView" destination="gGM-o4-Gqu" id="ocL-rM-ve3"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

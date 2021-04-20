@@ -14,7 +14,10 @@ final class ContactListTableViewController: UITableViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     tableView.rowHeight = 44
+    tableView.register(ContactTableViewCell.self, forCellReuseIdentifier: cellIdentififer)
+
     configureTapGesture()
+    setupNavigationBar()
   }
   
   // MARK: - UITableViewDataSource
@@ -68,5 +71,14 @@ final class ContactListTableViewController: UITableViewController {
     let tapGesture = UITapGestureRecognizer(target: self, action: #selector(hideContactPreview))
     contactPreviewView.addGestureRecognizer(tapGesture)
     view.addGestureRecognizer(tapGesture)
+  }
+  private func setupNavigationBar(){
+    let rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(rightBarBttonTap))
+    navigationItem.rightBarButtonItem = rightBarButtonItem
+  }
+  @objc private func rightBarBttonTap(_ sender:UIBarButtonItem){
+    let navigationController = UINavigationController(rootViewController: NewContactController())
+    self.present(navigationController, animated: true, completion: nil)
+    
   }
 }
