@@ -33,3 +33,27 @@
 	-  Fill Proportionally: 调整子视图的大小以填充沿轴的所有空间，但按其固有尺寸成比例地调整每个子视图的大小。
 	-  Equal Spacing:根据子视图的固有大小或其他约束来调整子视图的大小，但要对其进行定位，以使每个子视图之间的间隔相等，并且至少要具有堆栈视图的Spacing属性。
 	-  Equal Centering: 根据子视图的内在大小或其他约束来调整子视图的大小，但要放置它们，以使每个中心之间的距离相等。
+	
+#### Auto Layout with visual format language
+##### Symbols
+- | superview
+- - standard spacing
+-  == equal widths
+-  -20- non-standard spacing (20 points)
+-  <= less than or equal to
+-  >= greater than or equal to
+-  @250 priority of the constraint; can have any value between 0 and 1000
+- 250 - low priority
+-  750 - high priority
+-  1000 - required priority
+###### 例子:
+` H:|-[label(labelHeight)]-16-[imageView(>=250,<=300)]-16- [button(88@250)]-|`
+
+- H：表示约束适用于水平排列。
+- `|-[label`在父视图的前沿和标签的前沿之间创建约束。标签应在视图字典中找到。以下各节将详细介绍Views字典。
+- `label(labelHeight）`将标签的高度设置为labelHeight。该密钥应在指标字典中找到。以下各节中将提供有关指标字典的更多信息。
+- `]-16-[imageView`将标签的后沿与imageView的前沿之间设置16个间距的约束。
+- `[imageView（>=250，<=300]`在imageView上设置一个大于或等于250约束且小于或等于300约束的宽度。
+- `]-16-` [按钮在imageView的后缘和按钮的前缘之间设置16个间距限制。
+- `[button(88@250]`为按钮提供了等于88的宽度限制，且优先级较低。这使“自动布局”引擎可以在需要时打破此约束。
+- `]-|`在按钮的后沿和超级视图的后沿之间设置标准间距的约束。
