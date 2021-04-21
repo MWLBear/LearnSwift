@@ -20,6 +20,4 @@ struct Message {
     return messages
     
   }
-  
-  
 }

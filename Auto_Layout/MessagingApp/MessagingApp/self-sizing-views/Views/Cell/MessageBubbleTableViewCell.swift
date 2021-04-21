@@ -5,11 +5,9 @@ enum MessageBubbleCellType: String{
 }
 
 class MessageBubbleTableViewCell: UITableViewCell {
-  let greenBubbleImageName = "green-bubble"
-  let blueBubbleImageName = "blue-bubble"
   lazy var messageLabel: UILabel = {
-    let messageLabel = UILabel()
-    messageLabel.textColor = .black
+    let messageLabel = UILabel(frame: .zero)
+    messageLabel.textColor = .white
     messageLabel.font = UIFont.systemFont(ofSize: 13)
     messageLabel.numberOfLines = 0
     messageLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -19,7 +17,7 @@ class MessageBubbleTableViewCell: UITableViewCell {
   lazy var bubbleImageView: UIImageView = {
     let bubbleImageView = UIImageView(frame: .zero)
     bubbleImageView.translatesAutoresizingMaskIntoConstraints = false
-    bubbleImageView.contentMode = .scaleAspectFill
+    bubbleImageView.contentMode = .scaleToFill
     return bubbleImageView
   }()
   
@@ -30,7 +28,8 @@ class MessageBubbleTableViewCell: UITableViewCell {
   }
   
   func configureLauout() {
-    
+    contentView.addSubview(bubbleImageView)
+    contentView.addSubview(messageLabel)
   }
   
   required init?(coder: NSCoder) {

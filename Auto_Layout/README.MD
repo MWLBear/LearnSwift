@@ -70,7 +70,11 @@
 
 #### Self-Sizing-Views
 
+要使用自动调整大小的单元，您需要遵循三个简单的规则：
 
+- 1.将表格视图的rowHeight设置为UITableView.automaticDimension。
+- 2.将表格视图的estimateRowHeight设置为所需的值，或者通过实现高度估计委托方法来执行此操作。
+- 3.对单元格内的UI元素使用“自动布局”。 请记住，您必须在表视图单元格的内容视图内创建约束。 必须有不间断的约束链才能起作用。
 
 
 
