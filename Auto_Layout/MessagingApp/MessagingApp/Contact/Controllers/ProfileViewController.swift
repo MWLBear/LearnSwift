@@ -1,4 +1,11 @@
-
+/**
+ • Constraints between a scroll view and the views outside of its view hierarchy act on the scroll view’s frame.
+ • Constraints between a scroll view and views inside of its view hierarchy act on the scroll view’s content area.
+ • Be extra careful when setting the size and position of your scroll view. Remember that apart from setting its size and position, you’ll have to specify a content area that will affect the way the scroll view behaves.
+ • It’s strongly recommended to add a content view that acts as a container for all of the views inside of the scroll view. This makes it easier to work with a scroll view that can grow in size.
+ • While working with stack views (or any views) inside of a scroll view that acts as the content area, the width and height determine if the scroll view will have vertical and horizontal scrolling.
+ Remember to use frameLayoutGuide and contentLayoutGuide when creating the constraints for scroll views.
+ */
 
 import UIKit
 
@@ -6,12 +13,25 @@ final class ProfileViewController: UIViewController {
   private let profileHeadView = ProfileHeaderView()
   private let mainStackView = UIStackView()
   private let scrollView = UIScrollView()
+  private lazy var settingButton:UIButton = {
+    let button = UIButton(type: .system)
+    button.translatesAutoresizingMaskIntoConstraints = false
+    button.setTitle("Setting", for: .normal)
+    button.setTitleColor(.white, for: .normal)
+    button.layer.borderColor = UIColor.lightGray.cgColor
+    button.layer.borderWidth = 1.0
+    button.backgroundColor = .blue
+    button.layer.cornerRadius = 40
+    return button
+  }()
   // MARK: - Life Cycles
   override func viewDidLoad() {
     super.viewDidLoad()
     view.backgroundColor = .white
+   
     setupScrollView()
     setupMainStackView()
+    setupSettingButton()
   }
   //MRAK : - Layouts
   private func setupProfileHeaderView(){
@@ -28,6 +48,19 @@ final class ProfileViewController: UIViewController {
   
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
+  }
+  
+  private func setupSettingButton(){
+  
+    scrollView.addSubview(settingButton)
+    
+    NSLayoutConstraint.activate([
+      settingButton.widthAnchor.constraint(equalToConstant: 80),
+      settingButton.heightAnchor.constraint(equalToConstant: 80),
+      settingButton.trailingAnchor.constraint(equalTo: scrollView.contentLayoutGuide.trailingAnchor,constant: -20),
+      settingButton.bottomAnchor.constraint(equalTo: scrollView.contentLayoutGuide.bottomAnchor,constant: -20)
+
+    ])
   }
   
   private func setupScrollView(){
