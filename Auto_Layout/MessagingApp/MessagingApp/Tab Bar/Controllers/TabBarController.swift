@@ -4,9 +4,9 @@ import UIKit
 
 class TabBarController: UITabBarController {
 
-  private let contactsNavigationController = NavigationController(tabBarTitle: .contacts)
-  private let profileNavigationController = NavigationController(tabBarTitle: .profile)
-  private let messageTableViewController = NavigationController(tabBarTitle: .message)
+  private let contactsNavigationController = NavigationController(tabBar: .contacts)
+  private let profileNavigationController = NavigationController(tabBar: .profile)
+  private let messageTableViewController = NavigationController(tabBar: .message)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,22 +25,11 @@ class TabBarController: UITabBarController {
 }
 
 private final class NavigationController:UINavigationController {
-  init(tabBarTitle:TabBarTitle) {
-    let rootViewController:UIViewController
-    switch tabBarTitle {
-    case .contacts:
-      let contactsStoryboard = UIStoryboard(name: "Contacts", bundle: nil)
-      let viewController = contactsStoryboard.instantiateViewController(withIdentifier: "ContactListTableViewController")
-      rootViewController = viewController
-
-    case .profile:
-      rootViewController = ProfileViewController()
-    case .message:
-      rootViewController = MessagesTableViewController()
-    }
-    rootViewController.title = tabBarTitle.rawValue
-    super.init(rootViewController: rootViewController)
-    tabBarItem.title = tabBarTitle.rawValue
+  init(tabBar:TabBar) {
+ 
+    super.init(rootViewController: tabBar.viewController)
+    tabBarItem.title = tabBar.title
+    tabBarItem.image = tabBar.image
   }
   
   override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {

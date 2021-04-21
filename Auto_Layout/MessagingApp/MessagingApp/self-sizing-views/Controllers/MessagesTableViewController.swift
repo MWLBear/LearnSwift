@@ -19,8 +19,14 @@ class MessagesTableViewController: UITableViewController {
     
     tableView.separatorStyle = .none
     tableView.rowHeight = UITableView.automaticDimension
+    
+    navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTap))
+
   }
   
+  @objc func addTap (){
+    
+  }
   
   // MARK: - Table view data source
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
