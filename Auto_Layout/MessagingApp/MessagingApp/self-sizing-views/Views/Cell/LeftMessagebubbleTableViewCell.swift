@@ -15,7 +15,8 @@ class LeftMessagebubbleTableViewCell: MessageBubbleTableViewCell {
       bubbleImageView.topAnchor.constraint( equalTo: messageLabel.topAnchor, constant: -5),
       bubbleImageView.trailingAnchor.constraint( equalTo: messageLabel.trailingAnchor, constant: 10),
       bubbleImageView.bottomAnchor.constraint( equalTo: messageLabel.bottomAnchor, constant: 5),
-      bubbleImageView.leadingAnchor.constraint( equalTo: messageLabel.leadingAnchor, constant: -20)
+      bubbleImageView.leadingAnchor.constraint( equalTo: messageLabel.leadingAnchor, constant: -20),
+      
     ])
     let insets = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 10)
     let image = UIImage(named: blueBubbleImageName)!.imageFlippedForRightToLeftLayoutDirection()

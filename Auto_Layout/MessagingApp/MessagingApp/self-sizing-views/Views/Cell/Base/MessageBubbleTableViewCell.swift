@@ -21,6 +21,7 @@ class MessageBubbleTableViewCell: UITableViewCell {
     return bubbleImageView
   }()
   
+
   
   override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
     super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -30,6 +31,7 @@ class MessageBubbleTableViewCell: UITableViewCell {
   func configureLauout() {
     contentView.addSubview(bubbleImageView)
     contentView.addSubview(messageLabel)
+  
   }
   
   required init?(coder: NSCoder) {

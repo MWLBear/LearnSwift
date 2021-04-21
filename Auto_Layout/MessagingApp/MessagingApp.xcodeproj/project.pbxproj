@@ -21,6 +21,9 @@
 		E8234A95262FD40800F4601C /* RightMessageBubbleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8234A94262FD40800F4601C /* RightMessageBubbleTableViewCell.swift */; };
 		E895A581262D81500054F1E6 /* ContactPreviewView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E895A580262D81500054F1E6 /* ContactPreviewView.xib */; };
 		E895A584262D81DF0054F1E6 /* ContactPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E895A583262D81DF0054F1E6 /* ContactPreviewView.swift */; };
+		E8CE561C262FFDAC00390474 /* ImageBubbleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CE561B262FFDAC00390474 /* ImageBubbleTableViewCell.swift */; };
+		E8CE5620262FFE5C00390474 /* LeftMessageImageBubbleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CE561F262FFE5C00390474 /* LeftMessageImageBubbleTableViewCell.swift */; };
+		E8CE5623262FFED200390474 /* RightMessageImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CE5622262FFED200390474 /* RightMessageImageTableViewCell.swift */; };
 		EE4EAC43223512C500C522EE /* Contacts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE4EAC42223512C500C522EE /* Contacts.storyboard */; };
 		EE4EAC452235140400C522EE /* ContactListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4EAC442235140400C522EE /* ContactListTableViewController.swift */; };
 		EE4EAC482235145900C522EE /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4EAC472235145900C522EE /* Contact.swift */; };
@@ -48,6 +51,9 @@
 		E8234A94262FD40800F4601C /* RightMessageBubbleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightMessageBubbleTableViewCell.swift; sourceTree = "<group>"; };
 		E895A580262D81500054F1E6 /* ContactPreviewView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactPreviewView.xib; sourceTree = "<group>"; };
 		E895A583262D81DF0054F1E6 /* ContactPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactPreviewView.swift; sourceTree = "<group>"; };
+		E8CE561B262FFDAC00390474 /* ImageBubbleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageBubbleTableViewCell.swift; sourceTree = "<group>"; };
+		E8CE561F262FFE5C00390474 /* LeftMessageImageBubbleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftMessageImageBubbleTableViewCell.swift; sourceTree = "<group>"; };
+		E8CE5622262FFED200390474 /* RightMessageImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightMessageImageTableViewCell.swift; sourceTree = "<group>"; };
 		EE4EAC42223512C500C522EE /* Contacts.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Contacts.storyboard; sourceTree = "<group>"; };
 		EE4EAC442235140400C522EE /* ContactListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListTableViewController.swift; sourceTree = "<group>"; };
 		EE4EAC472235145900C522EE /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
@@ -227,9 +233,11 @@
 		E8234A85262FD20000F4601C /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				E8234A8E262FD3CF00F4601C /* MessageBubbleTableViewCell.swift */,
+				E8CE561A262FFD9500390474 /* Base */,
 				E8234A91262FD3FB00F4601C /* LeftMessagebubbleTableViewCell.swift */,
+				E8CE561F262FFE5C00390474 /* LeftMessageImageBubbleTableViewCell.swift */,
 				E8234A94262FD40800F4601C /* RightMessageBubbleTableViewCell.swift */,
+				E8CE5622262FFED200390474 /* RightMessageImageTableViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -240,6 +248,15 @@
 				E8234A85262FD20000F4601C /* Cell */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		E8CE561A262FFD9500390474 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				E8234A8E262FD3CF00F4601C /* MessageBubbleTableViewCell.swift */,
+				E8CE561B262FFDAC00390474 /* ImageBubbleTableViewCell.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 		EE4EAC462235144A00C522EE /* Models */ = {
@@ -368,6 +385,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8234A95262FD40800F4601C /* RightMessageBubbleTableViewCell.swift in Sources */,
+				E8CE5620262FFE5C00390474 /* LeftMessageImageBubbleTableViewCell.swift in Sources */,
 				EE4EAC482235145900C522EE /* Contact.swift in Sources */,
 				E8234A4A262EA60E00F4601C /* TarBarTitle.swift in Sources */,
 				E8234A78262EBF2B00F4601C /* ProfileHeaderView.swift in Sources */,
@@ -376,11 +394,13 @@
 				FD16E8A62233C21A0000045B /* ProfileViewController.swift in Sources */,
 				D2A5F2211F4A96D0005CD714 /* AppDelegate.swift in Sources */,
 				E8234A7B262ED47E00F4601C /* NewContactController.swift in Sources */,
+				E8CE561C262FFDAC00390474 /* ImageBubbleTableViewCell.swift in Sources */,
 				E895A584262D81DF0054F1E6 /* ContactPreviewView.swift in Sources */,
 				E8234A8C262FD3A600F4601C /* MessagesTableViewController.swift in Sources */,
 				E8234A88262FD25A00F4601C /* Message.swift in Sources */,
 				EE4EAC4B2235420000C522EE /* ContactTableViewCell.swift in Sources */,
 				E8234A8F262FD3CF00F4601C /* MessageBubbleTableViewCell.swift in Sources */,
+				E8CE5623262FFED200390474 /* RightMessageImageTableViewCell.swift in Sources */,
 				EE4EAC452235140400C522EE /* ContactListTableViewController.swift in Sources */,
 				E8234A92262FD3FB00F4601C /* LeftMessagebubbleTableViewCell.swift in Sources */,
 				FDEAC5AA22342404009296BD /* ProfileNameLabel.swift in Sources */,

@@ -69,6 +69,7 @@
 - 在为scroll view创建约束时，请记住使用frameLayoutGuide和contentLayoutGuide。
 
 #### Self-Sizing-Views
+###### bottom-to-top approach to size a UITableViewCell
 
 要使用自动调整大小的单元，您需要遵循三个简单的规则：
 
