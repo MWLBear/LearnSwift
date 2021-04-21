@@ -6,6 +6,7 @@ class TabBarController: UITabBarController {
 
   private let contactsNavigationController = NavigationController(tabBarTitle: .contacts)
   private let profileNavigationController = NavigationController(tabBarTitle: .profile)
+  private let messageTableViewController = NavigationController(tabBarTitle: .message)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,7 +18,9 @@ class TabBarController: UITabBarController {
   private func embedViewControllers() {
     viewControllers = [
       profileNavigationController,
-      contactsNavigationController]
+      contactsNavigationController,
+      messageTableViewController
+    ]
   }
 }
 
@@ -32,6 +35,8 @@ private final class NavigationController:UINavigationController {
 
     case .profile:
       rootViewController = ProfileViewController()
+    case .message:
+      rootViewController = MessagesTableViewController()
     }
     rootViewController.title = tabBarTitle.rawValue
     super.init(rootViewController: rootViewController)
