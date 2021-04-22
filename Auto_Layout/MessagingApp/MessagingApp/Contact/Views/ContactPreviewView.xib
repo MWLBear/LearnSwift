@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ContactPreviewView" customModule="MessagingApp" customModuleProvider="target">
             <connections>
+                <outlet property="callButton" destination="5ad-bK-fg2" id="2An-qe-dki"/>
                 <outlet property="contentView" destination="iN0-l3-epB" id="eaz-5d-r2a"/>
                 <outlet property="nameLabel" destination="htI-1o-3tK" id="iQB-ov-X2j"/>
                 <outlet property="photoImageView" destination="gGM-o4-Gqu" id="ocL-rM-ve3"/>
@@ -22,26 +23,31 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gGM-o4-Gqu">
-                    <rect key="frame" x="35" y="28" width="80" height="80"/>
+                    <rect key="frame" x="35" y="20" width="80" height="80"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="gGM-o4-Gqu" secondAttribute="height" multiplier="1:1" id="Cya-83-t2P"/>
                         <constraint firstAttribute="width" constant="80" id="Nlj-bD-hO2"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="htI-1o-3tK">
-                    <rect key="frame" x="54" y="118" width="42" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="htI-1o-3tK">
+                    <rect key="frame" x="16" y="109" width="33" height="16"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ad-bK-fg2">
+                    <rect key="frame" x="18" y="122" width="30" height="27"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <state key="normal" title="Call"/>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" name="rw-light"/>
             <constraints>
-                <constraint firstItem="htI-1o-3tK" firstAttribute="top" secondItem="gGM-o4-Gqu" secondAttribute="bottom" constant="10" id="EZ3-oY-DPk"/>
-                <constraint firstItem="gGM-o4-Gqu" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="28" id="Gmo-Ao-soi"/>
+                <constraint firstItem="gGM-o4-Gqu" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="Gmo-Ao-soi"/>
                 <constraint firstItem="gGM-o4-Gqu" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="Z8A-V6-LAn"/>
-                <constraint firstItem="htI-1o-3tK" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="tRI-Cp-eke"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="-144" y="188.00599700149925"/>
