@@ -77,7 +77,24 @@
 - 2.将表格视图的estimateRowHeight设置为所需的值，或者通过实现高度估计委托方法来执行此操作。
 - 3.对单元格内的UI元素使用“自动布局”。 请记住，您必须在表视图单元格的内容视图内创建约束。 必须有不间断的约束链才能起作用。
 
+#### Available Layout Guides
+- 布局指南不是视觉元素，因为它们的工作只是在视图层次结构中定义矩形区域。
+- 布局指南是使用代码创建的；这样可以进行更多的自定义，尤其是在代码中创建所有约束时。
 
+- `Safe Area`
+	- The Safe Area layout guide represents the portion of the screen that is not covered by the navigation bars, tab bars, and toolbars. “安全区域”布局指南表示导航栏，标签栏和工具栏未覆盖的屏幕部分。
+- `Layout Margin`
+	- `The Layout Margin` 表示视图的边距。 您可以使用它来创建对视图边距的约束，而不是视图本身。 
+-  `Readable Content`
+	- `The Readable Content guide `表示在应用程序中使用文本视图时可以使用的建议区域  
+	- `The Readable Content guide` 南也很有用，因为它指定了可用于显示文本的总宽度。
+	- the Readable Content Guide will never extend beyond the Layout Margin guide.
+ 
+- ##### Creating layout guides
+	- 实例化新的布局指南。
+	- 通过调用addLayoutGuide（_ :)将其添加到其容器视图中。
+	- 定义`the layout guide` 的约束。
+除了在视图之间创建空间外，您还可以使用布局指南来包含其他视图。 当您要创建一个以一组视图为中心的容器时，这很有用。
 
 
 
