@@ -26,6 +26,10 @@ class MessagesTableViewController: UITableViewController {
   
   @objc func addTap (){
     
+//    let viewController = UINavigationController(rootViewController: MessageViewController())
+//    viewController.modalPresentationStyle = .fullScreen
+//    present(viewController, animated: true, completion: nil)
+    
   }
   
   // MARK: - Table view data source

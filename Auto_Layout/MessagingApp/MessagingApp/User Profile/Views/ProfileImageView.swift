@@ -20,11 +20,11 @@ final class ProfileImageView: UIImageView {
   private var borderShape: BorderShape
   
   // MARK: - Initializers
-  init(borderShape:BorderShape,boldBorder:Bool = true) {
+  init(borderShape:BorderShape,boldBorder:Bool = false) {
     self.borderShape = borderShape
     self.boldBorder = boldBorder
     super.init(frame: CGRect.zero)
-    backgroundColor = .lightGray
+    commonInit()
   }
   
   convenience init() {
@@ -34,8 +34,15 @@ final class ProfileImageView: UIImageView {
     self.borderShape = .none
     self.boldBorder = false
     super.init(coder: coder)
-    
+    commonInit()
   }
+  
+  private func commonInit() {
+    backgroundColor = .lightGray
+    contentMode = .scaleAspectFit
+    clipsToBounds = true
+  }
+  
   // MARK: - Setup Views
   override func layoutSubviews() {
     super.layoutSubviews()

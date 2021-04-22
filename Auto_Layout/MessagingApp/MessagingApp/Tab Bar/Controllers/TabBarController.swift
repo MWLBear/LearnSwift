@@ -7,6 +7,7 @@ class TabBarController: UITabBarController {
   private let contactsNavigationController = NavigationController(tabBar: .contacts)
   private let profileNavigationController = NavigationController(tabBar: .profile)
   private let messageTableViewController = NavigationController(tabBar: .message)
+  private let messageController = NavigationController(tabBar: .collectoin)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,14 +20,14 @@ class TabBarController: UITabBarController {
     viewControllers = [
       profileNavigationController,
       contactsNavigationController,
-      messageTableViewController
+      messageTableViewController,
+      messageController
     ]
   }
 }
 
 private final class NavigationController:UINavigationController {
   init(tabBar:TabBar) {
- 
     super.init(rootViewController: tabBar.viewController)
     tabBarItem.title = tabBar.title
     tabBarItem.image = tabBar.image

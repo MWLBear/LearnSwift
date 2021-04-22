@@ -4,7 +4,7 @@ enum TabBar:String {
   case contacts = "Contacts"
   case profile = "Profile"
   case message = "Message"
-  
+  case collectoin = "collectoin"
   var viewController: UIViewController  {
     
     let rootViewController: UIViewController
@@ -18,8 +18,12 @@ enum TabBar:String {
       rootViewController = ProfileViewController()
     case .message:
       rootViewController = MessagesTableViewController()
+   
+    case .collectoin:
+      rootViewController = MessageViewController()
     }
-    
+    rootViewController.title = title
+
     return rootViewController
   }
   var title:String {
@@ -30,6 +34,8 @@ enum TabBar:String {
       return "Profile"
     case .message:
       return "Message"
+    case .collectoin:
+      return "Collection"
     }
   }
   
@@ -42,6 +48,9 @@ enum TabBar:String {
       systemName = "person.fill"
     case .message:
       systemName = "message.fill"
+    case .collectoin:
+      systemName = "message.fill"
+
     }
     guard let image = UIImage(systemName: systemName) else {
       fatalError("Unable to retrieve system image: \(systemName).")
