@@ -34,6 +34,7 @@
 		E8CE56482631191500390474 /* UserStoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CE56472631191500390474 /* UserStoryViewController.swift */; };
 		E8CE564C26311F2800390474 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CE564B26311F2800390474 /* UIView+Constraints.swift */; };
 		E8CE56502631285400390474 /* HeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CE564F2631285400390474 /* HeaderCollectionReusableView.swift */; };
+		E8CE56542631584100390474 /* StoryProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CE56532631584100390474 /* StoryProgressView.swift */; };
 		EE4EAC43223512C500C522EE /* Contacts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE4EAC42223512C500C522EE /* Contacts.storyboard */; };
 		EE4EAC452235140400C522EE /* ContactListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4EAC442235140400C522EE /* ContactListTableViewController.swift */; };
 		EE4EAC482235145900C522EE /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4EAC472235145900C522EE /* Contact.swift */; };
@@ -74,6 +75,7 @@
 		E8CE56472631191500390474 /* UserStoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStoryViewController.swift; sourceTree = "<group>"; };
 		E8CE564B26311F2800390474 /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
 		E8CE564F2631285400390474 /* HeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCollectionReusableView.swift; sourceTree = "<group>"; };
+		E8CE56532631584100390474 /* StoryProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryProgressView.swift; sourceTree = "<group>"; };
 		EE4EAC42223512C500C522EE /* Contacts.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Contacts.storyboard; sourceTree = "<group>"; };
 		EE4EAC442235140400C522EE /* ContactListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListTableViewController.swift; sourceTree = "<group>"; };
 		EE4EAC472235145900C522EE /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
@@ -313,6 +315,7 @@
 			isa = PBXGroup;
 			children = (
 				E8CE563B26310CBA00390474 /* MiniStoryView.swift */,
+				E8CE56532631584100390474 /* StoryProgressView.swift */,
 				E8CE563E26310EF400390474 /* MiniStoryCollectionViewCell.swift */,
 				E8CE56412631116F00390474 /* StoryEventCollectionViewCell.swift */,
 				E8CE564F2631285400390474 /* HeaderCollectionReusableView.swift */,
@@ -482,6 +485,7 @@
 				E8234A8C262FD3A600F4601C /* MessagesTableViewController.swift in Sources */,
 				E8CE56482631191500390474 /* UserStoryViewController.swift in Sources */,
 				E8234A88262FD25A00F4601C /* Message.swift in Sources */,
+				E8CE56542631584100390474 /* StoryProgressView.swift in Sources */,
 				E8CE56502631285400390474 /* HeaderCollectionReusableView.swift in Sources */,
 				EE4EAC4B2235420000C522EE /* ContactTableViewCell.swift in Sources */,
 				E8CE56312630520900390474 /* StoryEvent.swift in Sources */,

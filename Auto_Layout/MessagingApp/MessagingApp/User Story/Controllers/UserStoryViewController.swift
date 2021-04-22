@@ -6,7 +6,7 @@ class UserStoryViewController: UIViewController {
   private let userStory: UserStory
   private let cellIdentifier = "cellIdentifier"
   private let headerViewIdentifier = "headerViewIdentifier"
-  private var currentItemIdex = 0
+  private var currentItemIndex = 0
   private lazy var flowLayout: UICollectionViewFlowLayout = {
     let flowLayout = UICollectionViewFlowLayout()
     flowLayout.scrollDirection = .horizontal
@@ -29,11 +29,13 @@ class UserStoryViewController: UIViewController {
     collectonView.dataSource = self
     return collectonView
   }()
-  
+  private lazy var storyProgressView = StoryProgressView(itemsCount: userStory.events.count)
+
   override func viewDidLoad() {
     super.viewDidLoad()
     view.addGestureRecognizer(swipeDownGesture)
     setupCollectionView()
+    setupStoryProgesssView()
   }
   
   
@@ -42,7 +44,6 @@ class UserStoryViewController: UIViewController {
     view.addSubview(collectionView)
     collectionView.translatesAutoresizingMaskIntoConstraints = false
     let safeAreaLayoutGuide = view.safeAreaLayoutGuide
-    
     NSLayoutConstraint.activate(
       [collectionView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
        collectionView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
@@ -70,22 +71,48 @@ class UserStoryViewController: UIViewController {
     let leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(dismissController))
     navigationItem.leftBarButtonItem = leftBarButtonItem
   }
+  private func setupStoryProgesssView(){
+    print("setupStoryProgesssView")
+    storyProgressView.delegate = self
+    view.addSubview(storyProgressView)
+    storyProgressView.translatesAutoresizingMaskIntoConstraints = false
+    let safeAreaLayoutGuide = view.safeAreaLayoutGuide
+    NSLayoutConstraint.activate(
+      [storyProgressView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
+       storyProgressView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
+       storyProgressView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
+       storyProgressView.heightAnchor.constraint(equalToConstant: 32)]
+    )
+    
+  }
   
   @objc private func dismissController(){
     self.dismiss(animated: true, completion: nil)
   }
-  //MRAK: -scrollViewWillEndDragging
   
+  //MRAK: -scrollView
+
   func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
     let contentOffsetX = targetContentOffset.pointee.x
     let scorllViewWidth = scrollView.frame.width
-    currentItemIdex = Int(contentOffsetX / scorllViewWidth)
+    currentItemIndex = Int(contentOffsetX / scorllViewWidth)
+  }
+  func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+    guard currentItemIndex > 0 else { return }
+    storyProgressView.selectedIndex = currentItemIndex - 1
+  }
+
+  func scrollViewDidScroll(_ scrollView: UIScrollView) {
+    let xContentOffset = scrollView.contentOffset.x
+    let scrollViewWidth = scrollView.frame.width
+    guard xContentOffset <= scrollViewWidth else { return }
+    storyProgressView.alpha = xContentOffset / scrollViewWidth
   }
   
   private func centerCollcetionViewContent(){
     DispatchQueue.main.async { [weak self] in
       guard let self = self else { return }
-      let x = self.collectionView.frame.width * CGFloat(self.currentItemIdex)
+      let x = self.collectionView.frame.width * CGFloat(self.currentItemIndex)
       let y: CGFloat = 0
       let contentOffset = CGPoint(x: x, y: y)
       
@@ -139,5 +166,11 @@ extension UserStoryViewController: UICollectionViewDelegateFlowLayout {
   }
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
     return collectionView.frame.size
+  }
+}
+
+extension UserStoryViewController: StoryProgressViewDelegate {
+  func didSelectProgressItem(at indexPath: IndexPath) {
+    self.collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
   }
 }
