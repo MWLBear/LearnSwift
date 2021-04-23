@@ -62,6 +62,7 @@ final class ContactListTableViewController: UITableViewController {
     let contact = contacts[indexPath.row]    
     cell.nameLabel.text = contact.name
     cell.messageLabel.text = contact.lastMessage
+    cell.dateLabel.text = contact.formattedDate
     return cell
   }
   override func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {

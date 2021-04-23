@@ -1,10 +1,15 @@
 import UIKit
+protocol MessageBubbleTableViewCellDelegate {
+  func doubleTapForCell(_ cell: MessageBubbleTableViewCell)
+}
 enum MessageBubbleCellType: String{
   case rightText
   case leftText
 }
 
 class MessageBubbleTableViewCell: UITableViewCell {
+  var delegate: MessageBubbleTableViewCellDelegate?
+  
   lazy var messageLabel: UILabel = {
     let messageLabel = UILabel(frame: .zero)
     messageLabel.textColor = .white
@@ -22,9 +27,14 @@ class MessageBubbleTableViewCell: UITableViewCell {
   }()
   
 
-  
   override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
     super.init(style: style, reuseIdentifier: reuseIdentifier)
+   
+    let gesture = UITapGestureRecognizer(target: self,action: #selector(doubleTapped))
+    gesture.numberOfTapsRequired = 2
+    gesture.cancelsTouchesInView = true
+    contentView.addGestureRecognizer(gesture)
+    
     configureLauout()
   }
   
@@ -38,5 +48,7 @@ class MessageBubbleTableViewCell: UITableViewCell {
     fatalError("init(coder:) has not been implemented")
   }
   
-
+  @objc func doubleTapped(){
+    delegate?.doubleTapForCell(self)
+  }
 }

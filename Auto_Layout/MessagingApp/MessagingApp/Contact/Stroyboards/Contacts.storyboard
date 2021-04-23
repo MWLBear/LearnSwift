@@ -25,29 +25,40 @@
                                     <rect key="frame" x="0.0" y="0.0" width="335" height="80"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yn7-ff-NBh">
-                                            <rect key="frame" x="20" y="10" width="42" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yn7-ff-NBh">
+                                            <rect key="frame" x="20" y="10" width="41.5" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dLx-BX-M7d">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dLx-BX-M7d">
                                             <rect key="frame" x="20" y="34" width="295" height="36"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="00:00 PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bGC-Qx-HoL">
+                                            <rect key="frame" x="263.5" y="10" width="51.5" height="13.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="yn7-ff-NBh" firstAttribute="leading" secondItem="eyS-6C-RHs" secondAttribute="leading" constant="20" id="1uZ-d4-H7k"/>
+                                        <constraint firstAttribute="trailing" secondItem="bGC-Qx-HoL" secondAttribute="trailing" constant="20" id="41f-fP-BlX"/>
                                         <constraint firstAttribute="trailing" secondItem="dLx-BX-M7d" secondAttribute="trailing" constant="20" id="7XJ-xy-jpM"/>
+                                        <constraint firstItem="bGC-Qx-HoL" firstAttribute="top" secondItem="eyS-6C-RHs" secondAttribute="top" constant="10" id="VaT-bL-VTL"/>
                                         <constraint firstItem="dLx-BX-M7d" firstAttribute="top" secondItem="yn7-ff-NBh" secondAttribute="bottom" constant="3" id="Zsr-1g-hgY"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="yn7-ff-NBh" secondAttribute="trailing" constant="20" id="ekS-gb-451"/>
                                         <constraint firstItem="dLx-BX-M7d" firstAttribute="leading" secondItem="eyS-6C-RHs" secondAttribute="leading" constant="20" id="kvm-pf-UWJ"/>
                                         <constraint firstItem="yn7-ff-NBh" firstAttribute="top" secondItem="eyS-6C-RHs" secondAttribute="top" constant="10" id="nX3-vB-Uho"/>
+                                        <constraint firstItem="bGC-Qx-HoL" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="yn7-ff-NBh" secondAttribute="trailing" constant="20" id="sdk-hS-cza"/>
                                         <constraint firstAttribute="bottom" secondItem="dLx-BX-M7d" secondAttribute="bottom" constant="10" id="wgD-4o-VXJ"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="dateLabel" destination="bGC-Qx-HoL" id="r2J-9Y-iJ1"/>
                                     <outlet property="messageLabel" destination="dLx-BX-M7d" id="Fza-FN-VcZ"/>
                                     <outlet property="nameLabel" destination="yn7-ff-NBh" id="7HY-u1-wyD"/>
                                 </connections>
