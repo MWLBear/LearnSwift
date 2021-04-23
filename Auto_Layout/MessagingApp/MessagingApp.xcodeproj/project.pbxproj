@@ -35,10 +35,11 @@
 		E8CE564C26311F2800390474 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CE564B26311F2800390474 /* UIView+Constraints.swift */; };
 		E8CE56502631285400390474 /* HeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CE564F2631285400390474 /* HeaderCollectionReusableView.swift */; };
 		E8CE56542631584100390474 /* StoryProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CE56532631584100390474 /* StoryProgressView.swift */; };
+		E8CE565C2632773300390474 /* ContactTableViewXibCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CE565B2632773300390474 /* ContactTableViewXibCell.swift */; };
 		EE4EAC43223512C500C522EE /* Contacts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE4EAC42223512C500C522EE /* Contacts.storyboard */; };
 		EE4EAC452235140400C522EE /* ContactListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4EAC442235140400C522EE /* ContactListTableViewController.swift */; };
 		EE4EAC482235145900C522EE /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4EAC472235145900C522EE /* Contact.swift */; };
-		EE4EAC4B2235420000C522EE /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4EAC4A2235420000C522EE /* ContactTableViewCell.swift */; };
+		EE4EAC4B2235420000C522EE /* ContactTableViewAutoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4EAC4A2235420000C522EE /* ContactTableViewAutoCell.swift */; };
 		FD16E8A62233C21A0000045B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD16E8A52233C21A0000045B /* ProfileViewController.swift */; };
 		FDEAC5A62233D74A009296BD /* nouser_Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDEAC5A52233D74A009296BD /* nouser_Profile.storyboard */; };
 		FDEAC5A82233D755009296BD /* ProfileImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEAC5A72233D755009296BD /* ProfileImageView.swift */; };
@@ -76,10 +77,11 @@
 		E8CE564B26311F2800390474 /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
 		E8CE564F2631285400390474 /* HeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		E8CE56532631584100390474 /* StoryProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryProgressView.swift; sourceTree = "<group>"; };
+		E8CE565B2632773300390474 /* ContactTableViewXibCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewXibCell.swift; sourceTree = "<group>"; };
 		EE4EAC42223512C500C522EE /* Contacts.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Contacts.storyboard; sourceTree = "<group>"; };
 		EE4EAC442235140400C522EE /* ContactListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListTableViewController.swift; sourceTree = "<group>"; };
 		EE4EAC472235145900C522EE /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
-		EE4EAC4A2235420000C522EE /* ContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
+		EE4EAC4A2235420000C522EE /* ContactTableViewAutoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewAutoCell.swift; sourceTree = "<group>"; };
 		FD16E8A52233C21A0000045B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = ../../Contact/Controllers/ProfileViewController.swift; sourceTree = "<group>"; };
 		FDEAC5A52233D74A009296BD /* nouser_Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = nouser_Profile.storyboard; sourceTree = "<group>"; };
 		FDEAC5A72233D755009296BD /* ProfileImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileImageView.swift; sourceTree = "<group>"; };
@@ -384,7 +386,8 @@
 		FDF4448E2233B0C400D3DA01 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				EE4EAC4A2235420000C522EE /* ContactTableViewCell.swift */,
+				EE4EAC4A2235420000C522EE /* ContactTableViewAutoCell.swift */,
+				E8CE565B2632773300390474 /* ContactTableViewXibCell.swift */,
 				E895A580262D81500054F1E6 /* ContactPreviewView.xib */,
 				E895A583262D81DF0054F1E6 /* ContactPreviewView.swift */,
 			);
@@ -486,8 +489,9 @@
 				E8CE56482631191500390474 /* UserStoryViewController.swift in Sources */,
 				E8234A88262FD25A00F4601C /* Message.swift in Sources */,
 				E8CE56542631584100390474 /* StoryProgressView.swift in Sources */,
+				E8CE565C2632773300390474 /* ContactTableViewXibCell.swift in Sources */,
 				E8CE56502631285400390474 /* HeaderCollectionReusableView.swift in Sources */,
-				EE4EAC4B2235420000C522EE /* ContactTableViewCell.swift in Sources */,
+				EE4EAC4B2235420000C522EE /* ContactTableViewAutoCell.swift in Sources */,
 				E8CE56312630520900390474 /* StoryEvent.swift in Sources */,
 				E8234A8F262FD3CF00F4601C /* MessageBubbleTableViewCell.swift in Sources */,
 				E8CE563C26310CBA00390474 /* MiniStoryView.swift in Sources */,

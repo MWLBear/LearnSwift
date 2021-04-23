@@ -1,7 +1,7 @@
 
 import UIKit
 
-final class ContactTableViewCell: UITableViewCell {
+final class ContactTableViewAutoCell: UITableViewCell {
   // MARK: - IBOutlets
   let nameLabel: UILabel = {
     let label = UILabel(frame: .zero)

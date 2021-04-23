@@ -13,18 +13,44 @@
         <scene sceneID="auV-ih-Rdd">
             <objects>
                 <tableViewController storyboardIdentifier="ContactListTableViewController" id="eO5-Wc-5rD" customClass="ContactListTableViewController" customModule="MessagingApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="w8T-lo-K7R">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="w8T-lo-K7R">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="detailButton" indentationWidth="10" reuseIdentifier="ContactCell" id="Ffp-2g-iH1" customClass="ContactTableViewCell" customModule="MessagingApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="detailButton" indentationWidth="10" reuseIdentifier="ContactCell" rowHeight="80" id="Ffp-2g-iH1" customClass="ContactTableViewXibCell" customModule="MessagingApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ffp-2g-iH1" id="eyS-6C-RHs">
-                                    <rect key="frame" x="0.0" y="0.0" width="335" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="335" height="80"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yn7-ff-NBh">
+                                            <rect key="frame" x="20" y="10" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dLx-BX-M7d">
+                                            <rect key="frame" x="20" y="34" width="295" height="36"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="yn7-ff-NBh" firstAttribute="leading" secondItem="eyS-6C-RHs" secondAttribute="leading" constant="20" id="1uZ-d4-H7k"/>
+                                        <constraint firstAttribute="trailing" secondItem="dLx-BX-M7d" secondAttribute="trailing" constant="20" id="7XJ-xy-jpM"/>
+                                        <constraint firstItem="dLx-BX-M7d" firstAttribute="top" secondItem="yn7-ff-NBh" secondAttribute="bottom" constant="3" id="Zsr-1g-hgY"/>
+                                        <constraint firstItem="dLx-BX-M7d" firstAttribute="leading" secondItem="eyS-6C-RHs" secondAttribute="leading" constant="20" id="kvm-pf-UWJ"/>
+                                        <constraint firstItem="yn7-ff-NBh" firstAttribute="top" secondItem="eyS-6C-RHs" secondAttribute="top" constant="10" id="nX3-vB-Uho"/>
+                                        <constraint firstAttribute="bottom" secondItem="dLx-BX-M7d" secondAttribute="bottom" constant="10" id="wgD-4o-VXJ"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="messageLabel" destination="dLx-BX-M7d" id="Fza-FN-VcZ"/>
+                                    <outlet property="nameLabel" destination="yn7-ff-NBh" id="7HY-u1-wyD"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -44,7 +70,7 @@
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </view>
             </objects>
-            <point key="canvasLocation" x="-567" y="-286"/>
+            <point key="canvasLocation" x="-567.20000000000005" y="-286.50674662668666"/>
         </scene>
     </scenes>
     <resources>

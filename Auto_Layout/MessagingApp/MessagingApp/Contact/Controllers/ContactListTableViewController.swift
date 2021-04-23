@@ -3,21 +3,51 @@ import UIKit
 
 final class ContactListTableViewController: UITableViewController {
   // MARK: - Properties
+  private var contacts: [Contact] = []
   private let cellIdentififer = "ContactCell"
-  private var contacts: [Contact] = [
-    Contact(name: "John Doe", photo: "rw-logo"),
-    Contact(name: "Jane Doe", photo: "rw-logo"),
-    Contact(name: "Joseph Doe", photo: "rw-logo")]
+  
   @IBOutlet var contactPreviewView: ContactPreviewView!
   
   // MARK: - Life Cycles
   override func viewDidLoad() {
     super.viewDidLoad()
-    tableView.rowHeight = 44
-    tableView.register(ContactTableViewCell.self, forCellReuseIdentifier: cellIdentififer)
-
+  //  tableView.rowHeight = 80
+   // tableView.register(ContactTableViewAutoCell.self, forCellReuseIdentifier: cellIdentififer)
+    loadData()
     configureTapGesture()
     setupNavigationBar()
+  }
+  private func loadData(){
+    contacts.append(Contact(name: "Cruz Jacqueline Espinal Nieves", photo: "rw-logo", lastMessage:
+      """
+      Hey, need to talk to you about this awesome project.
+      Before you go to New Yorik, we have to meet.
+      You won't regret it. Also, I have some some books that Hillary sent to you.
+      """, lastTime: Date(timeIntervalSinceNow: -2)))
+    contacts.append(Contact(
+      name: "Hillary Oliver", photo: "rw-logo",
+      lastMessage: "Remember to buy the milk",
+      lastTime: Date(timeIntervalSinceNow: -3.2)))
+    contacts.append(Contact(
+      name: "Noah Librado", photo: "rw-logo",
+      lastMessage: "Ok",
+      lastTime: Date(timeIntervalSinceNow: -3.9)))
+    contacts.append(Contact(
+      name: "Yinet Nella", photo: "rw-logo",
+      lastMessage: "Ok",
+      lastTime: Date(timeIntervalSinceNow: -6.1)))
+    contacts.append(Contact(
+      name: "Cruz Alberto", photo: "rw-logo",
+      lastMessage: "See you soon",
+      lastTime: Date(timeIntervalSinceNow: -10.4)))
+    contacts.append(Contact(
+      name: "Evan Derek", photo: "rw-logo",
+      lastMessage: "I'll call you later",
+      lastTime: Date(timeIntervalSinceNow: -10.4)))
+    contacts.append(Contact(
+      name: "Carlos Henry", photo: "rw-logo",
+      lastMessage: "I'll call you later",
+      lastTime: Date(timeIntervalSinceNow: -10.4)))
   }
   
   // MARK: - UITableViewDataSource
@@ -27,10 +57,11 @@ final class ContactListTableViewController: UITableViewController {
   
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentififer, for: indexPath)
-      as? ContactTableViewCell else { fatalError("Dequeued unregistered cell.") }
+      as? ContactTableViewXibCell else { fatalError("Dequeued unregistered cell.") }
     
     let contact = contacts[indexPath.row]    
     cell.nameLabel.text = contact.name
+    cell.messageLabel.text = contact.lastMessage
     return cell
   }
   override func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
