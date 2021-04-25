@@ -102,7 +102,10 @@
 - 内容拥抱优先级表示视图必须增长到大于其固有内容大小的阻力。 
 - 压缩抗性优先级表示视图必须缩小到其固有内容大小以外的抗性。
 
-
+#### Size classes
+horizontalSizeClass和verticalSizeClass。 这两个特征可以是`regular`，也可以是`compact`。 常规值表示可扩展的空间，这意味着有大量可用空间。 紧凑值表示空间受限，这意味着没有太多可用空间。`regular`:常规的,`compact`:紧凑的
+![avatar](../Auto_Layout/ED43D999-FFDC-43B2-BCB1-F2E03CC434C8.png)
+![avatar](../Auto_Layout/6A8C6904-83BE-465B-BCD5-3C4257F89421.png)
 
 
 
