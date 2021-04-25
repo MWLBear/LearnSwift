@@ -110,8 +110,21 @@ horizontalSizeClass和verticalSizeClass。 这两个特征可以是`regular`，�
 
 
 #### Dynamic Type
+- 除非绝对必要，否则请勿使用rightAnchor或leftAnchor创建约束； 相反，请使用LeadingAnchor和TrailingAnchor。
+- 使用Interface Builder上的预览来测试您的应用程序的国际化程度。
+- 除非绝对必要，否则不要对可以包含文本的元素使用固定的约束。
 
+#### Common Auto Layout Issues
+- `Logical Errors`(逻辑错误):当您无意中设置了不正确的约束时，通常会发生这些类型的错误。也许您为常数输入了错误的值，选择了元素之间的错误关系，或者没有考虑到不同的方向和屏幕尺寸
+- `Unsatisfiable Constraints`(无法满足的约束): 如果自动布局引擎无法计算解决方案，则会出现这些错误。一个简单的例子是，当您将一个视图的宽度设置为<20且宽度= 100时。由于这两个约束不能同时成立，因此会出现错误。
+- `Ambiguous Constraints`(模糊约束):当自动布局引擎试图满足多个约束，并且解决方案不止一种时，您会遇到这种类型的错误。发生这种情况时，引擎将随机选择一个解决方案，这可能会在您的UI中产生意外结果。
 
+###### UIView debug methods
+- hasAmbiguousLayout：如果视图框架不明确，则返回true。
+- exerciseAmbiguityInLayout：随机选择一个解决方案来说明
+模棱两可。
+- ConstraintsAffectingLayout：返回一个约束数组，这些约束会影响指定轴上的视图。
+- _autolayoutTrace：返回一个字符串，其中包含有关包含视图的视图层次结构的信息。
 
 
 
