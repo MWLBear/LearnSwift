@@ -109,6 +109,7 @@ horizontalSizeClass和verticalSizeClass。 这两个特征可以是`regular`，�
 
 
 
+#### Dynamic Type
 
 
 
