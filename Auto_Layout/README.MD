@@ -125,6 +125,28 @@ horizontalSizeClass和verticalSizeClass。 这两个特征可以是`regular`，�
 模棱两可。
 - ConstraintsAffectingLayout：返回一个约束数组，这些约束会影响指定轴上的视图。
 - _autolayoutTrace：返回一个字符串，其中包含有关包含视图的视图层次结构的信息。
+- `po [[UIWindow keyWindow] _autolayoutTrace]`
+
+
+##### Factoring in the render loop
+苹果为开发人员提供了渲染循环API方法，以优化布局性能。 目标是让系统做最少的工作，以为每个帧产生所需的用户界面。 渲染循环的方法可以分为三个阶段：更新约束，布局和显示。
+
+- `Update constraints`：布局计算。
+	- `updateConstraints()` : 更改约束。
+	- `setNeedsUpdateConstraints()` : 在下一个渲染循环中调用约束更改。
+	-  `updateConstraintsIfNeeded()`: 确保将最新的约束更改应用于视图及其子视图。
+- `Layout`：将上一步中的布局值输入到视图中。
+	- `layoutSubviews()`: 使用约束信息设置视图的大小和位置。
+	- `setNeedsLayout()`: 在下一个渲染循环中调用布局更改。
+	- `layoutIfNeeded()`: 确保将最新的布局更新应用于视图及其子视图。
+- `Display`：在布局范围内渲染视图的用户界面。
+	- `draw(_:)`: 在视图范围内绘制视图的内容。
+	-  `setNeedsDisplay()`: 在下一个渲染循环中调用视图重绘。
+	
+为避免约束流失，请确保以下各项：
+
+- 静态约束设置一次。
+- 动态约束仅在必要时激活和停用。
 
 
 
