@@ -148,7 +148,13 @@ horizontalSizeClass和verticalSizeClass。 这两个特征可以是`regular`，�
 - 静态约束设置一次。
 - 动态约束仅在必要时激活和停用。
 
+#### Designing Custom Controls
+- Visualizing XIB/NIB files in storyboards
+- Preparing custom views for Interface Builder
+	- 您可以在Interface Builder中以及在运行时将自定义视图定制为不同的用户界面。 例如，您可以使用此功能来帮助其他开发人员更好地了解您的自定义视图。
+- Making a custom UIButton
 
+   
 
 
 
