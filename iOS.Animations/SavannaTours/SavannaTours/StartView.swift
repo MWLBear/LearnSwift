@@ -8,14 +8,22 @@
 import SwiftUI
 
 struct StartView: View {
-    @State var contentOffset = 0
+    @State var currentOffset = 0
+    @State var color = Color.green
+    
     var body: some View {
         ZStack {
             Circle()
                 .scaleEffect(0.5)
-                .foregroundColor(.green)
+                .animation(.default)
+                .offset(x: offsets[currentOffset].x, y: offsets[currentOffset].y)
+                .foregroundColor(colors[currentOffset])
         }.onAppear{
-            
+            for index in 1..<offsets.count {
+                delay(seconds: Double(index)) {
+                    self.currentOffset = index
+                }
+            }
         }
     }
 }
@@ -26,7 +34,7 @@ struct StartView_Previews: PreviewProvider {
     }
 }
 
-let offset: [CGPoint] = [
+let offsets: [CGPoint] = [
     CGPoint(x: 0, y: 0),
     CGPoint(x: 100, y: 0),
     CGPoint(x: 100, y: -100),
