@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E870396E263A7E550055FB2C /* SpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E870396D263A7E550055FB2C /* SpinnerView.swift */; };
+		E8703971263A82450055FB2C /* offsetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8703970263A82450055FB2C /* offsetView.swift */; };
 		E8C1AC88263989720063FF57 /* SavannaToursApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C1AC87263989720063FF57 /* SavannaToursApp.swift */; };
 		E8C1AC8A263989720063FF57 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C1AC89263989720063FF57 /* ContentView.swift */; };
 		E8C1AC8C263989740063FF57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8C1AC8B263989740063FF57 /* Assets.xcassets */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E870396D263A7E550055FB2C /* SpinnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerView.swift; sourceTree = "<group>"; };
+		E8703970263A82450055FB2C /* offsetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = offsetView.swift; sourceTree = "<group>"; };
 		E8C1AC84263989720063FF57 /* SavannaTours.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SavannaTours.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8C1AC87263989720063FF57 /* SavannaToursApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavannaToursApp.swift; sourceTree = "<group>"; };
 		E8C1AC89263989720063FF57 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -43,6 +47,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E8703973263A86200055FB2C /* TestView */ = {
+			isa = PBXGroup;
+			children = (
+				E8703970263A82450055FB2C /* offsetView.swift */,
+			);
+			path = TestView;
+			sourceTree = "<group>";
+		};
 		E8C1AC7B263989720063FF57 = {
 			isa = PBXGroup;
 			children = (
@@ -62,8 +74,10 @@
 		E8C1AC86263989720063FF57 /* SavannaTours */ = {
 			isa = PBXGroup;
 			children = (
+				E8703973263A86200055FB2C /* TestView */,
 				E8C1AC97263989CA0063FF57 /* View */,
 				E8C1AC87263989720063FF57 /* SavannaToursApp.swift */,
+				E870396D263A7E550055FB2C /* SpinnerView.swift */,
 				E8C1AC89263989720063FF57 /* ContentView.swift */,
 				E8C1ACA526398B310063FF57 /* StartView.swift */,
 				E8C1AC98263989DC0063FF57 /* Delay.swift */,
@@ -167,6 +181,8 @@
 				E8C1ACA026398B050063FF57 /* TourTitle.swift in Sources */,
 				E8C1AC88263989720063FF57 /* SavannaToursApp.swift in Sources */,
 				E8C1AC9D26398AF30063FF57 /* HeroImage.swift in Sources */,
+				E8703971263A82450055FB2C /* offsetView.swift in Sources */,
+				E870396E263A7E550055FB2C /* SpinnerView.swift in Sources */,
 				E8C1ACA626398B310063FF57 /* StartView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

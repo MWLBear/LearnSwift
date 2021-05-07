@@ -11,7 +11,7 @@ import SwiftUI
 struct SavannaToursApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SpinnerView()
         }
     }
 }

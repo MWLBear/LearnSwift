@@ -32,7 +32,7 @@ struct ContentView: View {
                     )
                     .saturation(self.zoomed ? 1 : 0)
                     .rotationEffect(self.zoomed ? .degrees(0): .degrees(90))
-                    .position(x: self.zoomed ? geometry.frame(in: .local).midX: 600, y: 50)
+                    .position(x: self.zoomed ? geometry.frame(in: .local).midX: 600, y: self.zoomed ? geometry.frame(in: .local).minY : 50)
                     .scaleEffect(self.zoomed ? 1.33 : 0.33)
                     .shadow(radius: 10)
                     .animation(.spring())

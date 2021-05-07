@@ -10,4 +10,6 @@
 	- `speed（_）`：允许您加快或减慢动画。
 
 - `saturation(_)` 修改当前视图的颜色饱和度。
+- `offset(x:y:)`: Offset this view by the specified horizontal and vertical distances.
+
 
