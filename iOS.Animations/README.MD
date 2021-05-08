@@ -12,4 +12,15 @@
 - `saturation(_)` 修改当前视图的颜色饱和度。
 - `offset(x:y:)`: Offset this view by the specified horizontal and vertical distances.
 
+##### Adding view transitions
 
+使用`transition(_)`修饰符向视图添加过渡效果,`transition（_）`修饰符采用类型为AnyTransition的参数，`which is a type erased transition`
+
+- `AnyTransition.opacity`：交叉淡入淡出效果，可以淡入或淡出视图。
+- `AnyTransition.slide`：一种过渡，在添加时在视图中从左侧滑动，在移除时在视图中向右侧滑动。
+- `AnyTransition.move（edge :)`：创建一个过渡，将视图移入和移出屏幕给定的边缘。
+- `AnyTransition.offset（_）`：创建一个将视图移动给定偏移量的过渡。
+- `AnyTransition.scale（scale：anchor :)`：创建一个用于放大或缩小视图的过渡。
+
+##### Interactive animations
+使用`gesture(_)`修饰符，可以通过实例化DragGesture将新手势添加到视图中
