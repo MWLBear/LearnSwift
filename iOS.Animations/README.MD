@@ -24,3 +24,67 @@
 
 ##### Interactive animations
 使用`gesture(_)`修饰符，可以通过实例化DragGesture将新手势添加到视图中
+
+## View Animations
+
+##### Animatable properties
+- `Position and size` (位置和大小)
+	- `bounds`：设置此属性的动画以在视图框架内重新放置视图内容。
+	- `frame`：对此属性设置动画以移动和/或缩放视图。
+	- `center`：当您要将视图移动到新位置时，对此属性进行动画处理在屏幕上。
+
+- `Appearance`
+	- `backgroundColor`：更改视图的此属性，以使UIKit随时间逐渐改变背景色。
+	- `alpha`：更改此属性以创建淡入和淡出效果。
+- Transformation
+	- `transform`：在动画块中修改此属性，以动画化视图的旋转，缩放和/或位置。
+	
+----
+```
+   UIView.animate(withDuration: 0.5, delay: 0.4, options: [], animations: {
+            self.password.center.x += self.view.bounds.width
+        }, completion: nil)
+
+```
+- `withDuration`：动画的持续时间。
+- `delay`：UIKit在开始动画之前将等待的秒数。
+- `options`：使您可以自定义有关动画的许多方面。 稍后您将了解有关此参数的更多信息，但现在您可以传递一个空数组[]表示“无特殊选项”。
+	- `repeat`：包括此选项以使动画永久循环。
+   - `autoreverse`：仅与.repeat一起包括此选项； 此选项会反复向前播放动画，然后反向播放。
+   - Animation easing
+     - curveLinear：此选项不对动画应用加速或减速。 
+     - curveEaseIn：此选项将加速应用于动画的开始。
+	  - curveEaseOut：此选项将减速应用于动画的结尾。
+	  - curveEaseInOut：此选项将加速度应用于动画的开始，并将减速度应用于动画的结束。
+- `animations`：用于提供动画的闭包表达式。
+- `completion`：动画结束时执行的代码关闭。 当您要执行一些最终的清理任务或一个接一个地链接动画时，此参数通常会派上用场。
+
+----
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
