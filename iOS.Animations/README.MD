@@ -61,6 +61,15 @@
 
 ----
 
+```
+animate（withDuration：delay：usingSpringWithDamping：initialSpringVeloci ty：options：animations：completion :)
+
+```
+- usingSpringWithDamping：控制在动画接近其最终状态时应用于动画的阻尼或减少量。此参数接受介于0.0和1.0之间的值。接近0.0的值将创建更生动的动画，而接近1.0的值将创建僵硬的效果。您可以将此值视为弹簧的“刚度”。
+- initialSpringVelocity：控制动画的初始速度。值1.0设置动画的初始速度以覆盖一秒跨度内的总距离。较大和较小的值将导致动画具有或多或少的速度，并会影响弹簧的沉降方式。但是请注意，弹簧计算会很快修改初始速度，并且动画将始终在持续时间结束之前结束。
+
+----
+
 
 
 
