@@ -97,9 +97,8 @@ class ViewController: UIViewController {
             
             let offsetArriving = CGPoint(x: 0.0, y: CGFloat(direction.rawValue * 50))
             moveLabel(label: arrivingTo, text: data.arrivingTo, offset: offsetArriving)
-           
-            cubeTransition(label: flightStatus, text: data.flightStatus,  dirction: direction)
 
+            cubeTransition(label: flightStatus, text: data.flightStatus, dirction: direction)
             
         }else {
             bgImageView.image = UIImage(named: data.weatherImageName)
