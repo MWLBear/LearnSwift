@@ -86,6 +86,7 @@ class ViewController: UIViewController {
         // populate the UI with the next flight's data
         summary.text = data.summary
         
+        planeDepart()
         if animated {
             fade(imageView: bgImageView, toImage: UIImage(named: data.weatherImageName)!, showEffects: data.showWeatherEffects)
             let direction: AnimationDirection = data.isTakingOff ? .positive : .negative
@@ -113,6 +114,37 @@ class ViewController: UIViewController {
         // schedule next flight
         delay(seconds: 3.0) {
             self.changeFlight(to: data.isTakingOff ? parisToRome : londonToParis, animated: true)
+        }
+    }
+    
+    func planeDepart() {
+        let originalCenter = planeImage.center
+        
+        UIView.animateKeyframes(withDuration: 1.5, delay: 0.0) {
+            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.25) {
+                self.planeImage.center.x += 80.0
+                self.planeImage.center.y -= 10.0
+            }
+            UIView.addKeyframe(withRelativeStartTime: 0.1, relativeDuration: 0.4) {
+                self.planeImage.transform = CGAffineTransform(rotationAngle: -.pi / 8)
+            }
+            UIView.addKeyframe(withRelativeStartTime: 0.25,relativeDuration: 0.25) {
+              self.planeImage.center.x += 100.0
+              self.planeImage.center.y -= 50.0
+              self.planeImage.alpha = 0.0
+            }
+            UIView.addKeyframe(withRelativeStartTime: 0.51,relativeDuration: 0.01) {
+              self.planeImage.transform = .identity
+              self.planeImage.center = CGPoint(x: 0.0, y: originalCenter.y)
+            }
+            UIView.addKeyframe(withRelativeStartTime: 0.55,
+            relativeDuration: 0.45) {
+              self.planeImage.alpha = 1.0
+              self.planeImage.center = originalCenter
+            }
+            
+        } completion: { _ in
+            
         }
     }
     
