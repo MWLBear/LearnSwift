@@ -53,13 +53,14 @@ class ViewController: UIViewController {
     // MARK: view controller methods
     func showMessage(index: Int) {
         label.text = messages[index]
-        UIView.transition(with: status, duration: 0.33, options: [.curveEaseOut,.transitionCurlDown]) {
+        UIView.transition(with: status, duration: 0.33, options: [.curveEaseOut,.transitionFlipFromBottom]) {
             self.status.isHidden = false
-            self.status.center = self.statusPosition
         } completion: { _ in
             delay(2.0) {
                 if index < self.messages.count - 1 {
                     self.removeMessage(index: index)
+                }else {
+                    self.resetForm()
                 }
             }
         }
@@ -71,10 +72,41 @@ class ViewController: UIViewController {
         } completion: { _ in
             self.status.isHidden = true
             self.status.center = self.statusPosition
-            
             self.showMessage(index: index + 1)
         }
 
+    }
+    
+    func resetForm() {
+        UIView.transition(with: self.status, duration: 0.2, options: [.curveEaseOut,.transitionFlipFromTop]) {
+            self.status.isHidden = true
+            self.status.center = self.statusPosition
+        } completion: { _ in
+            
+        }
+        UIView.animate(withDuration: 0.2, delay: 0, options: []) {
+            self.spinner.center = CGPoint(x: -20, y: 6)
+            self.spinner.alpha = 0
+            self.loginButton.backgroundColor = UIColor(red: 0.63, green: 0.84, blue: 0.35, alpha: 1.0)
+            self.loginButton.center.y -= 60
+            self.loginButton.bounds.size.width -= 80.0
+
+        } completion: { _ in
+            
+        }
+        loginButton.isEnabled = true
+    }
+    
+    func animateCloud(cloud: UIImageView) {
+        let cloundSpeed = 60 / view.frame.size.width
+        let duration = (view.frame.width-cloud.frame.origin.x) * cloundSpeed
+        
+        UIView.animate(withDuration: TimeInterval(duration), delay: 0, options: .curveLinear) {
+            cloud.frame.origin.x = self.view.frame.size.width
+        } completion: { _ in
+            cloud.frame.origin.x = -cloud.frame.size.width
+            self.animateCloud(cloud: cloud)
+        }
     }
     
     
@@ -89,7 +121,6 @@ class ViewController: UIViewController {
         spinner.startAnimating()
         spinner.alpha = 0.0
         loginButton.addSubview(spinner)
-        
         status.isHidden = true
         status.center = loginButton.center
         view.addSubview(status)
@@ -152,13 +183,17 @@ class ViewController: UIViewController {
             self.loginButton.alpha = 1
         }, completion: nil)
         
+        animateCloud(cloud: cloud1)
+        animateCloud(cloud: cloud2)
+        animateCloud(cloud: cloud3)
+        animateCloud(cloud: cloud4)
     }
     
     // MARK: further methods
     
     @IBAction func login() {
         view.endEditing(true)
-        
+        loginButton.isEnabled = false
         UIView.animate(withDuration: 1.5, delay: 0.0, usingSpringWithDamping: 0.2, initialSpringVelocity: 0, options: [], animations: {
             self.loginButton.bounds.size.width += 80.0
         }) { _ in
