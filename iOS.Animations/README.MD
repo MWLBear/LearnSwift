@@ -70,7 +70,16 @@ animate（withDuration：delay：usingSpringWithDamping：initialSpringVeloci ty
 
 ----
 
+##### Transitions 
+`transition(with:duration: options:animations:completion:)`
 
+- .transitionFlipFromLeft
+- .transitionFlipFromRight
+- .transitionCurlUp
+- .transitionCurlDown
+- .transitionCrossDissolve 
+-  .transitionFlipFromTop
+- .transitionFlipFromBottom
 
 
 
