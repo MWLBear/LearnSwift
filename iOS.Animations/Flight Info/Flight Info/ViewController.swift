@@ -84,7 +84,6 @@ class ViewController: UIViewController {
     func changeFlight(to data: FlightData, animated: Bool = false) {
         
         // populate the UI with the next flight's data
-        summary.text = data.summary
         
         planeDepart()
         if animated {
@@ -100,6 +99,7 @@ class ViewController: UIViewController {
             moveLabel(label: arrivingTo, text: data.arrivingTo, offset: offsetArriving)
 
             cubeTransition(label: flightStatus, text: data.flightStatus, dirction: direction)
+            summarySwitch(to: data.summary)
             
         }else {
             bgImageView.image = UIImage(named: data.weatherImageName)
@@ -110,11 +110,30 @@ class ViewController: UIViewController {
             departingFrom.text = data.departingFrom
             arrivingTo.text = data.arrivingTo
             flightStatus.text = data.flightStatus
+            summary.text = data.summary
+
         }
         // schedule next flight
         delay(seconds: 3.0) {
             self.changeFlight(to: data.isTakingOff ? parisToRome : londonToParis, animated: true)
         }
+    }
+    
+    func summarySwitch(to: String) {
+        UIView.animateKeyframes(withDuration: 1.0, delay: 0) {
+            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.45 ){
+                self.summary.center.y -= 100
+            }
+            UIView.addKeyframe(withRelativeStartTime: 0.5, relativeDuration: 0.45) {
+                self.summary.center.y += 100
+            }
+        } completion: { _ in
+            
+        }
+        delay(seconds: 0.5) {
+            self.summary.text = to
+        }
+        
     }
     
     func planeDepart() {
