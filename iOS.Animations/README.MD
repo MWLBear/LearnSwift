@@ -84,6 +84,7 @@ animate（withDuration：delay：usingSpringWithDamping：initialSpringVeloci ty
 ##### Keyframe animations 
 - `addKeyframe（withRelativeStartTime：relativeDuration：animations :)`是您第一次在本书的动画中使用相对时长。 关键帧的开始时间及其持续时间用相对于动画整个持续时间的百分比表示。 例如，0.1将是总持续时间的10％，0.25将是25％，而1.0将是总持续时间的100％。
 
+##### Auto Layout
 
 
 
