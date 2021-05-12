@@ -22,3 +22,6 @@ UIView.animate(withDuration: 1.0) {
 
 view.addSubview(imageView)
 PlaygroundPage.current.liveView = view
+
+
+

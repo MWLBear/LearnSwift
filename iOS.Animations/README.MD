@@ -86,12 +86,51 @@ animate（withDuration：delay：usingSpringWithDamping：initialSpringVeloci ty
 
 ##### Auto Layout
 
+## Layer Animations
+`Views`:
 
+- 复杂的视图层次结构布局，自动布局等。
+- 用户交互。
+- 通常具有在CPU的主线程上执行的自定义逻辑或自定义图形代码。
+- 非常灵活，功能强大，有很多子类可以继承。
 
+`Layers`:
 
+- 更简单的层次结构，更快的布局解析速度，更快的绘制速度。
+- 没有响应者链开销。
+- 默认情况下没有自定义逻辑。并直接在GPU上绘制。
+- 不够灵活，可以减少子类的类。
 
+##### Animatable properties
 
+- `Position and size`
+	- `bounds`: 修改此项以使图层的边界框动起来。
+	- `position`: 修改此位置以使该图层在其父图层中的位置具有动画效果。如果只想控制一个轴的运动，则可以分别为position.x或position.y设置动画
+	- `transform`: 修改此选项可移动，缩放和旋转图层。您甚至可以为3D空间中的图层设置动画，这是单独使用视图无法做到的
+- `Border`
+	- `borderColor`: 修改此项以更改边界色调。
+	- `borderWidth`: 修改此项以增加或缩小边框的宽度
+	- `cornerRadius`: 修改此项以更改图层圆角的半径。
+- Shadow
+	- `shadowOffset`: 修改此选项可使阴影看起来更靠近或远离图层。
+	- `shadowOpacity: 修改此项以使阴影淡入或淡出
+	- `shadowPath`: 改此选项可更改图层阴影的形状。您可以创建不同的3D效果，以使图层看起来像在浮动时具有不同的阴影形状和位置。
+	- `shadowRadius`: 修改此项以控制阴影的模糊；当模拟视图朝向或远离投射阴影的表面的运动时，此功能特别有用
+- `Contents`
+	- `contents`: 修改此内容以将原始TIFF或PNG数据分配为图层内容。
+	- `mask`: 修改此选项可建立用于遮罩图层可见内容的形状或图像；
+	- `opacity`: 修改此项以设置图层内容的透明度
 
+`CABasicAnimation`的一个实例描述了一种潜在的图层动画：您可以选择立即运行，稍后运行或根本不运行。 由于动画没有绑定到特定的图层，因此您可以在其他图层上重复使用该动画，并且每个图层将独立运行该动画的副本
+`add（_：forKey :)`复制动画对象，并告诉Core Animation在图层上运行它。
+
+- CABasicAnimation对象只是一个数据模型，未绑定到任何特定层。
+- add（_：forKey :)复制动画对象。
+- fillMode:控制动画序列的开头和结尾的行为。
+	-  `CAMediaTimingFillMode.removed`是fillMode的默认值。这会在定义的beginTime时（或未设置beginTime的情况下）立即启动动画，并在动画完成时删除在动画过程中所做的更改：
+	-  backwards:无论动画的实际开始时间如何，CAMediaTimingFillMode.backwards都会在屏幕上立即显示动画的第一帧，并在以后的时间开始动画。
+	-  forwards:CAMediaTimingFillMode.forwards会照常播放动画，但会在屏幕上保留动画的最后一帧，直到您删除动画为止：
+	-  both:CAMediaTimingFillMode.both是向前和向后的组合； 如您所愿，这会使动画的第一帧立即显示在屏幕上，并在动画结束时将最后一帧保留在屏幕上：
 
 
 
