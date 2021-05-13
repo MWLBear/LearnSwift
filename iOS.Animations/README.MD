@@ -140,14 +140,19 @@ CAMediaTimingFunction
 - `.easeOut`产生与.easeIn相反的效果：动画开始时较快，结束时则变慢。
 - `.easeInEaseOut`在开始和结束时减慢动画的速度，但在中间部分增加速度。
 
-CASpringAnimation
+#####CASpringAnimation
 
 - `damping`：应用于系统的阻尼
 - `mass`：系统中重量的质量
 - `stiffness`：附加到配重的弹簧的刚度
 - `initialVelocity`：施加到配重的初始推力。
 
+##### CAKeyframeAnimation
+Animating struct values
 
+- 您可以使用CAKeyframeAnimation类轻松创建图层关键帧动画。
+- 与视图不同，图层关键帧动画在多个可能的关键点上以连续动画的形式对单个属性进行动画处理。
+- 您可以通过将复杂的属性数据类型包装为NSValue类型来制作动画。
 
 
 

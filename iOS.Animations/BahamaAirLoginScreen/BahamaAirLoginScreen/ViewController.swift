@@ -27,17 +27,20 @@ func delay(_ seconds: Double, completion: @escaping ()->Void) {
     DispatchQueue.main.asyncAfter(deadline: .now() + seconds, execute: completion)
 }
 func tintBackgroundColor(layer: CALayer, toColor: UIColor) {
-    let color = CABasicAnimation(keyPath: "backgroundColor")
+    let color = CASpringAnimation(keyPath: "backgroundColor")
+    color.damping = 5.0
+    color.initialVelocity = -10.0
     color.fromValue = layer.backgroundColor
     color.toValue = toColor.cgColor
-    color.duration = 1.0
+    color.duration = color.settlingDuration
     layer.add(color, forKey: nil)
     layer.backgroundColor = toColor.cgColor
 }
 func roundCorners(layer: CALayer, toRadius: CGFloat){
-    let round = CABasicAnimation(keyPath: "cornerRadius")
+    let round = CASpringAnimation(keyPath: "cornerRadius")
+    round.damping = 5.0
     round.toValue = toRadius
-    round.duration = 0.33
+    round.duration = round.settlingDuration
     layer.add(round, forKey: nil)
     layer.cornerRadius = toRadius
 }
@@ -118,6 +121,13 @@ class ViewController: UIViewController {
 
         }
         loginButton.isEnabled = true
+        
+        let wobble = CAKeyframeAnimation(keyPath: "transform.rotation")
+        wobble.duration = 0.25
+        wobble.repeatCount = 4
+        wobble.values =  [0.0, -.pi/4.0, 0.0, .pi/4.0, 0.0]
+        wobble.keyTimes = [0.0, 0.25, 0.5, 0.75, 1.0]
+        heading.layer.add(wobble, forKey: nil)
     }
     
     func animateCloud(cloud: UIImageView) {
@@ -320,6 +330,22 @@ class ViewController: UIViewController {
         alpha: 1.0)
         tintBackgroundColor(layer: loginButton.layer, toColor:tintColor)
         roundCorners(layer: loginButton.layer, toRadius: 25.0)
+        
+        let ballon = CALayer()
+        ballon.contents = UIImage(named: "balloon")!.cgImage
+        ballon.frame = CGRect(x: -50, y: 0, width: 50, height: 60)
+        view.layer.insertSublayer(ballon, below: username.layer)
+        
+        let flight = CAKeyframeAnimation(keyPath: "position")
+        flight.duration = 2.0
+        flight.values = [
+            CGPoint(x: -50, y: 0),
+            CGPoint(x: view.frame.width + 50, y: 160),
+            CGPoint(x: -50, y: loginButton.center.y)
+        ].map{NSValue(cgPoint: $0 )}
+        flight.keyTimes = [0.0, 0.5, 1.0]
+        ballon.add(flight, forKey: nil)
+        ballon.position = CGPoint(x: -50, y: loginButton.center.y)
     }
     
     // MARK: UITextFieldDelegate
