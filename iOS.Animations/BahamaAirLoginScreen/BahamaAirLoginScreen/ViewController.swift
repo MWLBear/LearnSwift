@@ -163,8 +163,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        view.addSubview(self.myView)
-        
         //set up the UI
         loginButton.layer.cornerRadius = 8.0
         loginButton.layer.masksToBounds = true
@@ -218,8 +216,7 @@ class ViewController: UIViewController {
         username.layer.position.x = view.bounds.size.width/2
         password.layer.position.x = view.bounds.size.width/2
         
-        loginButton.center.y += 30
-        loginButton.alpha = 0
+      
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -242,10 +239,6 @@ class ViewController: UIViewController {
         cloudAl.beginTime = CACurrentMediaTime() + 1.1
         cloud4.layer.add(cloudAl, forKey: nil)
 
-        UIView.animate(withDuration: 0.5, delay: 0.5, usingSpringWithDamping: 1, initialSpringVelocity: 0, options: [], animations: {
-            self.loginButton.center.y -= 30
-            self.loginButton.alpha = 1
-        }, completion: nil)
         
 //        animateCloud(cloud: cloud1)
 //        animateCloud(cloud: cloud2)
@@ -271,6 +264,29 @@ class ViewController: UIViewController {
         
         username.delegate = self
         password.delegate = self
+        
+        let groupAnimation = CAAnimationGroup()
+        groupAnimation.beginTime = CACurrentMediaTime() + 0.5
+        groupAnimation.timingFunction = CAMediaTimingFunction(name: .easeIn)
+        groupAnimation.duration = 0.5
+        groupAnimation.fillMode = .backwards
+        
+        let scaleDowm = CABasicAnimation(keyPath: "transfrom.scale")
+        scaleDowm.fromValue = 3.5
+        scaleDowm.toValue = 1.0
+        
+        let rotate = CABasicAnimation(keyPath:"transform.rotation")
+        rotate.fromValue = 0.0
+        rotate.toValue = 1.0
+        
+        let fade = CABasicAnimation(keyPath: "opacity")
+        fade.fromValue = 0.0
+        fade.toValue = 1.0
+        
+        groupAnimation.animations = [scaleDowm, rotate, fade]
+        loginButton.layer.add(groupAnimation, forKey: nil)
+        
+        
     }
     
     // MARK: further methods

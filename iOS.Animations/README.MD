@@ -132,6 +132,13 @@ animate（withDuration：delay：usingSpringWithDamping：initialSpringVeloci ty
 	-  forwards:CAMediaTimingFillMode.forwards会照常播放动画，但会在屏幕上保留动画的最后一帧，直到您删除动画为止：
 	-  both:CAMediaTimingFillMode.both是向前和向后的组合； 如您所愿，这会使动画的第一帧立即显示在屏幕上，并在动画结束时将最后一帧保留在屏幕上：
 
+##### CAAnimationGroup
+CAMediaTimingFunction
+
+- `.linear`在整个动画过程中以相等的速度运行动画。 
+- `.easeIn`更改动画，使其开始较慢，并以较快的速度结束。
+- `.easeOut`产生与.easeIn相反的效果：动画开始时较快，结束时则变慢。
+- `.easeInEaseOut`在开始和结束时减慢动画的速度，但在中间部分增加速度。
 
 
 
