@@ -148,6 +148,7 @@ class ViewController: UIViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesCancelled(touches, with: event)
         
+        view.endEditing(true)
         let move = CABasicAnimation(keyPath: "position.y")
         move.fromValue = 100
         move.toValue = 500
@@ -195,26 +196,35 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        
+        let formGroup = CAAnimationGroup()
+        formGroup.duration = 0.5
+        formGroup.fillMode = .forwards
+        
         let flyRight = CABasicAnimation(keyPath: "position.x")
         flyRight.fromValue = -view.bounds.size.width/2
         flyRight.toValue = view.bounds.size.width/2
-        flyRight.duration = 0.5
-        flyRight.delegate = self
-        flyRight.setValue("form", forKey: "name")
-        flyRight.setValue(heading.layer, forKey: "layer")
-        heading.layer.add(flyRight, forKey: nil)
+       
+        let fadeFieldIn = CABasicAnimation(keyPath: "opacity")
+        fadeFieldIn.fromValue = 0.25
+        fadeFieldIn.toValue = 1.0
+        
+        formGroup.animations = [flyRight,fadeFieldIn]
+        heading.layer.add(formGroup, forKey: nil)
 
-        flyRight.beginTime = CACurrentMediaTime() + 0.3
-        flyRight.fillMode = .both
-        flyRight.setValue(username.layer, forKey: "layer")
-        username.layer.add(flyRight, forKey: nil)
+        formGroup.delegate = self
+        formGroup.setValue("form", forKey: "name")
+        formGroup.setValue(username.layer, forKey: "layer")
+
+        formGroup.beginTime = CACurrentMediaTime() + 0.3
+        username.layer.add(formGroup, forKey: nil)
         
-        flyRight.beginTime = CACurrentMediaTime() + 0.4
-        flyRight.setValue(password.layer, forKey: "layer")
-        password.layer.add(flyRight, forKey: nil)
+        formGroup.setValue(password.layer, forKey: "layer")
+        formGroup.beginTime = CACurrentMediaTime() + 0.4
+        password.layer.add(formGroup, forKey: nil)
         
-        username.layer.position.x = view.bounds.size.width/2
-        password.layer.position.x = view.bounds.size.width/2
+//        username.layer.position.x = view.bounds.size.width/2
+//        password.layer.position.x = view.bounds.size.width/2
         
       
     }
@@ -330,13 +340,14 @@ extension ViewController: CAAnimationDelegate {
         if name == "form" {
             print("form")
             let layer = anim.value(forKey: "layer") as? CALayer
-            anim.setValue(nil, forKey: "layer") //            //将layer的值设置为nil即可删除对原始图层的引用。
-
+            anim.setValue(nil, forKey: "layer") //将layer的值设置为nil即可删除对原始图层的引用。
             
-            let pulse = CABasicAnimation(keyPath: "transform.scale")
+            let pulse = CASpringAnimation(keyPath: "transform.scale")
+            pulse.damping = 7.5
             pulse.fromValue = 1.25
             pulse.toValue = 1.0
-            pulse.duration = 0.25
+            //settlingDuration估计系统稳定所需的时间；
+            pulse.duration = pulse.settlingDuration
             layer?.add(pulse, forKey: nil)
         }
         
@@ -359,5 +370,32 @@ extension ViewController: UITextFieldDelegate {
         }
         print(runningAnimations)
         info.layer.removeAnimation(forKey: "infoappear")
+    }
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        guard let text = textField.text else {
+            return
+        }
+        if text.count < 5 {
+            let jump = CASpringAnimation(keyPath: "position.y")
+            jump.initialVelocity = 100.0
+            jump.mass = 10.0
+            jump.stiffness = 1500.0
+            jump.damping = 50.0
+            jump.fromValue = textField.layer.position.y + 1.0
+            jump.toValue = textField.layer.position.y
+            jump.duration = jump.settlingDuration
+            textField.layer.add(jump, forKey: nil)
+            
+            textField.layer.borderWidth = 3.0
+            textField.layer.borderColor = UIColor.clear.cgColor
+            
+            let flash = CASpringAnimation(keyPath: "borderColor")
+            flash.damping = 7.0
+            flash.stiffness = 200.0
+            flash.fromValue = UIColor(red: 1.0, green: 0.27, blue: 0.0, alpha: 1.0).cgColor
+            flash.toValue = UIColor.white.cgColor
+            flash.duration = flash.settlingDuration
+            textField.layer.add(flash, forKey: nil)
+        }
     }
 }
