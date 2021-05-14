@@ -161,7 +161,14 @@ Animating struct values
 - lineDashPhase：在形状周围创建选取框或“行进蚂蚁”效果。
 - lineWidth：增大或缩小形状的描边线的大小。
 
+##### Gradient Animations
 
+`Animatable properties`:
+
+- colors：对渐变的颜色进行动画处理以使其具有色调。
+- locations：对颜色里程碑位置进行动画处理以使颜色移动
+在渐变内部。
+- startPoint和endPoint：对渐变的布局范围进行动画处理。
 
 
 
