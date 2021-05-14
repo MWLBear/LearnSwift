@@ -154,9 +154,12 @@ Animating struct values
 - 与视图不同，图层关键帧动画在多个可能的关键点上以连续动画的形式对单个属性进行动画处理。
 - 您可以通过将复杂的属性数据类型包装为NSValue类型来制作动画。
 
+##### CAShapeLayer
 
-
-
+- path：将图层的形状变形为其他形状。
+- fillColor：将形状的填充色调更改为其他颜色。
+- lineDashPhase：在形状周围创建选取框或“行进蚂蚁”效果。
+- lineWidth：增大或缩小形状的描边线的大小。
 
 
 
