@@ -140,7 +140,7 @@ CAMediaTimingFunction
 - `.easeOut`产生与.easeIn相反的效果：动画开始时较快，结束时则变慢。
 - `.easeInEaseOut`在开始和结束时减慢动画的速度，但在中间部分增加速度。
 
-#####CASpringAnimation
+##### CASpringAnimation
 
 - `damping`：应用于系统的阻尼
 - `mass`：系统中重量的质量
