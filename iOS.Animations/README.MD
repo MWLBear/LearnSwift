@@ -170,7 +170,10 @@ Animating struct values
 在渐变内部。
 - startPoint和endPoint：对渐变的布局范围进行动画处理。
 
-
-
+##### Stroke & Path Animations
+- `strokeStart` 把一个圆先画完，然后 再慢慢减少
+- `strokeEnd` 从原点开始画，然后把圆画完整
+- 您可以通过动画CAShapeLayer的strokeStart和strokeEnd属性来动画化在屏幕上绘制形状的整个过程。
+- 您可以通过使用关键帧动画并使用给定的CGPath动画化该图层的position属性，从而在屏幕上沿路径设置动画。
 
 
