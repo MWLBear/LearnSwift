@@ -176,4 +176,18 @@ Animating struct values
 - 您可以通过动画CAShapeLayer的strokeStart和strokeEnd属性来动画化在屏幕上绘制形状的整个过程。
 - 您可以通过使用关键帧动画并使用给定的CGPath动画化该图层的position属性，从而在屏幕上沿路径设置动画。
 
+##### Replicating Animations
+`CAReplicatorLayer`:
+
+- `instanceCount`：设置所需的副本数
+- `instanceTransform`：设置要在副本之间应用的变换
+- `instanceDelay`：设置副本之间的动画延迟
+
+CAReplicator图层特有的可设置动画的属性包括以下内容:
+
+- `instanceDelay`：对实例之间的延迟量进行动画处理
+- `instanceTransform`：动态更改复制之间的转换
+- `instanceColor`：更改用于所有实例的混合颜色
+- `instanceRedOffse`，`instanceGreenOffset`，`instanceBlueOffset`：应用增量以应用于每个实例颜色分量
+- `instanceAlphaOffset`：更改应用于每个实例的不透明度增量
 
