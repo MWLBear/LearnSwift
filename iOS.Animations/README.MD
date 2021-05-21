@@ -199,3 +199,10 @@ CAReplicator图层特有的可设置动画的属性包括以下内容:
 
 - view（forKey :)：这使您可以分别通过参数UITransitionContextViewKeyKey.from或UITransitionContextViewKey.to访问“旧”和“新”视图控制器的视图。
 - viewController（forKey :)：这使您可以分别通过参数UITransitionContextViewControllerKey.from或UITransitionContextViewControllerKey.to访问“旧”和“新”视图控制器。
+
+##### UINavigationController Custom Transition Animations
+
+- 要启用和自定义自定义导航过渡，您可以在其中一种类型中采用UINavigationControllerDelegate协议，并使其成为导航委托。
+- 要执行任何自定义导航过渡动画，请采用UIViewControllerAnimatedTransitioning协议作为过渡的动画制作者。
+- 只要正确包装过渡并最后调用必要的UIKit方法，就可以成功地将图层动画用于自定义过渡。
+- 要保留导航过渡的上下文并在整个过渡期间进行异步访问，可以将其保留在动画师类型的UIViewControllerContextTransitioning属性中。
