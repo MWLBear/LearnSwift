@@ -206,3 +206,8 @@ CAReplicator图层特有的可设置动画的属性包括以下内容:
 - 要执行任何自定义导航过渡动画，请采用UIViewControllerAnimatedTransitioning协议作为过渡的动画制作者。
 - 只要正确包装过渡并最后调用必要的UIKit方法，就可以成功地将图层动画用于自定义过渡。
 - 要保留导航过渡的上下文并在整个过渡期间进行异步访问，可以将其保留在动画师类型的UIViewControllerContextTransitioning属性中。
+
+
+- 通过在过渡动画制作器中采用UIPercentDrivenInteractiveTransition协议，可以轻松地向自定义过渡添加交互性。
+- 交互式过渡通常由用户手势驱动。 UIPanGestureRecognizer是一种方便的类，可为您提供连续的手势反馈。
+- 您可以通过在UIPercentDrivenInteractiveTransition上设置Interactive属性的值来在交互式和非交互式转换模式之间切换。
