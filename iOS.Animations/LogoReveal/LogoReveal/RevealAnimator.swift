@@ -10,12 +10,12 @@ class RevealAnimator: UIPercentDrivenInteractiveTransition, UIViewControllerAnim
     private var isLayerBased: Bool {
         return operation == .push
     }
+    
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return animationDuration
     }
     
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
-        storedContext = transitionContext
         
         
         if interactive && isLayerBased {
@@ -24,9 +24,10 @@ class RevealAnimator: UIPercentDrivenInteractiveTransition, UIViewControllerAnim
             //阻止图层运行自己的动画
             transitionLayer.speed = 0
             transitionLayer.timeOffset = pausedTime
-            
         }
         
+        storedContext = transitionContext
+
         if operation == .push {
             let fromVC = transitionContext.viewController(forKey: .from) as! MasterViewController
             let toVC = transitionContext.viewController(forKey: .to) as! DetailViewController
@@ -61,7 +62,8 @@ class RevealAnimator: UIPercentDrivenInteractiveTransition, UIViewControllerAnim
             UIView.animate(withDuration: animationDuration, delay: 0.0, options: .curveEaseIn) {
                 fromView.transform = CGAffineTransform(scaleX: 0.01, y: 0.01)
             } completion: { _ in
-                transitionContext.completeTransition(true)
+                transitionContext.cancelInteractiveTransition()
+                transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
             }
         }
     }
