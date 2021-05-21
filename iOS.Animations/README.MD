@@ -191,3 +191,11 @@ CAReplicator图层特有的可设置动画的属性包括以下内容:
 - `instanceRedOffse`，`instanceGreenOffset`，`instanceBlueOffset`：应用增量以应用于每个实例颜色分量
 - `instanceAlphaOffset`：更改应用于每个实例的不透明度增量
 
+
+## Layer Presentation Controller & Orientation Animations
+
+
+过渡上下文对象有两个非常方便的方法，可让您访问过渡播放器：
+
+- view（forKey :)：这使您可以分别通过参数UITransitionContextViewKeyKey.from或UITransitionContextViewKey.to访问“旧”和“新”视图控制器的视图。
+- viewController（forKey :)：这使您可以分别通过参数UITransitionContextViewControllerKey.from或UITransitionContextViewControllerKey.to访问“旧”和“新”视图控制器。
