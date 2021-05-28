@@ -211,3 +211,15 @@ CAReplicator图层特有的可设置动画的属性包括以下内容:
 - 通过在过渡动画制作器中采用UIPercentDrivenInteractiveTransition协议，可以轻松地向自定义过渡添加交互性。
 - 交互式过渡通常由用户手势驱动。 UIPanGestureRecognizer是一种方便的类，可为您提供连续的手势反馈。
 - 您可以通过在UIPercentDrivenInteractiveTransition上设置Interactive属性的值来在交互式和非交互式转换模式之间切换。
+
+## Animations with UIViewPropertyAnimator
+- 使用UIViewPropertyAnimator类型时，可以创建一个对象，向其添加动画和/或完成闭包，并在方便时启动动画。
+- 在类实例中包含动画闭包为通过动画工厂重用动画提供了全新的方法。
+- 要创建视图关键帧动画，您仍然需要使用旧的api UIView.animateKeyframes（withDuration：delay：keyframes :)。
+- 使用UIViewPropertyAnimator，可以为UIBlurEffect值设置动画并创建令人印象深刻的模糊动画。
+- 您可以使用UIViewPropertyAnimator的两个控制点自定义Bézier曲线来创建自己的自定义动画定时，并远离预定义的缓动常数。
+
+- 最后但并非最不重要的一点是，您可以将预定义的UIKit过渡API（如UIView.transition（with：duration：options：animations：completion））与其他UIViewPropertyAnimator动画混合使用，它们将“一起工作”。
+
+
+
