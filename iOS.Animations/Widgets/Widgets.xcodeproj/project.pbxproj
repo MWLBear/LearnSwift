@@ -14,11 +14,12 @@
 		9C9A08A31DAD335A0080F439 /* WidgetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9A08A21DAD335A0080F439 /* WidgetCell.swift */; };
 		9C9CC9F81DAD63B9006D4177 /* WidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9CC9F71DAD63B9006D4177 /* WidgetView.swift */; };
 		9C9E23F61DAD251B004749FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9E23F51DAD251B004749FD /* AppDelegate.swift */; };
-		9C9E23F81DAD251B004749FD /* LockScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9E23F71DAD251B004749FD /* LockScreenViewController.swift */; };
 		9C9E23FB1DAD251B004749FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C9E23F91DAD251B004749FD /* Main.storyboard */; };
 		9C9E24001DAD251B004749FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C9E23FE1DAD251B004749FD /* LaunchScreen.storyboard */; };
 		9CF4C0F11DAE5D0900F4E30A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF4C0F01DAE5D0900F4E30A /* SettingsViewController.swift */; };
 		9CF4C0F51DAE912000F4E30A /* FooterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF4C0F41DAE912000F4E30A /* FooterCell.swift */; };
+		E8AC03302664830E0006C4BF /* PresentTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8AC032F2664830E0006C4BF /* PresentTransition.swift */; };
+		E8AC03322664E4D50006C4BF /* LockScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8AC03312664E4D50006C4BF /* LockScreenViewController.swift */; };
 		E8BDA930265DF3C10003E9BD /* AnimatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BDA92F265DF3C10003E9BD /* AnimatorFactory.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,12 +32,13 @@
 		9C9CC9F71DAD63B9006D4177 /* WidgetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WidgetView.swift; sourceTree = "<group>"; };
 		9C9E23F21DAD251B004749FD /* Widgets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Widgets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C9E23F51DAD251B004749FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9C9E23F71DAD251B004749FD /* LockScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockScreenViewController.swift; sourceTree = "<group>"; };
 		9C9E23FA1DAD251B004749FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9C9E23FF1DAD251B004749FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C9E24011DAD251B004749FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9CF4C0F01DAE5D0900F4E30A /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		9CF4C0F41DAE912000F4E30A /* FooterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FooterCell.swift; sourceTree = "<group>"; };
+		E8AC032F2664830E0006C4BF /* PresentTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentTransition.swift; sourceTree = "<group>"; };
+		E8AC03312664E4D50006C4BF /* LockScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LockScreenViewController.swift; sourceTree = "<group>"; };
 		E8BDA92F265DF3C10003E9BD /* AnimatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatorFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -115,10 +117,11 @@
 			isa = PBXGroup;
 			children = (
 				9C3A2E341DAFBDD000384C68 /* Widget */,
-				9C9E23F71DAD251B004749FD /* LockScreenViewController.swift */,
+				E8AC03312664E4D50006C4BF /* LockScreenViewController.swift */,
 				9CF4C0F41DAE912000F4E30A /* FooterCell.swift */,
 				9C7446761DB2995E0075364A /* WidgetsOwnerProtocol.swift */,
 				E8BDA92F265DF3C10003E9BD /* AnimatorFactory.swift */,
+				E8AC032F2664830E0006C4BF /* PresentTransition.swift */,
 			);
 			name = "Lock Screen View Controller";
 			sourceTree = "<group>";
@@ -198,11 +201,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CF4C0F11DAE5D0900F4E30A /* SettingsViewController.swift in Sources */,
+				E8AC03322664E4D50006C4BF /* LockScreenViewController.swift in Sources */,
 				E8BDA930265DF3C10003E9BD /* AnimatorFactory.swift in Sources */,
 				9C7446771DB2995E0075364A /* WidgetsOwnerProtocol.swift in Sources */,
 				9CF4C0F51DAE912000F4E30A /* FooterCell.swift in Sources */,
+				E8AC03302664830E0006C4BF /* PresentTransition.swift in Sources */,
 				9C125E081DAEEFBF00E352C1 /* IconCell.swift in Sources */,
-				9C9E23F81DAD251B004749FD /* LockScreenViewController.swift in Sources */,
 				9C9E23F61DAD251B004749FD /* AppDelegate.swift in Sources */,
 				9C9A08A31DAD335A0080F439 /* WidgetCell.swift in Sources */,
 				9C7446791DB29B340075364A /* IconEffectView.swift in Sources */,
