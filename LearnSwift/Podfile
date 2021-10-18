@@ -11,6 +11,7 @@ target 'LearnSwift' do
   pod 'ObjectMapper'
   pod 'Moya'
   pod 'SwiftyJSON'
+  pod "PromiseKit"
  # pod 'RxAlamofire'
 
   # Pods for LearnSwift

@@ -6,6 +6,15 @@ PODS:
   - Moya/Core (14.0.0):
     - Alamofire (~> 5.0)
   - ObjectMapper (3.5.1)
+  - PromiseKit (6.13.1):
+    - PromiseKit/CorePromise (= 6.13.1)
+    - PromiseKit/Foundation (= 6.13.1)
+    - PromiseKit/UIKit (= 6.13.1)
+  - PromiseKit/CorePromise (6.13.1)
+  - PromiseKit/Foundation (6.13.1):
+    - PromiseKit/CorePromise
+  - PromiseKit/UIKit (6.13.1):
+    - PromiseKit/CorePromise
   - RxCocoa (5.0.0):
     - RxRelay (~> 5)
     - RxSwift (~> 5)
@@ -22,6 +31,7 @@ DEPENDENCIES:
   - Alamofire (~> 5.2)
   - Moya
   - ObjectMapper
+  - PromiseKit
   - RxCocoa
   - RxDataSources
   - RxSwift
@@ -33,6 +43,7 @@ SPEC REPOS:
     - Differentiator
     - Moya
     - ObjectMapper
+    - PromiseKit
     - RxCocoa
     - RxDataSources
     - RxRelay
@@ -44,12 +55,13 @@ SPEC CHECKSUMS:
   Differentiator: 886080237d9f87f322641dedbc5be257061b0602
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
   ObjectMapper: 70187b8941977c62ccfb423caf6b50be405cabf0
+  PromiseKit: 28fda91c973cc377875d8c0ea4f973013c05b6db
   RxCocoa: fcf32050ac00d801f34a7f71d5e8e7f23026dcd8
   RxDataSources: efee07fa4de48477eca0a4611e6d11e2da9c1114
   RxRelay: 4f7409406a51a55cd88483f21ed898c234d60f18
   RxSwift: 8b0671caa829a763bbce7271095859121cbd895f
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: a87e087a78edca81bbee54346f610a5c9c768a74
+PODFILE CHECKSUM: 4bf8ceb9d6e0617e8dbd7378126531a5dddb1d5f
 
 COCOAPODS: 1.6.1

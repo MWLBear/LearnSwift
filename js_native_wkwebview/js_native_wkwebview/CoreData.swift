@@ -75,14 +75,12 @@ class Machine {
 //Base64编码
 extension String {
     
-    
     func base64Encoded() -> String? {
         if let data = self.data(using: .utf8) {
             return data.base64EncodedString()
         }
         return nil
     }
-    
     func base64Decoded() -> String? {
         let str = self.replacingOccurrences(of: "-", with: "+").replacingOccurrences(of: "_", with: "/")
         if let data = Data(base64Encoded: str) {
