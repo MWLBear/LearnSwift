@@ -52,7 +52,7 @@ class LoadScene: SKScene {
         startLogo.run(SKAction.repeatForever(startlogoAction))
         startLogo.anchorPoint = CGPoint(x: 0.5, y: 0.5)
         startLogo.position = CGPoint(x: size.width/2, y: size.height/2 + 120)
-        addChild(startLogo)
+       // addChild(startLogo)
         
         infobtn.position = CGPoint(x: size.width-50, y: size.height-50)
         infobtn.name = "info"
@@ -65,7 +65,7 @@ class LoadScene: SKScene {
         
         let startBtn = SKSpriteNode(texture: SKTexture(imageNamed: "start"), size: CGSize(width: 150, height: 50))
         startBtn.name = "start"
-        startBtn.position = CGPoint(x: size.width/2, y: 150)
+        startBtn.position = CGPoint(x: size.width/2, y: size.height/2)
         addChild(startBtn)
     }
     

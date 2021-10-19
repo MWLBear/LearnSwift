@@ -68,7 +68,7 @@ class GameScene: SKScene {
     }
     
     func addBg(){
-        let background = Background(name: "palybg1")
+        let background = Background(name: "bg1")
         addChild(background)
 
         let backNode = SKSpriteNode(imageNamed: "btnReturn")

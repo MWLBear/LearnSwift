@@ -30,8 +30,8 @@ class SelectScene: SKScene {
         headerButton.position =  CGPoint(x: size.width/2, y: backhome.frame.midY - 65)
         addChild(headerButton)
         
-        let HeightContant = 150
-        let atlasName = ["player", "pao", "startlogo"]
+        let HeightContant = 200
+        let atlasName = ["player", "pao"]
         for (index,name) in atlasName.enumerated() {
             let position = CGPoint(x: self.frame.midX, y: size.height*0.65 - CGFloat( HeightContant * index))
             let player = PlayerNode(positionInit: position, showBg: true, atlasName: name)
