@@ -1,0 +1,611 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F06F2A38238F35F000D0DEBF /* Disparo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F06F2A37238F35F000D0DEBF /* Disparo.mp3 */; };
+		F078BEE7238D94F500AB35F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F078BEE6238D94F500AB35F3 /* AppDelegate.swift */; };
+		F078BEE9238D94F500AB35F3 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = F078BEE8238D94F500AB35F3 /* GameScene.sks */; };
+		F078BEED238D94F500AB35F3 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F078BEEC238D94F500AB35F3 /* GameScene.swift */; };
+		F078BEEF238D94F500AB35F3 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F078BEEE238D94F500AB35F3 /* GameViewController.swift */; };
+		F078BEF2238D94F500AB35F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F078BEF0238D94F500AB35F3 /* Main.storyboard */; };
+		F078BEF4238D94F600AB35F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F078BEF3238D94F600AB35F3 /* Assets.xcassets */; };
+		F078BEF7238D94F600AB35F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F078BEF5238D94F600AB35F3 /* LaunchScreen.storyboard */; };
+		F078BF02238D94F600AB35F3 /* Desert SpaceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F078BF01238D94F600AB35F3 /* Desert SpaceTests.swift */; };
+		F078BF0D238D94F700AB35F3 /* Desert SpaceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F078BF0C238D94F700AB35F3 /* Desert SpaceUITests.swift */; };
+		F0F2F9BC238DAAA50091D9B2 /* Explosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = F0F2F9BB238DAAA50091D9B2 /* Explosion.sks */; };
+		F0F2F9C2238DD6C20091D9B2 /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F2F9C1238DD6C20091D9B2 /* GameOverScene.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F078BEFE238D94F600AB35F3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F078BEDB238D94F500AB35F3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F078BEE2238D94F500AB35F3;
+			remoteInfo = JuegoTemasSelectos;
+		};
+		F078BF09238D94F700AB35F3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F078BEDB238D94F500AB35F3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F078BEE2238D94F500AB35F3;
+			remoteInfo = JuegoTemasSelectos;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F06F2A37238F35F000D0DEBF /* Disparo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Disparo.mp3; sourceTree = "<group>"; };
+		F078BEE3238D94F500AB35F3 /* Desert Space.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Desert Space.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F078BEE6238D94F500AB35F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F078BEE8238D94F500AB35F3 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		F078BEEC238D94F500AB35F3 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		F078BEEE238D94F500AB35F3 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		F078BEF1238D94F500AB35F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F078BEF3238D94F600AB35F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F078BEF6238D94F600AB35F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F078BEF8238D94F600AB35F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F078BEFD238D94F600AB35F3 /* Desert SpaceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Desert SpaceTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F078BF01238D94F600AB35F3 /* Desert SpaceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Desert SpaceTests.swift"; sourceTree = "<group>"; };
+		F078BF03238D94F600AB35F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F078BF08238D94F700AB35F3 /* Desert SpaceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Desert SpaceUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F078BF0C238D94F700AB35F3 /* Desert SpaceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Desert SpaceUITests.swift"; sourceTree = "<group>"; };
+		F078BF0E238D94F700AB35F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F0F2F9BB238DAAA50091D9B2 /* Explosion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Explosion.sks; sourceTree = "<group>"; };
+		F0F2F9C1238DD6C20091D9B2 /* GameOverScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F078BEE0238D94F500AB35F3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F078BEFA238D94F600AB35F3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F078BF05238D94F700AB35F3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F078BEDA238D94F500AB35F3 = {
+			isa = PBXGroup;
+			children = (
+				F078BEE5238D94F500AB35F3 /* Desert Space */,
+				F078BF00238D94F600AB35F3 /* Desert SpaceTests */,
+				F078BF0B238D94F700AB35F3 /* Desert SpaceUITests */,
+				F078BEE4238D94F500AB35F3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F078BEE4238D94F500AB35F3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F078BEE3238D94F500AB35F3 /* Desert Space.app */,
+				F078BEFD238D94F600AB35F3 /* Desert SpaceTests.xctest */,
+				F078BF08238D94F700AB35F3 /* Desert SpaceUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F078BEE5238D94F500AB35F3 /* Desert Space */ = {
+			isa = PBXGroup;
+			children = (
+				F078BEE6238D94F500AB35F3 /* AppDelegate.swift */,
+				F078BEE8238D94F500AB35F3 /* GameScene.sks */,
+				F0F2F9BB238DAAA50091D9B2 /* Explosion.sks */,
+				F06F2A37238F35F000D0DEBF /* Disparo.mp3 */,
+				F078BEEC238D94F500AB35F3 /* GameScene.swift */,
+				F078BEEE238D94F500AB35F3 /* GameViewController.swift */,
+				F0F2F9C1238DD6C20091D9B2 /* GameOverScene.swift */,
+				F078BEF0238D94F500AB35F3 /* Main.storyboard */,
+				F078BEF3238D94F600AB35F3 /* Assets.xcassets */,
+				F078BEF5238D94F600AB35F3 /* LaunchScreen.storyboard */,
+				F078BEF8238D94F600AB35F3 /* Info.plist */,
+			);
+			path = "Desert Space";
+			sourceTree = "<group>";
+		};
+		F078BF00238D94F600AB35F3 /* Desert SpaceTests */ = {
+			isa = PBXGroup;
+			children = (
+				F078BF01238D94F600AB35F3 /* Desert SpaceTests.swift */,
+				F078BF03238D94F600AB35F3 /* Info.plist */,
+			);
+			path = "Desert SpaceTests";
+			sourceTree = "<group>";
+		};
+		F078BF0B238D94F700AB35F3 /* Desert SpaceUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F078BF0C238D94F700AB35F3 /* Desert SpaceUITests.swift */,
+				F078BF0E238D94F700AB35F3 /* Info.plist */,
+			);
+			path = "Desert SpaceUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F078BEE2238D94F500AB35F3 /* Desert Space */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F078BF11238D94F700AB35F3 /* Build configuration list for PBXNativeTarget "Desert Space" */;
+			buildPhases = (
+				F078BEDF238D94F500AB35F3 /* Sources */,
+				F078BEE0238D94F500AB35F3 /* Frameworks */,
+				F078BEE1238D94F500AB35F3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Desert Space";
+			productName = JuegoTemasSelectos;
+			productReference = F078BEE3238D94F500AB35F3 /* Desert Space.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F078BEFC238D94F600AB35F3 /* Desert SpaceTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F078BF14238D94F700AB35F3 /* Build configuration list for PBXNativeTarget "Desert SpaceTests" */;
+			buildPhases = (
+				F078BEF9238D94F600AB35F3 /* Sources */,
+				F078BEFA238D94F600AB35F3 /* Frameworks */,
+				F078BEFB238D94F600AB35F3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F078BEFF238D94F600AB35F3 /* PBXTargetDependency */,
+			);
+			name = "Desert SpaceTests";
+			productName = JuegoTemasSelectosTests;
+			productReference = F078BEFD238D94F600AB35F3 /* Desert SpaceTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F078BF07238D94F700AB35F3 /* Desert SpaceUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F078BF17238D94F700AB35F3 /* Build configuration list for PBXNativeTarget "Desert SpaceUITests" */;
+			buildPhases = (
+				F078BF04238D94F700AB35F3 /* Sources */,
+				F078BF05238D94F700AB35F3 /* Frameworks */,
+				F078BF06238D94F700AB35F3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F078BF0A238D94F700AB35F3 /* PBXTargetDependency */,
+			);
+			name = "Desert SpaceUITests";
+			productName = JuegoTemasSelectosUITests;
+			productReference = F078BF08238D94F700AB35F3 /* Desert SpaceUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F078BEDB238D94F500AB35F3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1120;
+				LastUpgradeCheck = 1120;
+				ORGANIZATIONNAME = UNAM;
+				TargetAttributes = {
+					F078BEE2238D94F500AB35F3 = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
+					F078BEFC238D94F600AB35F3 = {
+						CreatedOnToolsVersion = 11.2.1;
+						TestTargetID = F078BEE2238D94F500AB35F3;
+					};
+					F078BF07238D94F700AB35F3 = {
+						CreatedOnToolsVersion = 11.2.1;
+						TestTargetID = F078BEE2238D94F500AB35F3;
+					};
+				};
+			};
+			buildConfigurationList = F078BEDE238D94F500AB35F3 /* Build configuration list for PBXProject "Desert Space" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F078BEDA238D94F500AB35F3;
+			productRefGroup = F078BEE4238D94F500AB35F3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F078BEE2238D94F500AB35F3 /* Desert Space */,
+				F078BEFC238D94F600AB35F3 /* Desert SpaceTests */,
+				F078BF07238D94F700AB35F3 /* Desert SpaceUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F078BEE1238D94F500AB35F3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F078BEF2238D94F500AB35F3 /* Main.storyboard in Resources */,
+				F078BEE9238D94F500AB35F3 /* GameScene.sks in Resources */,
+				F0F2F9BC238DAAA50091D9B2 /* Explosion.sks in Resources */,
+				F078BEF4238D94F600AB35F3 /* Assets.xcassets in Resources */,
+				F078BEF7238D94F600AB35F3 /* LaunchScreen.storyboard in Resources */,
+				F06F2A38238F35F000D0DEBF /* Disparo.mp3 in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F078BEFB238D94F600AB35F3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F078BF06238D94F700AB35F3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F078BEDF238D94F500AB35F3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F078BEED238D94F500AB35F3 /* GameScene.swift in Sources */,
+				F078BEEF238D94F500AB35F3 /* GameViewController.swift in Sources */,
+				F0F2F9C2238DD6C20091D9B2 /* GameOverScene.swift in Sources */,
+				F078BEE7238D94F500AB35F3 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F078BEF9238D94F600AB35F3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F078BF02238D94F600AB35F3 /* Desert SpaceTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F078BF04238D94F700AB35F3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F078BF0D238D94F700AB35F3 /* Desert SpaceUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F078BEFF238D94F600AB35F3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F078BEE2238D94F500AB35F3 /* Desert Space */;
+			targetProxy = F078BEFE238D94F600AB35F3 /* PBXContainerItemProxy */;
+		};
+		F078BF0A238D94F700AB35F3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F078BEE2238D94F500AB35F3 /* Desert Space */;
+			targetProxy = F078BF09238D94F700AB35F3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F078BEF0238D94F500AB35F3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F078BEF1238D94F500AB35F3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F078BEF5238D94F600AB35F3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F078BEF6238D94F600AB35F3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F078BF0F238D94F700AB35F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F078BF10238D94F700AB35F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F078BF12238D94F700AB35F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L8FM5R7M3P;
+				INFOPLIST_FILE = "Desert Space/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "mx.UNAM.Desert Space";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F078BF13238D94F700AB35F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L8FM5R7M3P;
+				INFOPLIST_FILE = "Desert Space/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "mx.UNAM.Desert Space";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F078BF15238D94F700AB35F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3BTKPHTN29;
+				INFOPLIST_FILE = JuegoTemasSelectosTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mx.unam.acatlan.pcpuma.JuegoTemasSelectosTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Desert Space.app/Desert Space";
+			};
+			name = Debug;
+		};
+		F078BF16238D94F700AB35F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3BTKPHTN29;
+				INFOPLIST_FILE = JuegoTemasSelectosTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mx.unam.acatlan.pcpuma.JuegoTemasSelectosTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Desert Space.app/Desert Space";
+			};
+			name = Release;
+		};
+		F078BF18238D94F700AB35F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3BTKPHTN29;
+				INFOPLIST_FILE = JuegoTemasSelectosUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mx.unam.acatlan.pcpuma.JuegoTemasSelectosUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = JuegoTemasSelectos;
+			};
+			name = Debug;
+		};
+		F078BF19238D94F700AB35F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3BTKPHTN29;
+				INFOPLIST_FILE = JuegoTemasSelectosUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mx.unam.acatlan.pcpuma.JuegoTemasSelectosUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = JuegoTemasSelectos;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F078BEDE238D94F500AB35F3 /* Build configuration list for PBXProject "Desert Space" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F078BF0F238D94F700AB35F3 /* Debug */,
+				F078BF10238D94F700AB35F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F078BF11238D94F700AB35F3 /* Build configuration list for PBXNativeTarget "Desert Space" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F078BF12238D94F700AB35F3 /* Debug */,
+				F078BF13238D94F700AB35F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F078BF14238D94F700AB35F3 /* Build configuration list for PBXNativeTarget "Desert SpaceTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F078BF15238D94F700AB35F3 /* Debug */,
+				F078BF16238D94F700AB35F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F078BF17238D94F700AB35F3 /* Build configuration list for PBXNativeTarget "Desert SpaceUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F078BF18238D94F700AB35F3 /* Debug */,
+				F078BF19238D94F700AB35F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F078BEDB238D94F500AB35F3 /* Project object */;
+}
