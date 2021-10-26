@@ -10,20 +10,39 @@ import GameplayKit
 
 class GameScene: SKScene {
     
-   
+   /**
+    理解:
+    
+    在SpriteKit坐标系中原点(0, 0)在左下角
+    
+    父控件的anchorPoint决定在父坐标系的中心点在哪里
+    (0.5,0.5)表示原点在自身的中心点
+    
+    子控件的anchorPoint表示的是, position是以自身的某个位置为参考,
+    以此来确定自身在父坐标系中位置
+    
+    */
     
     override func didMove(to view: SKView) {
         
         self.anchorPoint = CGPoint(x: 0.5, y: 0.5)
-        createGrounds()
-       
+        //createGrounds()
+        addSprikit()
         print((self.scene?.size.width)!)
         
     }
     
     override func update(_ currentTime: TimeInterval) {
-        moveGround()
+       // moveGround()
     }
+    
+    func addSprikit(){
+        let sk  = SKSpriteNode(imageNamed: "sk")
+        sk.anchorPoint = CGPoint(x: 0.5, y: 0)
+        sk.position = CGPoint(x: 0, y: 0)
+        addChild(sk)
+    }
+    
     
     func createGrounds(){
         for i in 0...3 {
