@@ -14,6 +14,7 @@
 		E81FC19C271EA52400656E8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E81FC19B271EA52400656E8F /* Assets.xcassets */; };
 		E81FC19F271EA52400656E8F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E81FC19D271EA52400656E8F /* LaunchScreen.storyboard */; };
 		E88C53162727EF5200E9BBEA /* ScrollNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88C53152727EF5200E9BBEA /* ScrollNode.swift */; };
+		E88C5318272806F700E9BBEA /* ScrollScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88C5317272806F700E9BBEA /* ScrollScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		E81FC19B271EA52400656E8F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E81FC19E271EA52400656E8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E88C53152727EF5200E9BBEA /* ScrollNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollNode.swift; sourceTree = "<group>"; };
+		E88C5317272806F700E9BBEA /* ScrollScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				E81FC18E271EA52000656E8F /* AppDelegate.swift */,
+				E88C5317272806F700E9BBEA /* ScrollScene.swift */,
 				E81FC194271EA52000656E8F /* GameScene.swift */,
 				E81FC196271EA52000656E8F /* GameViewController.swift */,
 				E88C53152727EF5200E9BBEA /* ScrollNode.swift */,
@@ -143,6 +146,7 @@
 				E81FC195271EA52000656E8F /* GameScene.swift in Sources */,
 				E81FC197271EA52000656E8F /* GameViewController.swift in Sources */,
 				E81FC18F271EA52000656E8F /* AppDelegate.swift in Sources */,
+				E88C5318272806F700E9BBEA /* ScrollScene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,6 +300,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeRight UIInterfaceOrientationLandscapeLeft";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -323,6 +328,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeRight UIInterfaceOrientationLandscapeLeft";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

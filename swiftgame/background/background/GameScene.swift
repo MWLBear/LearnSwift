@@ -23,23 +23,24 @@ class GameScene: SKScene {
     
     */
     
+    
     override func didMove(to view: SKView) {
         
         self.anchorPoint = CGPoint(x: 0.5, y: 0.5)
-        //createGrounds()
+        createGrounds()
         addSprikit()
         print((self.scene?.size.width)!)
         
     }
     
     override func update(_ currentTime: TimeInterval) {
-       // moveGround()
+        moveGround()
     }
     
     func addSprikit(){
-        let sk  = SKSpriteNode(imageNamed: "sk")
+        let sk  = SKSpriteNode(imageNamed: "sk-1")
         sk.anchorPoint = CGPoint(x: 0.5, y: 0)
-        sk.position = CGPoint(x: 0, y: 0)
+        sk.position = CGPoint(x: 100, y: -40)
         addChild(sk)
     }
     
@@ -62,5 +63,10 @@ class GameScene: SKScene {
                 noode.position.x += (self.scene?.size.width)! * 3
             }
         }
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        self.view?.presentScene(ScrollScene(size: self.size))
     }
 }

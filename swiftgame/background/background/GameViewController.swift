@@ -16,7 +16,7 @@ class GameViewController: UIViewController {
         
         if let view = self.view as! SKView? {
             // Load the SKScene from 'GameScene.sks'
-        
+            let size = CGSize.init(width: 1214, height: 683)
             let scene = GameScene(size: self.view.frame.size)
             scene.scaleMode = .aspectFill
                 
@@ -30,17 +30,10 @@ class GameViewController: UIViewController {
     }
 
     override var shouldAutorotate: Bool {
-        return true
+        return false
     }
 
-    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-        if UIDevice.current.userInterfaceIdiom == .phone {
-            return .allButUpsideDown
-        } else {
-            return .all
-        }
-    }
-
+  
     override var prefersStatusBarHidden: Bool {
         return true
     }
