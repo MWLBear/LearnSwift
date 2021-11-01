@@ -421,7 +421,7 @@
 				DEVELOPMENT_TEAM = 9XJM24A9KC;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = sanguocount/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Collect yuanbao";
+				INFOPLIST_KEY_CFBundleDisplayName = "收集元宝";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -435,13 +435,13 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.app.sanguocount;
 				PRODUCT_NAME = "Lord collects ingots";
 				PROVISIONING_PROFILE_SPECIFIER = apps;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -456,7 +456,7 @@
 				DEVELOPMENT_TEAM = 9XJM24A9KC;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = sanguocount/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Collect yuanbao";
+				INFOPLIST_KEY_CFBundleDisplayName = "收集元宝";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -470,13 +470,13 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.app.sanguocount;
 				PRODUCT_NAME = "Lord collects ingots";
 				PROVISIONING_PROFILE_SPECIFIER = apps;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

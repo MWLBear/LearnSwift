@@ -38,22 +38,14 @@ class ModelScene: SKScene {
         backNode.position = convertPoint(toView: CGPoint(x: 40, y: 60))
         addChild(backNode)
         
-        let normalNode = SKSpriteNode(imageNamed: "easy")
-        normalNode.name = "easy"
-        normalNode.position = convertPoint(toView: CGPoint(x: size.width/2, y: size.height/2 - 150))
-        addChild(normalNode)
-        
-        let hardNode = SKSpriteNode(imageNamed: "hard")
-        hardNode.name = "hard"
-        hardNode.position = convertPoint(toView: CGPoint(x: size.width/2, y: size.height/2 ))
-        addChild(hardNode)
-        
-        
-        let endLessNode = SKSpriteNode(imageNamed: "endless")
-        endLessNode.name = "endless"
-        endLessNode.position = convertPoint(toView: CGPoint(x: size.width/2, y: size.height/2 + 150))
-        addChild(endLessNode)
-        
+        let modelsName = ["easy","hard","endless"]
+        for (index,name) in modelsName.enumerated() {
+            let position = CGPoint(x: self.frame.midX, y: size.height*0.65 - CGFloat( 150 * index))
+            let player = SKSpriteNode(imageNamed: name)
+            player.position = position
+            player.name = name
+            addChild(player)
+        }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
