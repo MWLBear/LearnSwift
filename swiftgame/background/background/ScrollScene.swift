@@ -12,14 +12,25 @@ class ScrollScene: SKScene {
     
     var smallMaps: [SelectNode] = [SelectNode]()
     
+    
+    lazy var selectedNode: SKSpriteNode = {
+        let node = SKSpriteNode.init(texture: SKTexture.init(imageNamed: "select_frame-hd"), size: CGSize.init(width: 200, height: 135))
+        node.zPosition = 2
+        return node
+    }()
+    
     var currentSelect:SelectNode = SelectNode(size: CGSize(width: 200, height: 150), type: 1) {
         didSet {
             showNode.texture = SKTexture(imageNamed: "ss-\(currentSelect.type)")
+            selectedNode.removeFromParent()
+            let node = smallMaps[currentSelect.type-1]
+            node.addChild(selectedNode)
         }
     }
     
     var bgNode:SKSpriteNode = {
         let node = SKSpriteNode(imageNamed: "bg")
+        node.size = CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
         node.zPosition = -1
         node.anchorPoint = CGPoint(x: 0.5, y: 0.5)
         return node
@@ -56,15 +67,33 @@ class ScrollScene: SKScene {
             tnode.zPosition = 2
             node.addChild(tnode)
             smallMaps.append(tnode)
+            if(i == 9){
+                tnode.addChild(selectedNode)
+            }
         }
         return node
     }()
     
+    lazy var startNode: ButtonNode = {
+        let node = ButtonNode.init(texture: SKTexture(imageNamed: "start1"), color: .clear, size: CGSize(width: 168, height: 90))
+        node.selectedTexture = SKTexture.init(imageNamed: "start")
+        node.anchorPoint = CGPoint(x: 0.5, y: 0.5)
+        node.zPosition = 2
+        node.position = CGPoint.init(x: 350, y: 20)
+        node.clickAction = {node in
+            print("开始游戏")
+        }
+        return node
+    }()
+    
+    
     override func didMove(to view: SKView) {
         self.anchorPoint = CGPoint(x: 0.5, y: 0.5)
+        self.scaleMode = .aspectFit
         addChild(bgNode)
         addChild(scrollNode)
         addChild(showNode)
+        addChild(startNode)
     }
 }
 
