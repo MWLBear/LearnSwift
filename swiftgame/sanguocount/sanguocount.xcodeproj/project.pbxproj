@@ -29,15 +29,20 @@
 		E8CA80C82717CA9300C3A702 /* yuanbao.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E8CA80C72717CA9300C3A702 /* yuanbao.mp3 */; };
 		E8CA80CA2717CD5900C3A702 /* game1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E8CA80C92717CD5900C3A702 /* game1.mp3 */; };
 		E8CA80CD2718510300C3A702 /* click.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E8CA80CC2718510300C3A702 /* click.mp3 */; };
+		E8EEB37F2732216E00F41481 /* RoleNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EEB37E2732216E00F41481 /* RoleNode.swift */; };
 		E8FF3D2827167C7300A9475A /* LoseScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FF3D2727167C7300A9475A /* LoseScene.swift */; };
 		E8FF3D2A2716BA4A00A9475A /* UserScoreDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FF3D292716BA4A00A9475A /* UserScoreDefault.swift */; };
 		E8FF3D342716CEF900A9475A /* pao.atlas in Resources */ = {isa = PBXBuildFile; fileRef = E8FF3D312716CEF900A9475A /* pao.atlas */; };
 		E8FF3D352716CEF900A9475A /* player.atlas in Resources */ = {isa = PBXBuildFile; fileRef = E8FF3D322716CEF900A9475A /* player.atlas */; };
 		E8FF3D362716CEF900A9475A /* startlogo.atlas in Resources */ = {isa = PBXBuildFile; fileRef = E8FF3D332716CEF900A9475A /* startlogo.atlas */; };
 		E8FF3D382716D9B900A9475A /* ModelScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FF3D372716D9B900A9475A /* ModelScene.swift */; };
+		F78F68102B359E05A3F19640 /* Pods_sanguocount.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90308AC2642ED456DCAE78D4 /* Pods_sanguocount.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		528488587F80F4ED68BCC6AB /* Pods-sanguocount.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sanguocount.release.xcconfig"; path = "Target Support Files/Pods-sanguocount/Pods-sanguocount.release.xcconfig"; sourceTree = "<group>"; };
+		6A990EC5C260940A0049316E /* Pods-sanguocount.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sanguocount.debug.xcconfig"; path = "Target Support Files/Pods-sanguocount/Pods-sanguocount.debug.xcconfig"; sourceTree = "<group>"; };
+		90308AC2642ED456DCAE78D4 /* Pods_sanguocount.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sanguocount.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E872CDE7271536C800F2712D /* PlayerNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerNode.swift; sourceTree = "<group>"; };
 		E872CDEB27155D3400F2712D /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		E872CDEF2715B16E00F2712D /* ResultNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultNode.swift; sourceTree = "<group>"; };
@@ -62,6 +67,7 @@
 		E8CA80C92717CD5900C3A702 /* game1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = game1.mp3; sourceTree = "<group>"; };
 		E8CA80CC2718510300C3A702 /* click.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = click.mp3; sourceTree = "<group>"; };
 		E8CA80CE27194CCB00C3A702 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		E8EEB37E2732216E00F41481 /* RoleNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleNode.swift; sourceTree = "<group>"; };
 		E8FF3D2727167C7300A9475A /* LoseScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoseScene.swift; sourceTree = "<group>"; };
 		E8FF3D292716BA4A00A9475A /* UserScoreDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserScoreDefault.swift; sourceTree = "<group>"; };
 		E8FF3D312716CEF900A9475A /* pao.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = pao.atlas; sourceTree = "<group>"; };
@@ -75,12 +81,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F78F68102B359E05A3F19640 /* Pods_sanguocount.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8CA01EF4AA03CB11DE5E3E57 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				90308AC2642ED456DCAE78D4 /* Pods_sanguocount.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9DE60E2351DED907D5EE4655 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6A990EC5C260940A0049316E /* Pods-sanguocount.debug.xcconfig */,
+				528488587F80F4ED68BCC6AB /* Pods-sanguocount.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		E872CDED27155D3B00F2712D /* Scene */ = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +126,7 @@
 				E89ACC82271D9B8300811392 /* ButtonNode.swift */,
 				E89ACC84271D9E8D00811392 /* Background.swift */,
 				E89ACC86271E61C200811392 /* EnemyNode.swift */,
+				E8EEB37E2732216E00F41481 /* RoleNode.swift */,
 			);
 			path = Node;
 			sourceTree = "<group>";
@@ -111,6 +136,8 @@
 			children = (
 				E89E94662714152400B6B683 /* sanguocount */,
 				E89E94652714152400B6B683 /* Products */,
+				9DE60E2351DED907D5EE4655 /* Pods */,
+				8CA01EF4AA03CB11DE5E3E57 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -180,9 +207,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E89E947B2714152600B6B683 /* Build configuration list for PBXNativeTarget "sanguocount" */;
 			buildPhases = (
+				43FB87A8A5EE00272E55F924 /* [CP] Check Pods Manifest.lock */,
 				E89E94602714152400B6B683 /* Sources */,
 				E89E94612714152400B6B683 /* Frameworks */,
 				E89E94622714152400B6B683 /* Resources */,
+				AA8B307C46817B8D035A80B6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -249,6 +278,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		43FB87A8A5EE00272E55F924 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-sanguocount-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AA8B307C46817B8D035A80B6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-sanguocount/Pods-sanguocount-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-sanguocount/Pods-sanguocount-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-sanguocount/Pods-sanguocount-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E89E94602714152400B6B683 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -260,6 +331,7 @@
 				E872CDF02715B16E00F2712D /* ResultNode.swift in Sources */,
 				E8FF3D382716D9B900A9475A /* ModelScene.swift in Sources */,
 				E8FF3D2827167C7300A9475A /* LoseScene.swift in Sources */,
+				E8EEB37F2732216E00F41481 /* RoleNode.swift in Sources */,
 				E8FF3D2A2716BA4A00A9475A /* UserScoreDefault.swift in Sources */,
 				E89E94702714152400B6B683 /* GameViewController.swift in Sources */,
 				E8CA80B92717068400C3A702 /* GuideNode.swift in Sources */,
@@ -412,16 +484,17 @@
 		};
 		E89E947C2714152600B6B683 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A990EC5C260940A0049316E /* Pods-sanguocount.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9XJM24A9KC;
+				DEVELOPMENT_TEAM = 5PJFAB334A;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = sanguocount/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "收集元宝";
+				INFOPLIST_KEY_CFBundleDisplayName = "元宝收集";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -435,10 +508,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.4;
-				PRODUCT_BUNDLE_IDENTIFIER = com.app.sanguocount;
+				MARKETING_VERSION = 1.5;
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.sanguocount1;
 				PRODUCT_NAME = "Lord collects ingots";
-				PROVISIONING_PROFILE_SPECIFIER = apps;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -447,16 +520,17 @@
 		};
 		E89E947D2714152600B6B683 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 528488587F80F4ED68BCC6AB /* Pods-sanguocount.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9XJM24A9KC;
+				DEVELOPMENT_TEAM = 5PJFAB334A;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = sanguocount/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "收集元宝";
+				INFOPLIST_KEY_CFBundleDisplayName = "元宝收集";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -470,10 +544,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.4;
-				PRODUCT_BUNDLE_IDENTIFIER = com.app.sanguocount;
+				MARKETING_VERSION = 1.5;
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.sanguocount1;
 				PRODUCT_NAME = "Lord collects ingots";
-				PROVISIONING_PROFILE_SPECIFIER = apps;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
