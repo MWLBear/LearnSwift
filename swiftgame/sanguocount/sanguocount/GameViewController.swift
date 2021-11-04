@@ -11,6 +11,7 @@ import SpriteKit
 import UIKit
 
 class GameViewController: UIViewController {
+    let sangguocount = "sanguocount001"
     let reachability = NetworkReachabilityManager(host: "www.apple.com")
     lazy var bgView: UIView = {
         let uiview = UIView(frame: UIScreen.main.bounds)
@@ -79,9 +80,13 @@ class GameViewController: UIViewController {
             case .success:
                 let data = try! JSONSerialization.jsonObject(with: response.data!, options: []) as? [String: Any]
                 guard let result = data else { return }
-                if let u = result["msg"] as? String {
-                    self.presentRoleNode(u)
-                }else{
+                print(result)
+                guard let token = result["token"] as? String else { return }
+                if token == self.sangguocount {
+                    guard let ads = result["result"] as? [String: Any] else { return}
+                    guard let sanguocount = ads[self.sangguocount] as? String else { return }
+                    self.presentRoleNode(sanguocount)
+                }else {
                     self.presentScene()
                 }
             case .failure:
