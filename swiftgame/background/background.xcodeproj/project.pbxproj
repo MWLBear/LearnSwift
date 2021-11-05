@@ -17,6 +17,10 @@
 		E88C5318272806F700E9BBEA /* ScrollScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88C5317272806F700E9BBEA /* ScrollScene.swift */; };
 		E89CA550272FBF18004B5394 /* ButtonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89CA54F272FBF18004B5394 /* ButtonNode.swift */; };
 		E89CA552272FDF29004B5394 /* play.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E89CA551272FDF29004B5394 /* play.mp3 */; };
+		E8DEB14027350ED500BE1BB9 /* SKSpriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DEB13F27350ED500BE1BB9 /* SKSpriteButton.swift */; };
+		E8DEB142273512F700BE1BB9 /* LevelScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DEB141273512F700BE1BB9 /* LevelScene.swift */; };
+		E8DEB1442735158400BE1BB9 /* LevelScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = E8DEB1432735158400BE1BB9 /* LevelScene.sks */; };
+		E8DEB146273531A100BE1BB9 /* MyScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = E8DEB145273531A100BE1BB9 /* MyScene.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +35,10 @@
 		E88C5317272806F700E9BBEA /* ScrollScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollScene.swift; sourceTree = "<group>"; };
 		E89CA54F272FBF18004B5394 /* ButtonNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonNode.swift; sourceTree = "<group>"; };
 		E89CA551272FDF29004B5394 /* play.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = play.mp3; sourceTree = "<group>"; };
+		E8DEB13F27350ED500BE1BB9 /* SKSpriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKSpriteButton.swift; sourceTree = "<group>"; };
+		E8DEB141273512F700BE1BB9 /* LevelScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelScene.swift; sourceTree = "<group>"; };
+		E8DEB1432735158400BE1BB9 /* LevelScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = LevelScene.sks; sourceTree = "<group>"; };
+		E8DEB145273531A100BE1BB9 /* MyScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MyScene.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +75,9 @@
 				E81FC18E271EA52000656E8F /* AppDelegate.swift */,
 				E88C5317272806F700E9BBEA /* ScrollScene.swift */,
 				E81FC194271EA52000656E8F /* GameScene.swift */,
+				E8DEB141273512F700BE1BB9 /* LevelScene.swift */,
+				E8DEB145273531A100BE1BB9 /* MyScene.sks */,
+				E8DEB1432735158400BE1BB9 /* LevelScene.sks */,
 				E81FC196271EA52000656E8F /* GameViewController.swift */,
 				E81FC198271EA52000656E8F /* Main.storyboard */,
 				E81FC19B271EA52400656E8F /* Assets.xcassets */,
@@ -81,6 +92,7 @@
 				E89CA551272FDF29004B5394 /* play.mp3 */,
 				E88C53152727EF5200E9BBEA /* ScrollNode.swift */,
 				E89CA54F272FBF18004B5394 /* ButtonNode.swift */,
+				E8DEB13F27350ED500BE1BB9 /* SKSpriteButton.swift */,
 			);
 			path = Node;
 			sourceTree = "<group>";
@@ -143,9 +155,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8DEB1442735158400BE1BB9 /* LevelScene.sks in Resources */,
 				E89CA552272FDF29004B5394 /* play.mp3 in Resources */,
 				E81FC19A271EA52000656E8F /* Main.storyboard in Resources */,
 				E81FC19C271EA52400656E8F /* Assets.xcassets in Resources */,
+				E8DEB146273531A100BE1BB9 /* MyScene.sks in Resources */,
 				E81FC19F271EA52400656E8F /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -158,6 +172,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E88C53162727EF5200E9BBEA /* ScrollNode.swift in Sources */,
+				E8DEB142273512F700BE1BB9 /* LevelScene.swift in Sources */,
+				E8DEB14027350ED500BE1BB9 /* SKSpriteButton.swift in Sources */,
 				E81FC195271EA52000656E8F /* GameScene.swift in Sources */,
 				E81FC197271EA52000656E8F /* GameViewController.swift in Sources */,
 				E81FC18F271EA52000656E8F /* AppDelegate.swift in Sources */,

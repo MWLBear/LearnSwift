@@ -42,8 +42,19 @@ class GameScene: SKScene {
         sk.anchorPoint = CGPoint(x: 0.5, y: 0)
         sk.position = CGPoint(x: 100, y: -40)
         addChild(sk)
+        
+        let playButton = SKSpriteButton(defaultButtonImage: "playButton", action: goToLevelScene)
+        playButton.position = CGPoint(x: -100, y: frame.midY)
+        playButton.setScale(0.2)
+        addChild(playButton)
     }
-    
+    func goToLevelScene(_: Int) {
+        let scene = SKScene(fileNamed: "LevelScene") as? LevelScene
+        scene?.touchAction = { level in
+            print("等级:\(level)")
+        }
+        self.view?.presentScene(scene)
+    }
     
     func createGrounds(){
         for i in 0...3 {
