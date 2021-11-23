@@ -13,6 +13,8 @@
 		E81FC19A271EA52000656E8F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E81FC198271EA52000656E8F /* Main.storyboard */; };
 		E81FC19C271EA52400656E8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E81FC19B271EA52400656E8F /* Assets.xcassets */; };
 		E81FC19F271EA52400656E8F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E81FC19D271EA52400656E8F /* LaunchScreen.storyboard */; };
+		E840DCB3274CCC5C00211033 /* CrameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E840DCB2274CCC5C00211033 /* CrameScene.swift */; };
+		E840DCB5274CD4DE00211033 /* MyUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E840DCB4274CD4DD00211033 /* MyUtils.swift */; };
 		E88C53162727EF5200E9BBEA /* ScrollNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88C53152727EF5200E9BBEA /* ScrollNode.swift */; };
 		E88C5318272806F700E9BBEA /* ScrollScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88C5317272806F700E9BBEA /* ScrollScene.swift */; };
 		E89CA550272FBF18004B5394 /* ButtonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89CA54F272FBF18004B5394 /* ButtonNode.swift */; };
@@ -31,6 +33,8 @@
 		E81FC199271EA52000656E8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E81FC19B271EA52400656E8F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E81FC19E271EA52400656E8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E840DCB2274CCC5C00211033 /* CrameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrameScene.swift; sourceTree = "<group>"; };
+		E840DCB4274CD4DD00211033 /* MyUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyUtils.swift; sourceTree = "<group>"; };
 		E88C53152727EF5200E9BBEA /* ScrollNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollNode.swift; sourceTree = "<group>"; };
 		E88C5317272806F700E9BBEA /* ScrollScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollScene.swift; sourceTree = "<group>"; };
 		E89CA54F272FBF18004B5394 /* ButtonNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonNode.swift; sourceTree = "<group>"; };
@@ -76,7 +80,9 @@
 				E88C5317272806F700E9BBEA /* ScrollScene.swift */,
 				E81FC194271EA52000656E8F /* GameScene.swift */,
 				E8DEB141273512F700BE1BB9 /* LevelScene.swift */,
+				E840DCB2274CCC5C00211033 /* CrameScene.swift */,
 				E8DEB145273531A100BE1BB9 /* MyScene.sks */,
+				E840DCB4274CD4DD00211033 /* MyUtils.swift */,
 				E8DEB1432735158400BE1BB9 /* LevelScene.sks */,
 				E81FC196271EA52000656E8F /* GameViewController.swift */,
 				E81FC198271EA52000656E8F /* Main.storyboard */,
@@ -172,11 +178,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E88C53162727EF5200E9BBEA /* ScrollNode.swift in Sources */,
+				E840DCB5274CD4DE00211033 /* MyUtils.swift in Sources */,
 				E8DEB142273512F700BE1BB9 /* LevelScene.swift in Sources */,
 				E8DEB14027350ED500BE1BB9 /* SKSpriteButton.swift in Sources */,
 				E81FC195271EA52000656E8F /* GameScene.swift in Sources */,
 				E81FC197271EA52000656E8F /* GameViewController.swift in Sources */,
 				E81FC18F271EA52000656E8F /* AppDelegate.swift in Sources */,
+				E840DCB3274CCC5C00211033 /* CrameScene.swift in Sources */,
 				E88C5318272806F700E9BBEA /* ScrollScene.swift in Sources */,
 				E89CA550272FBF18004B5394 /* ButtonNode.swift in Sources */,
 			);

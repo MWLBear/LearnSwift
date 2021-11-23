@@ -29,6 +29,10 @@ class LevelScene: SKScene {
         }else {
             guard let name = node.name else { return }
             touchAction?(name)
+            let size = CGSize(width: 2048, height: 1536)
+            let scene = CrameScene(size: size)
+            scene.scaleMode = .aspectFill
+            self.view?.presentScene(scene)
         }
     }
 }
