@@ -20,6 +20,7 @@
 		E89CA550272FBF18004B5394 /* ButtonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89CA54F272FBF18004B5394 /* ButtonNode.swift */; };
 		E89CA552272FDF29004B5394 /* play.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E89CA551272FDF29004B5394 /* play.mp3 */; };
 		E8D38667274DD4D600F494BC /* readme.md in Resources */ = {isa = PBXBuildFile; fileRef = E8D38666274DD4D600F494BC /* readme.md */; };
+		E8D38669274E25C000F494BC /* discolights-loop.mov in Resources */ = {isa = PBXBuildFile; fileRef = E8D38668274E25C000F494BC /* discolights-loop.mov */; };
 		E8DEB14027350ED500BE1BB9 /* SKSpriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DEB13F27350ED500BE1BB9 /* SKSpriteButton.swift */; };
 		E8DEB142273512F700BE1BB9 /* LevelScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DEB141273512F700BE1BB9 /* LevelScene.swift */; };
 		E8DEB1442735158400BE1BB9 /* LevelScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = E8DEB1432735158400BE1BB9 /* LevelScene.sks */; };
@@ -41,6 +42,7 @@
 		E89CA54F272FBF18004B5394 /* ButtonNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonNode.swift; sourceTree = "<group>"; };
 		E89CA551272FDF29004B5394 /* play.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = play.mp3; sourceTree = "<group>"; };
 		E8D38666274DD4D600F494BC /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
+		E8D38668274E25C000F494BC /* discolights-loop.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "discolights-loop.mov"; sourceTree = "<group>"; };
 		E8DEB13F27350ED500BE1BB9 /* SKSpriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKSpriteButton.swift; sourceTree = "<group>"; };
 		E8DEB141273512F700BE1BB9 /* LevelScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelScene.swift; sourceTree = "<group>"; };
 		E8DEB1432735158400BE1BB9 /* LevelScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = LevelScene.sks; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 		E89CA54E272FBEEC004B5394 /* Node */ = {
 			isa = PBXGroup;
 			children = (
+				E8D38668274E25C000F494BC /* discolights-loop.mov */,
 				E89CA551272FDF29004B5394 /* play.mp3 */,
 				E88C53152727EF5200E9BBEA /* ScrollNode.swift */,
 				E89CA54F272FBF18004B5394 /* ButtonNode.swift */,
@@ -164,6 +167,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8D38669274E25C000F494BC /* discolights-loop.mov in Resources */,
 				E8DEB1442735158400BE1BB9 /* LevelScene.sks in Resources */,
 				E89CA552272FDF29004B5394 /* play.mp3 in Resources */,
 				E81FC19A271EA52000656E8F /* Main.storyboard in Resources */,

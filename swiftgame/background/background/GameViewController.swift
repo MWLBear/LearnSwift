@@ -29,6 +29,9 @@ class GameViewController: UIViewController {
         }
     }
 
+    override var shouldAutorotate: Bool{
+        return false
+    }
     override var prefersStatusBarHidden: Bool {
         return true
     }
