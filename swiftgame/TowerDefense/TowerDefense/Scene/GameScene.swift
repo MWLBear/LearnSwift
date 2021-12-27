@@ -226,8 +226,7 @@ class GameScene: SKScene {
 	override init(size: CGSize) {
 		super.init(size: size)
 		self.physicsWorld.contactDelegate = self
-        
-        print("aaaa:\(self.anchorPoint)")
+		
 		let body = SKPhysicsBody.init(edgeLoopFrom: self.frame)
 		body.affectedByGravity = false
 		body.allowsRotation = false

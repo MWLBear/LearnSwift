@@ -71,7 +71,6 @@ class SelectedMapScene: SKScene {
 			}
 		}
 		for i in (0 ... 9).reversed() {
-            print("i:\(i)")
 			let tnode: SmallMapNode = SmallMapNode.init(size: CGSize.init(width: 240, height: 135), type: 10 - i)
 			tnode.position = CGPoint.init(x: 0, y: 150 + i * 170)
 			tnode.zPosition = 1
@@ -101,7 +100,7 @@ class SelectedMapScene: SKScene {
 		let node = ButtonNode.init(texture: SKTexture.init(imageNamed: "start1"), color: UIColor.clear, size: CGSize.init(width: 168, height: 90))
 		node.selectedTexture = SKTexture.init(imageNamed: "start")
 		node.zPosition = 2
-        node.anchorPoint = CGPoint.init(x: 0.5, y: 0)
+		node.anchorPoint = CGPoint.init(x: 0.5, y: 0)
 		node.position = CGPoint.init(x: 650, y: 20)
 		node.clickAction = { (node) in
 			self.startGame?(self.currentMap)
