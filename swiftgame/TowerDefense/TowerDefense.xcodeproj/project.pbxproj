@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		5070C133464860D617B7AFC8 /* Pods_TowerDefense.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB73BAE907AAF433305B2BEF /* Pods_TowerDefense.framework */; };
 		5F047C54215E32BF0099391D /* IceBulletNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F047C53215E32BE0099391D /* IceBulletNode.swift */; };
-		5F047C56215F17020099391D /* gun3Effect.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5F047C55215F17020099391D /* gun3Effect.mp3 */; };
 		5F047C5A215F24FF0099391D /* MagneticBulletNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F047C59215F24FF0099391D /* MagneticBulletNode.swift */; };
 		5F047C5D215F5EF40099391D /* MissileBombNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F047C5C215F5EF40099391D /* MissileBombNode.swift */; };
 		5F4156662121AAF00073BE45 /* machineGun.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5F4156652121AAF00073BE45 /* machineGun.wav */; };
@@ -53,18 +52,18 @@
 		5FFC53AD212BD883001E09D1 /* DoodlePen_Limited.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5FFC53AC212BD883001E09D1 /* DoodlePen_Limited.ttf */; };
 		5FFC53AF212BDB88001E09D1 /* alph.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5FFC53AE212BDB87001E09D1 /* alph.ttf */; };
 		5FFC5947212C3C18001E09D1 /* SelectedMapScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFC5946212C3C18001E09D1 /* SelectedMapScene.swift */; };
-		5FFC594D212C42AC001E09D1 /* play.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5FFC594C212C42AC001E09D1 /* play.mp3 */; };
-		5FFC594F212C4360001E09D1 /* BGM.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5FFC594E212C4360001E09D1 /* BGM.mp3 */; };
 		5FFC5951212C47E4001E09D1 /* map_UI-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FFC5950212C47E4001E09D1 /* map_UI-hd.png */; };
 		5FFC5953212C4909001E09D1 /* mode_bg-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FFC5952212C4909001E09D1 /* mode_bg-hd.png */; };
+		E8077D66279152F600DE6DA4 /* play.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E8077D65279152F600DE6DA4 /* play.mp3 */; };
+		E8077D682791530900DE6DA4 /* gun3Effect.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E8077D672791530900DE6DA4 /* gun3Effect.mp3 */; };
+		E8077D6A2791531C00DE6DA4 /* BGM.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E8077D692791531C00DE6DA4 /* BGM.mp3 */; };
+		E8077D6C2791532800DE6DA4 /* explosion.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E8077D6B2791532800DE6DA4 /* explosion.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5F047C53215E32BE0099391D /* IceBulletNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IceBulletNode.swift; sourceTree = "<group>"; };
-		5F047C55215F17020099391D /* gun3Effect.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = gun3Effect.mp3; path = "../../音效/gun3Effect.mp3"; sourceTree = "<group>"; };
 		5F047C59215F24FF0099391D /* MagneticBulletNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagneticBulletNode.swift; sourceTree = "<group>"; };
 		5F047C5C215F5EF40099391D /* MissileBombNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissileBombNode.swift; sourceTree = "<group>"; };
-		5F047C5E215F67740099391D /* explosion.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = explosion.mp3; path = "../../音效/explosion.mp3"; sourceTree = "<group>"; };
 		5F4156652121AAF00073BE45 /* machineGun.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = machineGun.wav; sourceTree = "<group>"; };
 		5F4156672121C5600073BE45 /* StartScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScene.swift; sourceTree = "<group>"; };
 		5F4156692121C6620073BE45 /* ButtonNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonNode.swift; sourceTree = "<group>"; };
@@ -167,12 +166,14 @@
 		5FFC53AC212BD883001E09D1 /* DoodlePen_Limited.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DoodlePen_Limited.ttf; sourceTree = "<group>"; };
 		5FFC53AE212BDB87001E09D1 /* alph.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = alph.ttf; sourceTree = "<group>"; };
 		5FFC5946212C3C18001E09D1 /* SelectedMapScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedMapScene.swift; sourceTree = "<group>"; };
-		5FFC594C212C42AC001E09D1 /* play.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = play.mp3; path = "../../音效/play.mp3"; sourceTree = "<group>"; };
-		5FFC594E212C4360001E09D1 /* BGM.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = BGM.mp3; path = "../../音效/BGM.mp3"; sourceTree = "<group>"; };
 		5FFC5950212C47E4001E09D1 /* map_UI-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map_UI-hd.png"; sourceTree = "<group>"; };
 		5FFC5952212C4909001E09D1 /* mode_bg-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mode_bg-hd.png"; sourceTree = "<group>"; };
 		7F97E77914ACD93693CE66E6 /* Pods-TowerDefense.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TowerDefense.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TowerDefense/Pods-TowerDefense.debug.xcconfig"; sourceTree = "<group>"; };
 		CB73BAE907AAF433305B2BEF /* Pods_TowerDefense.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TowerDefense.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8077D65279152F600DE6DA4 /* play.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = play.mp3; sourceTree = "<group>"; };
+		E8077D672791530900DE6DA4 /* gun3Effect.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = gun3Effect.mp3; sourceTree = "<group>"; };
+		E8077D692791531C00DE6DA4 /* BGM.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = BGM.mp3; sourceTree = "<group>"; };
+		E8077D6B2791532800DE6DA4 /* explosion.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = explosion.mp3; sourceTree = "<group>"; };
 		FEE3DE10BB22FCFE741401F9 /* Pods-TowerDefense.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TowerDefense.release.xcconfig"; path = "Pods/Target Support Files/Pods-TowerDefense/Pods-TowerDefense.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -327,19 +328,19 @@
 				5F6BD8E62137B64C0093D10F /* UI */,
 				5FFC5952212C4909001E09D1 /* mode_bg-hd.png */,
 				5FFC5950212C47E4001E09D1 /* map_UI-hd.png */,
-				5FFC594E212C4360001E09D1 /* BGM.mp3 */,
-				5FFC594C212C42AC001E09D1 /* play.mp3 */,
+				E8077D692791531C00DE6DA4 /* BGM.mp3 */,
+				E8077D65279152F600DE6DA4 /* play.mp3 */,
 				5FAC294F2124598800109DF8 /* none.wav */,
 				5F4156652121AAF00073BE45 /* machineGun.wav */,
 				5F6DE86B211C63D8001CD060 /* gun1.wav */,
 				5FEA61E2216C8E270074216E /* missileGun.mp3 */,
 				5F6DE86C211C63D9001CD060 /* magneticGun.wav */,
 				5FEA61E4216C8F160074216E /* explosion1.mp3 */,
-				5F047C5E215F67740099391D /* explosion.mp3 */,
+				E8077D6B2791532800DE6DA4 /* explosion.mp3 */,
+				E8077D672791530900DE6DA4 /* gun3Effect.mp3 */,
 				5FEA61E8216C90FB0074216E /* explosion3.mp3 */,
 				5FEA61E6216C8FE70074216E /* explosion2.mp3 */,
 				5F6DE86A211C63D8001CD060 /* iceGun.wav */,
-				5F047C55215F17020099391D /* gun3Effect.mp3 */,
 				5F6BD9BF213814670093D10F /* Scene */,
 				5F6DE84A211C5549001CD060 /* AppDelegate.swift */,
 				5F8B015A2138EC4A00DB32C5 /* MapNode.swift */,
@@ -443,22 +444,23 @@
 			files = (
 				5FAC29502124598800109DF8 /* none.wav in Resources */,
 				5F4156662121AAF00073BE45 /* machineGun.wav in Resources */,
-				5FFC594D212C42AC001E09D1 /* play.mp3 in Resources */,
 				5F8B01612139014D00DB32C5 /* fire_effect2.png in Resources */,
 				5FFC53AD212BD883001E09D1 /* DoodlePen_Limited.ttf in Resources */,
+				E8077D6C2791532800DE6DA4 /* explosion.mp3 in Resources */,
 				5FEA61E3216C8E270074216E /* missileGun.mp3 in Resources */,
 				5FFC5951212C47E4001E09D1 /* map_UI-hd.png in Resources */,
+				E8077D682791530900DE6DA4 /* gun3Effect.mp3 in Resources */,
 				5F6DE86F211C63D9001CD060 /* magneticGun.wav in Resources */,
 				5F6DE856211C5549001CD060 /* Main.storyboard in Resources */,
+				E8077D66279152F600DE6DA4 /* play.mp3 in Resources */,
 				5F6DE86D211C63D9001CD060 /* iceGun.wav in Resources */,
 				5FEA61E9216C90FB0074216E /* explosion3.mp3 in Resources */,
-				5F047C56215F17020099391D /* gun3Effect.mp3 in Resources */,
 				5FFC53AF212BDB88001E09D1 /* alph.ttf in Resources */,
 				5F8B01632139014D00DB32C5 /* fire_effect1.png in Resources */,
+				E8077D6A2791531C00DE6DA4 /* BGM.mp3 in Resources */,
 				5F8B01622139014D00DB32C5 /* fire_effect3.png in Resources */,
 				5FFC5953212C4909001E09D1 /* mode_bg-hd.png in Resources */,
 				5F6DE858211C554C001CD060 /* Assets.xcassets in Resources */,
-				5FFC594F212C4360001E09D1 /* BGM.mp3 in Resources */,
 				5F6BD8E72137B64C0093D10F /* UI in Resources */,
 				5F6DE85B211C554C001CD060 /* LaunchScreen.storyboard in Resources */,
 				5F6DE86E211C63D9001CD060 /* gun1.wav in Resources */,
