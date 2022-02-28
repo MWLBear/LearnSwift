@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios' buildActiveScheme='true' importAppTypes='true'>
+    <pages>
+        <page name='柯里化（Currying）'/>
+        <page name='将 protocol 的方法声明为 mutating'/>
+        <page name='Optional Chaining'/>
+        <page name='associatedtype'/>
+        <page name='初始化顺序'/>
+        <page name='正则匹配'/>
+        <page name='AnyClass，元类，和.self'/>
+    </pages>
+</playground>
