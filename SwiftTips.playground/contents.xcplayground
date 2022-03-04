@@ -8,5 +8,10 @@
         <page name='初始化顺序'/>
         <page name='正则匹配'/>
         <page name='AnyClass，元类，和.self'/>
+        <page name='动态类型和多方法'/>
+        <page name='属性观察 '/>
+        <page name='lazy 修饰符'/>
+        <page name='隐式解包 Optional'/>
+        <page name='where 和模式匹配'/>
     </pages>
 </playground>
