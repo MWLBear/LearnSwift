@@ -49,4 +49,10 @@ print(result1)
 let result2 = linkedList.removing(100)
 print(result2)
 
+
+
+//
+//现在如果你想要 Objective-C 能使用 Swift 的类型或者方法的话，也需要进行相应的 标记。对于单个方法，在前面添加 @objc 。如果想让整个类型在 Objective-C 可用，可以 在类型前添加 @objcMembers 。
+
+
 //: [Next](@next)
