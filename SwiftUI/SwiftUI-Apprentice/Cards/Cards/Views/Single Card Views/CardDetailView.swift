@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CardDetailView: View {
   @EnvironmentObject var viewState: ViewState
+  @Environment(\.scenePhase) private var scenePhase
   @State private var currentModal: CardModal?
   @State private var stickerImage: UIImage?
   @State private var images: [UIImage] = []
@@ -48,6 +49,14 @@ struct CardDetailView: View {
     content
       .onDrop(of: [.image], delegate: CardDrop(card: $card))
       .modifier(CardToolbar(currentModal: $currentModal))
+      .onChange(of: scenePhase, perform: { newValue in
+        if newValue == .inactive {
+          card.save()
+        }
+      })
+      .onDisappear(perform: {
+        card.save()
+      })
       .sheet(item: $currentModal){ item in
         switch item {
         case .stickerPicker:
